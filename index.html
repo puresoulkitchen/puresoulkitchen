@@ -2,64 +2,48 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>PureSoulKitchen | Mindful Plant-Based Living</title>
-  <link rel="stylesheet" href="assets/css/style.css" />
-  <script defer src="assets/js/toggle-lang.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PureSoulKitchen</title>
+  <link rel="stylesheet" href="assets/css/style.css"/>
 </head>
 <body>
   <header>
     <h1>PureSoulKitchen</h1>
     <nav>
-      <a href="#">Home</a>
-      <a href="#recipes">Recipes</a>
-      <a href="#research">Research</a>
-      <a href="#lifestyle">Lifestyle</a>
+      <a href="index.html">Home</a>
+      <a href="articles/plant-based-dinner.html">Recipes</a>
+      <a href="articles/no-five-spices.html">In-Depth</a>
+      <a href="articles/dinner-ritual.html">Lifestyle</a>
+      <a href="#" onclick="toggleLanguage()">中文</a>
+      <a href="https://www.instagram.com/puresoulkitchen/" target="_blank">Instagram</a>
+      <a href="https://www.threads.com/@puresoulkitchen" target="_blank">Threads</a>
     </nav>
-    <div class="lang-toggle" onclick="toggleLanguage()">🌐 EN | 中文</div>
   </header>
 
-  <section class="hero">
-    <img src="assets/images/hero.jpg" alt="Healthy Plant-Based Food">
-    <div class="hero-text">
-      <h2>Wholesome Meals. Peaceful Mind. Nourished Soul.</h2>
-    </div>
-  </section>
+  <div class="hero"></div>
 
-  <main>
-    <section id="recipes">
-      <h2>Recipes</h2>
-      <article>
-        <img src="assets/images/dinner.jpg" alt="Plant-Based Dinner">
-        <h3><a href="articles/plant-based-dinner.html">5 Plant-Based Dinner Recipes to Soothe Your Mind and Body</a></h3>
-      </article>
+  <main class="container">
+    <section class="card">
+      <h2><a href="articles/plant-based-dinner.html">5 Plant-Based Dinner Recipes to Soothe Your Mind and Body</a></h2>
+      <p>Delicious, calming meals without garlic or onion — nourish both body and soul.</p>
     </section>
-
-    <section id="research">
-      <h2>In-Depth Research</h2>
-      <article>
-        <img src="assets/images/spices.jpg" alt="No Five Spices">
-        <h3><a href="articles/no-five-spices.html">Why the Five Pungent Spices Stimulate the Nervous System</a></h3>
-      </article>
-      <article>
-        <img src="assets/images/stress-food.jpg" alt="Stress Relief Foods">
-        <h3><a href="articles/stress-relief-foods.html">Nutritional Analysis of Common Stress-Relieving Foods</a></h3>
-      </article>
+    <section class="card">
+      <h2><a href="articles/no-five-spices.html">Why Pungent Vegetables Overstimulate the Nervous System</a></h2>
+      <p>Scientific insights into garlic, onion, and the overstimulation of the mind.</p>
     </section>
-
-    <section id="lifestyle">
-      <h2>Lifestyle Advice</h2>
-      <article>
-        <img src="assets/images/ritual.jpg" alt="Dinner Ritual">
-        <h3><a href="articles/dinner-ritual.html">Using a Dinner Ritual to Soothe the Spirit</a></h3>
-      </article>
+    <section class="card">
+      <h2><a href="articles/stress-relief-foods.html">The Nutritional Power of Stress-Relieving Foods</a></h2>
+      <p>A breakdown of calming ingredients and their mental health benefits.</p>
+    </section>
+    <section class="card">
+      <h2><a href="articles/dinner-ritual.html">Soothe Your Soul with a Dinner Ritual</a></h2>
+      <p>Use mindful dinner habits to reset your energy and spirit each evening.</p>
     </section>
   </main>
 
   <footer>
-    <p>© 2025 PureSoulKitchen.com | All rights reserved</p>
-    <a href="https://www.instagram.com/puresoulkitchen/" target="_blank">Instagram</a> |
-    <a href="https://www.threads.com/@puresoulkitchen" target="_blank">Threads</a>
+    <p>© 2025 PureSoulKitchen. All rights reserved.</p>
   </footer>
+  <script src="assets/js/toggle-lang.js"></script>
 </body>
 </html>
