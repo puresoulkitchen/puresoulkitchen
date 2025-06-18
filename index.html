@@ -1,115 +1,58 @@
-<!DOCTYPE html>
+   <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Pure Soul Kitchen</title>
-  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
-  <style>
-    body {
-      font-family: 'Nunito', sans-serif;
-      background-color: #fdfaf4;
-      color: #333;
-      margin: 0;
-      padding: 0;
-    }
-    header {
-      background-color: #fff9f0;
-      padding: 1.5rem;
-      text-align: center;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-    }
-    header h1 {
-      margin: 0;
-      font-size: 2rem;
-    }
-    main {
-      max-width: 960px;
-      margin: 2rem auto;
-      padding: 1rem;
-    }
-    .article-preview {
-      background-color: #ffffff;
-      padding: 1.5rem;
-      border-radius: 12px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-      margin-bottom: 2rem;
-      transition: transform 0.2s ease;
-    }
-    .article-preview:hover {
-      transform: scale(1.02);
-    }
-    .article-preview img {
-      width: 100%;
-      border-radius: 12px;
-      margin-bottom: 1rem;
-    }
-    .article-preview h2 {
-      font-size: 1.3rem;
-      margin-bottom: 0.5rem;
-    }
-    .article-preview p {
-      font-size: 0.95rem;
-      color: #555;
-    }
-    footer {
-      text-align: center;
-      padding: 2rem;
-      font-size: 0.85rem;
-      color: #999;
-    }
-  </style>
+  <title>PureSoulKitchen</title>
+  <link rel="stylesheet" href="assets/css/style.css"/>
 </head>
 <body>
+  <header>
+    <div class="logo">PureSoulKitchen</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="articles/plant-based-dinner.html">Recipes</a>
+      <a href="articles/no-five-spices.html">In-Depth</a>
+      <a href="articles/dinner-ritual.html">Lifestyle</a>
+      <a href="#" onclick="toggleLanguage()">中文</a>
+      <a href="https://www.instagram.com/puresoulkitchen/" target="_blank">Instagram</a>
+      <a href="https://www.threads.com/@puresoulkitchen" target="_blank">Threads</a>
+    </nav>
+  </header>
 
-<header>
-  <h1>Pure Soul Kitchen</h1>
-  <p>Plant-Based, Peaceful Recipes & Research</p>
-</header>
+  <div class="hero">
+    <div class="hero-text">
+      <h1>Wholesome Recipes & Mindful Living</h1>
+      <p>Plant-based, five-spice-free nourishment for your body and soul</p>
+    </div>
+  </div>
 
-<main>
-  <section id="latest-articles">
+  <main class="container">
+    <section class="card">
+      <img src="assets/images/dinner1.jpg" alt="Plant-based dinner">
+      <h2><a href="articles/plant-based-dinner.html">5 Plant-Based Dinner Recipes to Soothe Your Mind and Body</a></h2>
+      <p>Delicious, calming meals without garlic or onion — nourish both body and soul.</p>
+    </section>
+    <section class="card">
+      <img src="assets/images/five-spices.jpg" alt="No pungent spices">
+      <h2><a href="articles/no-five-spices.html">Why Pungent Vegetables Overstimulate the Nervous System</a></h2>
+      <p>Scientific insights into garlic, onion, and the overstimulation of the mind.</p>
+    </section>
+    <section class="card">
+      <img src="assets/images/calming-foods.jpg" alt="Stress relief foods">
+      <h2><a href="articles/stress-relief-foods.html">The Nutritional Power of Stress-Relieving Foods</a></h2>
+      <p>A breakdown of calming ingredients and their mental health benefits.</p>
+    </section>
+    <section class="card">
+      <img src="assets/images/dinner-ritual.jpg" alt="Dinner ritual">
+      <h2><a href="articles/dinner-ritual.html">Soothe Your Soul with a Dinner Ritual</a></h2>
+      <p>Use mindful dinner habits to reset your energy and spirit each evening.</p>
+    </section>
+  </main>
 
-    <article class="article-preview">
-      <a href="articles/5-recipes-no-garlic.html" style="text-decoration: none; color: inherit;">
-        <img src="assets/images/pumpkin-millet-porridge.png" alt="5 Dinner Recipes to Soothe Mind and Body">
-        <h2>🥘 5 Plant-Based Dinner Recipes to Soothe Your Mind and Body</h2>
-        <p>Comforting, garlic-free and onion-free meals to help relax your nerves and promote mindful digestion before bedtime.</p>
-      </a>
-    </article>
-
-    <article class="article-preview">
-      <a href="articles/why-pungent-veg.html" style="text-decoration: none; color: inherit;">
-        <img src="assets/images/chickpea-coconut-curry.png" alt="Why Pungent Vegetables Overstimulate">
-        <h2>🧄 Why Pungent Vegetables Overstimulate the Nervous System</h2>
-        <p>Learn the spiritual and scientific reasons why foods like garlic and onion may interfere with inner peace and energy balance.</p>
-      </a>
-    </article>
-
-    <article class="article-preview">
-      <a href="articles/nutritional-analysis.html" style="text-decoration: none; color: inherit;">
-        <img src="assets/images/Nutritional Analysis.png" alt="Stress-Relieving Foods Nutritional Analysis">
-        <h2>🥦 Nutritional Analysis of Common Stress-Relieving Foods</h2>
-        <p>Break down the calming nutrients in oats, bananas, spinach and more — with insights from science and sattvic eating.</p>
-      </a>
-    </article>
-
-    <article class="article-preview">
-      <a href="articles/dinner-ritual.html" style="text-decoration: none; color: inherit;">
-        <img src="assets/images/buddha-bowl.png" alt="Dinner Ritual Article">
-        <h2>🧘‍♀️ Soothe Your Soul with a Dinner Ritual</h2>
-        <p>Explore how the simple act of preparing and eating dinner mindfully can restore balance and peace in daily life.</p>
-      </a>
-    </article>
-
-  </section>
-</main>
-
-<footer>
-  &copy; 2025 Pure Soul Kitchen | Follow us on 
-  <a href="https://www.instagram.com/puresoulkitchen/" target="_blank">Instagram</a> & 
-  <a href="https://www.threads.net/@puresoulkitchen" target="_blank">Threads</a>
-</footer>
-
+  <footer>
+    <p>© 2025 PureSoulKitchen. All rights reserved.</p>
+  </footer>
+  <script src="assets/js/toggle-lang.js"></script>
 </body>
 </html>
