@@ -77,19 +77,24 @@
       color: #444;
     }
     /* 返回首頁按鈕 */
-    .back-home {
-      display: inline-block;
-      margin-bottom: 2rem;
-      padding: 0.5rem 1rem;
+    button.back-home {
+      position: fixed;
+      top: 1rem;
+      left: 1rem;
       background-color: #d9643e;
       color: white;
-      text-decoration: none;
+      border: none;
       border-radius: 5px;
+      padding: 0.5rem 1rem;
       font-weight: 600;
+      cursor: pointer;
+      box-shadow: 0 2px 6px rgb(0 0 0 / 0.2);
       transition: background-color 0.3s ease;
+      z-index: 1000;
     }
-    .back-home:hover, .back-home:focus {
+    button.back-home:hover, button.back-home:focus {
       background-color: #b7522b;
+      outline: none;
     }
     /* 社交分享區 */
     nav.social-share {
@@ -137,7 +142,7 @@
 </head>
 <body>
 
-  <a href="./index.html" class="back-home" aria-label="Return to homepage">← Back to Home</a>
+  <button class="back-home" aria-label="Return to homepage" onclick="window.location.href='/'">← Back to Home</button>
 
   <h1>5 Plant-Based Dinner Recipes to Soothe Your Mind and Body (No Garlic, No Onion)</h1>
   
