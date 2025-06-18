@@ -13,6 +13,11 @@
       background-color: #f9f6f1;
       color: #4a4a4a;
       padding: 0 1rem;
+      position: relative;
+      min-height: 100vh;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
     }
     h1, h2, h3 {
       color: #3b3b3b;
@@ -22,6 +27,26 @@
       text-align: center;
       font-weight: 700;
       margin-bottom: 1.5rem;
+    }
+    .back-home {
+      position: fixed;
+      top: 1rem;
+      left: 1rem;
+      background: #d9643e;
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-decoration: none;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+      transition: background-color 0.3s ease;
+      z-index: 1000;
+    }
+    .back-home:hover,
+    .back-home:focus {
+      background: #b3502d;
+      outline: none;
     }
     .introduction, .conclusion {
       background: #fff8e7;
@@ -72,54 +97,48 @@
       padding-top: 1rem;
       border-top: 1px solid #ddd;
       color: #444;
-      margin-bottom: 3rem;
+      margin-bottom: 4rem; /* 為底部社交區留空間 */
     }
-    /* 新增的返回首頁按鈕樣式 */
-    .back-home {
-      display: inline-block;
-      margin-bottom: 1rem;
-      padding: 0.5rem 1rem;
-      background-color: #d9643e;
-      color: white;
-      text-decoration: none;
-      border-radius: 5px;
-      font-weight: 600;
-      transition: background-color 0.3s ease;
+    .social-share {
+      position: fixed;
+      bottom: 1.5rem;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #fff8e7;
+      border: 1px solid #f4c95d;
+      border-radius: 30px;
+      padding: 0.4rem 1.2rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      display: flex;
+      gap: 1.5rem;
+      align-items: center;
+      z-index: 1000;
     }
-    .back-home:hover {
-      background-color: #b45327;
-    }
-    /* 分享區 */
-    .share-container {
-      text-align: center;
-      margin-bottom: 3rem;
-    }
-    .share-container span {
-      font-weight: 600;
-      margin-right: 1rem;
-      color: #4a4a4a;
-    }
-    .share-buttons a {
-      display: inline-block;
-      margin: 0 0.5rem;
+    .social-share a {
       text-decoration: none;
       color: #d9643e;
       font-weight: 700;
-      border: 1.5px solid #d9643e;
-      padding: 0.4rem 0.8rem;
-      border-radius: 5px;
-      transition: background-color 0.3s ease, color 0.3s ease;
+      font-size: 1.1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      transition: color 0.3s ease;
     }
-    .share-buttons a:hover {
-      background-color: #d9643e;
-      color: white;
+    .social-share a:hover,
+    .social-share a:focus {
+      color: #b3502d;
+      outline: none;
+    }
+    .social-share svg {
+      width: 20px;
+      height: 20px;
+      fill: currentColor;
     }
   </style>
 </head>
 <body>
 
-  <!-- 返回首頁按鈕 -->
-  <a href="/" class="back-home" aria-label="Return to homepage">← Back to Home</a>
+  <a href="/" class="back-home" aria-label="Back to homepage">← Back to Home</a>
 
   <h1>5 Plant-Based Dinner Recipes to Soothe Your Mind and Body (No Garlic, No Onion)</h1>
   
@@ -237,17 +256,26 @@
     </ol>
   </article>
 
-  <!-- 分享按鈕區 -->
-  <div class="share-container">
-    <span>Share on:</span>
-    <div class="share-buttons">
-      <a href="https://www.instagram.com/puresoulkitchen/" target="_blank" rel="noopener noreferrer" aria-label="Share on Instagram">Instagram</a>
-      <a href="https://www.threads.net/@puresoulkitchen" target="_blank" rel="noopener noreferrer" aria-label="Share on Threads">Threads</a>
-    </div>
-  </div>
-
   <footer class="conclusion">
     <p>Your dinner should be more than just fuel — it can be a ritual of restoration. These five gentle, garlic-free and onion-free recipes are designed to help you slow down, reconnect, and nourish yourself deeply. By aligning what you eat with how you want to feel, you begin to bring peace not only to your body, but also to your spirit.</p>
   </footer>
+
+  <nav class="social-share" aria-label="Social media sharing">
+    <a href="https://www.instagram.com/puresoulkitchen/" target="_blank" rel="noopener noreferrer" aria-label="Visit PureSoulKitchen Instagram">
+      <!-- Instagram SVG icon -->
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+        <path d="M7.75 2h8.5A5.75 5.75 0 0122 7.75v8.5A5.75 5.75 0 0116.25 22h-8.5A5.75 5.75 0 012 16.25v-8.5A5.75 5.75 0 017.75 2zm0 1.5A4.25 4.25 0 003.5 7.75v8.5A4.25 4.25 0 007.75 20.5h8.5a4.25 4.25 0 004.25-4.25v-8.5A4.25 4.25 0 0016.25 3.5h-8.5zm8.75 2.25a1.125 1.125 0 110 2.25 1.125 1.125 0 010-2.25zM12 7a5 5 0 110 10 5 5 0 010-10zm0 1.5a3.5 3.5 0 100 7 3.5 3.5 0 000-7z"/>
+      </svg>
+      Instagram
+    </a>
+    <a href="https://www.threads.net/@puresoulkitchen" target="_blank" rel="noopener noreferrer" aria-label="Visit PureSoulKitchen Threads">
+      <!-- Threads SVG icon (stylized T) -->
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+        <path d="M4 2v20h16V2H4zm14 18H6V4h12v16zM8 6h8v2H8V6zm0 4h8v2H8v-2zm0 4h8v2H8v-2z"/>
+      </svg>
+      Threads
+    </a>
+  </nav>
+
 </body>
 </html>
