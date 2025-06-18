@@ -1,0 +1,41 @@
+body {
+  margin: 0;
+  font-family: "Helvetica Neue", sans-serif;
+  background-color: #fdfaf5;
+  color: #333;
+  line-height: 1.6;
+}
+a {
+  color: #a97b50;
+  text-decoration: none;
+}
+header, footer {
+  background-color: #f7f1e8;
+  padding: 1.5rem;
+  text-align: center;
+}
+nav a {
+  margin: 0 1rem;
+}
+.hero {
+  background-image: url('../images/hero.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+}
+.container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+.card {
+  background: #fff;
+  padding: 1rem;
+  margin-bottom: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+img {
+  max-width: 100%;
+  border-radius: 8px;
+}
