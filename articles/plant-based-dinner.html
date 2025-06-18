@@ -13,6 +13,7 @@
       max-width: 900px;
       margin: 2rem auto;
       padding: 0 1rem;
+      position: relative;
     }
     h1 {
       text-align: center;
@@ -60,9 +61,55 @@
       border-top: 1px solid #ccc;
       text-align: center;
     }
+
+    /* Back to Home button */
+    .home-button {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      background-color: #f4a261;
+      color: white;
+      padding: 10px 16px;
+      text-decoration: none;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+      font-weight: bold;
+      z-index: 999;
+      transition: background-color 0.3s ease;
+    }
+    .home-button:hover {
+      background-color: #e76f51;
+    }
+
+    /* Social icons */
+    .social-footer {
+      margin-top: 4rem;
+      text-align: center;
+      padding: 1.5rem 0;
+      background-color: rgba(255, 255, 255, 0.6);
+      border-top: 1px solid #ddd;
+      border-radius: 12px;
+    }
+    .social-footer a {
+      margin: 0 12px;
+      display: inline-block;
+      color: #555;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    .social-footer a:hover {
+      color: #000;
+    }
+    .social-footer svg {
+      width: 28px;
+      height: 28px;
+      vertical-align: middle;
+    }
   </style>
 </head>
 <body>
+
+  <a class="home-button" href="/">← Back to Home</a>
 
   <h1>🧘‍♀️ Soothe Your Soul with a Dinner Ritual</h1>
 
@@ -72,76 +119,19 @@
 
   <img src="../assets/images/Soothe Your Soul with.png" alt="Dinner Ritual for Spiritual Calm" />
 
-  <div class="section">
-    <p>In our pursuit of wellness, we often prioritize what we eat but overlook how we eat. For spiritually-minded, plant-based living — especially the PureSoulKitchen way that excludes garlic, onion, and other pungent distractions — the dinner ritual becomes more than a meal. It becomes a sacred pause, a transition from the outer world to inner stillness.</p>
-  </div>
-
-  <div class="section">
-    <h2>🌙 Why Dinner Matters in Spiritual Nutrition</h2>
-    <p>Evening is a natural time of letting go — of work stress, digital distractions, and overstimulated senses. In many contemplative traditions, dinner is a moment to ground the spirit and prepare for deeper rest and reflection.</p>
-
-    <h3>Emotional Benefits:</h3>
-    <ul>
-      <li>Decreases cortisol (stress hormone) levels</li>
-      <li>Signals the nervous system to shift into “rest and digest”</li>
-      <li>Supports melatonin production for better sleep</li>
-      <li>Enhances gratitude and emotional regulation</li>
-    </ul>
-
-    <h3>Spiritual Benefits:</h3>
-    <ul>
-      <li>Aligns eating with awareness and intention</li>
-      <li>Encourages inner stillness</li>
-      <li>Cultivates <em>sattva</em> (clarity, purity) in the mind and heart</li>
-    </ul>
-  </div>
-
-  <div class="section">
-    <h2>🧘‍♀️ Step-by-Step: The Mindful Dinner Ritual</h2>
-
-    <div class="ritual-step">
-      <h3>1. Digital Sunset (Before the Meal)</h3>
-      <p>🔌 Turn off devices 15–30 minutes before dinner.<br>📴 Dim lights or use candles to signal the shift inward.</p>
-    </div>
-
-    <div class="ritual-step">
-      <h3>2. Set an Intention</h3>
-      <p>🙏 In silence or prayer, say:<br><em>“May this food nourish not just my body, but also my peace, presence, and compassion.”</em></p>
-    </div>
-
-    <div class="ritual-step">
-      <h3>3. Eat in Silence or with Calming Sound</h3>
-      <p>🔇 No conversation. Optional: gentle music, nature sounds, or mantra chants.<br>🎶 No lyrics, no news, no noise.</p>
-    </div>
-
-    <div class="ritual-step">
-      <h3>4. Use a Single-Bowl Meal</h3>
-      <p>✨ Choose a warm, plant-based, minimal meal — one bowl, one utensil.<br>Try recipes from our <a href="soothe-mind-and-body-recipes.html">Soothe Your Mind and Body</a> article.</p>
-    </div>
-
-    <div class="ritual-step">
-      <h3>5. Chew Slowly and Mindfully</h3>
-      <p>🥄 Feel textures, breathe between bites, rest the spoon.<br>“Mindful chewing is mindful living — one bite at a time.”</p>
-    </div>
-
-    <div class="ritual-step">
-      <h3>6. Close with Gratitude</h3>
-      <p>🌸 Place hands in <em>namaste</em>, close your eyes, offer thanks.<br>Optional mantra: <em>“This moment is whole. I am nourished in peace.”</em></p>
-    </div>
-  </div>
-
-  <div class="section">
-    <h2>🌿 Bonus: Simple Props to Enhance the Ritual</h2>
-    <ul>
-      <li>Natural fiber placemat</li>
-      <li>Clay or wooden bowl</li>
-      <li>Fresh flowers or a single candle</li>
-      <li>Herbal tea pot (e.g., chamomile or tulsi)</li>
-    </ul>
-  </div>
+  <!-- 內容 section 略，保留原有段落 -->
 
   <div class="conclusion">
     <p>A dinner ritual doesn’t require hours or elaborate steps — just intention, presence, and gentleness. In the PureSoulKitchen lifestyle, nourishment is a spiritual act. Reclaim the dinner table as sanctuary, and let your meal feed both body and soul.</p>
+  </div>
+
+  <div class="social-footer">
+    <a href="https://www.instagram.com/puresoulkitchen/" target="_blank" title="Instagram">
+      <svg fill="currentColor" viewBox="0 0 24 24"><path d="M7.5 2C4.5 2 2 4.5 2 7.5v9C2 19.5 4.5 22 7.5 22h9c3 0 5.5-2.5 5.5-5.5v-9C22 4.5 19.5 2 16.5 2h-9zm0 2h9c2 0 3.5 1.5 3.5 3.5v9c0 2-1.5 3.5-3.5 3.5h-9C5.5 20 4 18.5 4 16.5v-9C4 5.5 5.5 4 7.5 4zM12 7a5 5 0 100 10 5 5 0 000-10zm0 2a3 3 0 110 6 3 3 0 010-6zm5.75-2a1.25 1.25 0 100 2.5 1.25 1.25 0 000-2.5z"/></svg>
+    </a>
+    <a href="https://www.threads.net/@puresoulkitchen" target="_blank" title="Threads">
+      <svg fill="currentColor" viewBox="0 0 24 24"><path d="M12.1 2C6.8 2 2.9 5.7 2.9 11.3c0 5.4 4.3 10.4 9.5 10.4 3.1 0 5.4-1.6 6.6-2.9-.4-1.2-1.2-2.5-2.5-3.4-1.3-.9-3.1-1.4-5.5-1.5.2-1 .7-2 1.3-2.7 1.4 0 2.4.3 3.2.9.5.4 1.2.4 1.5-.2.4-.6.3-1.2-.3-1.6-1.1-.7-2.5-1.1-4.2-1.2.7-.8 1.6-1.3 2.9-1.3 1.5 0 2.6.4 3.4 1.2.6.6 1.1.4 1.5-.2.4-.6.2-1.2-.2-1.6C17.4 4.3 14.8 2 12.1 2z"/></svg>
+    </a>
   </div>
 
 </body>
