@@ -5,6 +5,54 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Lifestyle | PureSoulKitchen</title>
   <link rel="stylesheet" href="assets/css/style.css"/>
+  <style>
+    .article-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5em;
+      padding: 2em;
+    }
+    .article-row {
+      display: flex;
+      background-color: #fffdf8;
+      border: 1px solid #e4dac8;
+      border-radius: 12px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.06);
+      overflow: hidden;
+      transition: transform 0.2s;
+    }
+    .article-row:hover {
+      transform: translateY(-2px);
+    }
+    .article-row img {
+      width: 180px;
+      height: 120px;
+      object-fit: cover;
+      border-right: 1px solid #eee;
+    }
+    .article-content {
+      padding: 1em;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .article-content h2 {
+      margin: 0 0 0.5em 0;
+      font-size: 1.1em;
+      color: #4e3d30;
+    }
+    .article-content p {
+      margin: 0;
+      color: #665e53;
+    }
+    .article-content a {
+      text-decoration: none;
+      color: #4e3d30;
+    }
+    .article-content a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -22,9 +70,10 @@
       <img src="assets/images/soothe-your-soul-with.png" alt="Dinner Ritual">
       <div class="article-content">
         <h2><a href="articles/dinner-ritual.html">Soothe Your Soul with a Dinner Ritual</a></h2>
-        <p>Turn your evening meal into a calming ritual for peace and mindfulness, free from garlic and onion.</p>
+        <p>Transform dinner into a peaceful ritual that supports inner clarity and calmness.</p>
       </div>
     </div>
+    <!-- 其他 Lifestyle 文章可繼續新增這樣的區塊 -->
   </main>
 
   <footer>
