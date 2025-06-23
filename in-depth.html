@@ -5,6 +5,54 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>In-Depth | PureSoulKitchen</title>
   <link rel="stylesheet" href="assets/css/style.css"/>
+  <style>
+    .article-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5em;
+      padding: 2em;
+    }
+    .article-row {
+      display: flex;
+      background-color: #fffdf8;
+      border: 1px solid #e4dac8;
+      border-radius: 12px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.06);
+      overflow: hidden;
+      transition: transform 0.2s;
+    }
+    .article-row:hover {
+      transform: translateY(-2px);
+    }
+    .article-row img {
+      width: 180px;
+      height: 120px;
+      object-fit: cover;
+      border-right: 1px solid #eee;
+    }
+    .article-content {
+      padding: 1em;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .article-content h2 {
+      margin: 0 0 0.5em 0;
+      font-size: 1.1em;
+      color: #4e3d30;
+    }
+    .article-content p {
+      margin: 0;
+      color: #665e53;
+    }
+    .article-content a {
+      text-decoration: none;
+      color: #4e3d30;
+    }
+    .article-content a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -22,14 +70,15 @@
       <img src="assets/images/stimulate-the-nervous-system.png" alt="No pungent spices">
       <div class="article-content">
         <h2><a href="articles/no-five-spices.html">Why Pungent Vegetables Overstimulate the Nervous System</a></h2>
-        <p>Explore scientific and spiritual insights into why garlic, onion, and similar foods may disrupt mental clarity.</p>
+        <p>Explore the scientific and spiritual reasons behind avoiding garlic and onion for mental calmness.</p>
       </div>
     </div>
+
     <div class="article-row">
       <img src="assets/images/nutritional-analysis.png" alt="Stress relief foods">
       <div class="article-content">
         <h2><a href="articles/stress-relief-foods.html">The Nutritional Power of Stress-Relieving Foods</a></h2>
-        <p>Analyze calming nutrients in plant-based ingredients and their impact on your emotional balance.</p>
+        <p>A detailed look at foods that support emotional stability and reduce anxiety through nutrition.</p>
       </div>
     </div>
   </main>
