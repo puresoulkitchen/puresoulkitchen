@@ -3,8 +3,64 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Recipes – PureSoulKitchen</title>
+  <title>Recipes | PureSoulKitchen</title>
   <link rel="stylesheet" href="assets/css/style.css"/>
+  <style>
+    .article-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5em;
+      padding: 2em;
+    }
+
+    .article-row {
+      display: flex;
+      background-color: #fffdf8;
+      border: 1px solid #e4dac8;
+      border-radius: 12px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.06);
+      overflow: hidden;
+      transition: transform 0.2s;
+    }
+
+    .article-row:hover {
+      transform: translateY(-2px);
+    }
+
+    .article-row img {
+      width: 180px;
+      height: 120px;
+      object-fit: cover;
+      border-right: 1px solid #eee;
+    }
+
+    .article-content {
+      padding: 1em;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .article-content h2 {
+      margin: 0 0 0.5em 0;
+      font-size: 1.1em;
+      color: #4e3d30;
+    }
+
+    .article-content p {
+      margin: 0;
+      color: #665e53;
+    }
+
+    .article-content a {
+      text-decoration: none;
+      color: #4e3d30;
+    }
+
+    .article-content a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -14,25 +70,23 @@
       <a href="recipes.html">Recipes</a>
       <a href="in-depth.html">In-Depth</a>
       <a href="lifestyle.html">Lifestyle</a>
-      <a href="#" onclick="toggleLanguage()">中文</a>
-      <a href="https://www.instagram.com/puresoulkitchen/" target="_blank">Instagram</a>
-      <a href="https://www.threads.net/@puresoulkitchen" target="_blank">Threads</a>
     </nav>
   </header>
 
-  <main class="container">
-    <!-- 正確連結與圖片 -->
-    <section class="card">
-      <img src="assets/images/pumpkin-millet-porridge.png" alt="Plant-based dinner">
-      <h2><a href="articles/plant-based-dinner.html">5 Plant-Based Dinner Recipes to Soothe Your Mind and Body</a></h2>
-      <p>Use mindful dinner habits to reset your energy and spirit each evening.</p>
-    </section>    
+  <main class="article-list">
+    <div class="article-row">
+      <img src="assets/images/pumpkin-millet-porridge.png" alt="Plant-based Dinner">
+      <div class="article-content">
+        <h2><a href="articles/plant-based-dinner.html">5 Plant-Based Dinner Recipes to Soothe Your Mind and Body</a></h2>
+        <p>Garlic-free, onion-free recipes that promote calm and well-being — ideal for mindful living.</p>
+      </div>
+    </div>
+
+    <!-- 可以再新增其他 Recipes 文章 -->
   </main>
 
   <footer>
     <p>© 2025 PureSoulKitchen. All rights reserved.</p>
   </footer>
-
-  <script src="assets/js/toggle-lang.js"></script>
 </body>
 </html>
