@@ -14,20 +14,24 @@
       color: #333;
       line-height: 1.7;
     }
-    header, footer {
-      text-align: center;
-      margin: 1rem 0;
+    header {
+      position: relative;
+      height: 3rem;
+      margin-bottom: 2rem;
     }
     .back-home {
-      display: inline-block;
-      margin-bottom: 2rem;
+      position: absolute;
+      left: 0;
+      top: 0;
       font-weight: bold;
       text-decoration: none;
       color: #4a8976;
       border: 2px solid #4a8976;
       padding: 0.5em 1em;
       border-radius: 8px;
+      letter-spacing: 0.06em;
       transition: background-color 0.3s, color 0.3s;
+      user-select: none;
     }
     .back-home:hover {
       background-color: #4a8976;
@@ -38,10 +42,12 @@
       font-weight: bold;
       text-align: center;
       margin-bottom: 1rem;
+      letter-spacing: 0.04em;
     }
     h2 {
       margin-top: 2rem;
       color: #4a8976;
+      letter-spacing: 0.03em;
     }
     img {
       display: block;
@@ -50,12 +56,14 @@
       border-radius: 12px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     }
-    ul {
+    ul, ol {
       margin-left: 1.5rem;
       margin-bottom: 1rem;
+      letter-spacing: 0.02em;
     }
     p {
       margin-bottom: 1rem;
+      letter-spacing: 0.02em;
     }
     .social-share {
       display: flex;
@@ -75,12 +83,20 @@
       font-weight: bold;
       gap: 0.4rem;
       transition: color 0.3s;
+      letter-spacing: 0.04em;
     }
     .social-share a:hover {
       color: #000;
     }
     .social-share svg {
       fill: currentColor;
+    }
+    footer {
+      text-align: center;
+      margin-top: 4rem;
+      color: #777;
+      font-size: 0.9em;
+      letter-spacing: 0.03em;
     }
   </style>
 </head>
