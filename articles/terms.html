@@ -13,62 +13,49 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Terms of Use | PureSoulKitchen</title>
-  <link rel="icon" href="../assets/images/favicon.png" type="image/png" />
-  <link rel="stylesheet" href="../assets/css/style.css"/>
+  <link rel="stylesheet" href="../assets/css/style.css" />
   <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #fffdf8;
+      color: #4e3d30;
+      margin: 0;
+      padding: 0;
+    }
     .terms-container {
       max-width: 800px;
-      margin: 3em auto;
+      margin: 0 auto;
+      padding: 2em;
       text-align: center;
-      padding: 0 1em;
-      line-height: 1.8;
-      color: #4e3d30;
     }
     .terms-container h1 {
       font-size: 2em;
       margin-bottom: 1em;
+      color: #d9643e;
     }
-.terms-container h2 {
-  margin-top: 1.2em;
-  margin-bottom: 0.3em;
-  font-weight: 700;
-  color: #d9643e;
+    .terms-container h2 {
+      margin-top: 1.5em;
+      margin-bottom: 0.3em; /* 👈 這裡是關鍵 */
+      font-weight: bold;
+      color: #d9643e;
     }
     .terms-container p {
-      margin-bottom: 1.2em;
+      margin-bottom: 0.8em;
+      line-height: 1.6;
     }
-    footer .footer-links a {
-      margin: 0 0.7em;
-      color: #4e3d30;
-      text-decoration: none;
-      font-weight: 600;
-    }
-    footer .footer-links a:hover {
-      text-decoration: underline;
+    footer {
+      text-align: center;
+      padding: 1em;
+      font-size: 0.9em;
+      color: #999;
     }
   </style>
 </head>
 <body>
-  <header>
-    <div class="logo">PureSoulKitchen</div>
-    <nav>
-      <a href="../index.html">Home</a>
-      <a href="../recipes.html">Recipes</a>
-      <a href="../in-depth.html">In-Depth</a>
-      <a href="../lifestyle.html">Lifestyle</a>
-      <a href="about.html">About Us</a>
-      <a href="contact.html">Contact Us</a>
-      <a href="#" onclick="toggleLanguage()">中文</a>
-      <a href="https://www.instagram.com/puresoulkitchen/" target="_blank">Instagram</a>
-      <a href="https://www.threads.net/@puresoulkitchen" target="_blank">Threads</a>
-    </nav>
-  </header>
-
-  <main class="terms-container">
+  <div class="terms-container">
     <h1>Terms of Use / Disclaimer</h1>
 
-    <p>Welcome to Pure Soul Kitchen.</p>
-
+    <h2>Welcome to Pure Soul Kitchen.</h2>
     <p>By accessing this website, you agree to the following terms:</p>
 
     <h2>Informational Use Only:</h2>
@@ -87,17 +74,10 @@
     <p>We reserve the right to update these terms at any time. Continued use of the site implies acceptance of these changes.</p>
 
     <p>If you do not agree with any part of these terms, please refrain from using our website.</p>
-  </main>
+  </div>
 
   <footer>
     <p>© 2025 PureSoulKitchen. All rights reserved.</p>
-    <div class="footer-links">
-      <a href="terms.html">Terms of Use / Disclaimer</a>
-      <a href="privacy.html">Privacy Policy</a>
-      <a href="contact.html">Contact Us</a>
-    </div>
   </footer>
-
-  <script src="../assets/js/toggle-lang.js"></script>
 </body>
 </html>
