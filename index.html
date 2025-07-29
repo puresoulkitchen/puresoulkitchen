@@ -2,14 +2,13 @@
 <html lang="en">
 <head>
   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-YW8N61J1S9"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-YW8N61J1S9');
-</script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YW8N61J1S9"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-YW8N61J1S9');
+  </script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>PureSoulKitchen</title>
@@ -19,16 +18,16 @@
 <body>
   <header>
     <div class="logo">PureSoulKitchen</div>
-  <nav>
-  <a href="index.html">Home</a>
-  <a href="recipes.html">Recipes</a>      <!-- 修正 -->
-  <a href="in-depth.html">In-Depth</a>
-  <a href="lifestyle.html">Lifestyle</a>  <!-- 修正 -->
-  <a href="#" onclick="toggleLanguage()">中文</a>
-  <a href="https://www.instagram.com/puresoulkitchen/" target="_blank">Instagram</a>
-  <a href="https://www.threads.net/@puresoulkitchen" target="_blank">Threads</a>
-</nav>
-
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="recipes.html">Recipes</a>
+      <a href="in-depth.html">In-Depth</a>
+      <a href="lifestyle.html">Lifestyle</a>
+      <a href="articles/about.html">About Us</a> <!-- ✅ 新增 About Us -->
+      <a href="#" onclick="toggleLanguage()">中文</a>
+      <a href="https://www.instagram.com/puresoulkitchen/" target="_blank">Instagram</a>
+      <a href="https://www.threads.net/@puresoulkitchen" target="_blank">Threads</a>
+    </nav>
   </header>
 
   <div class="hero">
@@ -39,11 +38,11 @@
   </div>
 
   <main class="container">
- <section class="card">
-  <img src="assets/images/how-plant-based.png" alt="Hormonal balance from food">
-  <h2><a href="articles/how-plant-based-affects-hormones.html">How Plant-Based Meals Influence Hormonal Balance and Mood</a></h2>
-  <p>Explore the deep connection between food and emotional well-being — through a plant-powered lens.</p>
-</section>
+    <section class="card">
+      <img src="assets/images/how-plant-based.png" alt="Hormonal balance from food">
+      <h2><a href="articles/how-plant-based-affects-hormones.html">How Plant-Based Meals Influence Hormonal Balance and Mood</a></h2>
+      <p>Explore the deep connection between food and emotional well-being — through a plant-powered lens.</p>
+    </section>
     <section class="card">
       <img src="assets/images/soothe-your-soul-with.png" alt="Dinner Ritual">
       <h2><a href="articles/plant-based-dinner.html">Soothe Your Soul with a Dinner Ritual</a></h2>
@@ -65,15 +64,22 @@
       <p>Use mindful dinner habits to reset your energy and spirit each evening.</p>
     </section>
     <section class="card">
-  <img src="assets/images/how-mindful-walking.png" alt="Mindful walking in nature">
-  <h2><a href="articles/how-mindful-walking.html">How Mindful Walking in Nature Reduces Stress Hormones</a></h2>
-  <p>Discover how a simple walk in nature can lower cortisol and restore emotional balance—step by step.</p>
-</section>
+      <img src="assets/images/how-mindful-walking.png" alt="Mindful walking in nature">
+      <h2><a href="articles/how-mindful-walking.html">How Mindful Walking in Nature Reduces Stress Hormones</a></h2>
+      <p>Discover how a simple walk in nature can lower cortisol and restore emotional balance—step by step.</p>
+    </section>
   </main>
 
   <footer>
     <p>© 2025 PureSoulKitchen. All rights reserved.</p>
+    <div style="margin-top: 1em;">
+      <!-- ✅ 新增 Footer 按鈕 -->
+      <a href="articles/terms.html" style="margin-right: 1em;">Terms of Use / Disclaimer</a>
+      <a href="articles/privacy.html" style="margin-right: 1em;">Privacy Policy</a>
+      <a href="articles/contact.html">Contact Us</a>
+    </div>
   </footer>
+
   <script src="assets/js/toggle-lang.js"></script>
 </body>
 </html>
