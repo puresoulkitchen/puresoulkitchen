@@ -1,28 +1,106 @@
-.card {
-  display: flex;               /* 讓卡片內容使用 flex 排列 */
-  flex-direction: column;      /* 文字、圖片垂直排列 */
-  background-color: #fffdf8;
-  border: 1px solid #e4dac8;
+body {
+  margin: 0;
+  font-family: 'Helvetica Neue', sans-serif;
+  background-color: #f8f5f1;
+  color: #333;
+}
+
+header {
+  background-color: #fff8ec;
+  padding: 1em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ddd0b4;
+}
+
+.logo {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #5c4a3d;
+}
+
+nav a {
+  margin-left: 1em;
+  text-decoration: none;
+  color: #5c4a3d;
+  font-weight: 500;
+}
+
+.hero {
+  background: url("../images/dinner1.jpg") no-repeat center center/cover;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-text {
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 2em;
   border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.06);
-  transition: transform 0.2s;
+  text-align: center;
+}
+
+.hero h1 {
+  margin: 0;
+  font-size: 2em;
+  color: #5c4a3d;
+}
+
+.hero p {
+  margin-top: 0.5em;
+  font-size: 1.2em;
+  color: #6d5e52;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5em;
+  padding: 2em;
 }
 
 .card img {
   width: 100%;
-  height: auto;               /* 保持圖片比例 */
-  object-fit: cover;           /* 填滿卡片，避免上下留白 */
+  height: auto;       /* 保持圖片比例自適應 */
+  object-fit: cover;  /* 改成 cover 讓圖片填滿容器，不留空白 */
   display: block;
+  margin: 0 auto;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
 }
 
 .card h2 {
-  margin: 0.8em;              /* 保留原本 margin，避免空白太大 */
+  margin: 0.8em;
   font-size: 1.1em;
   color: #4e3d30;
 }
 
 .card p {
-  margin: 0 0.8em 1em 0.8em;  /* 保留原本 margin */
+  margin: 0 0.8em 1em 0.8em;
   color: #665e53;
+}
+
+footer {
+  background-color: #f2e9dc;
+  text-align: center;
+  padding: 1em;
+  margin-top: 2em;
+  font-size: 0.9em;
+  color: #7a6e61;
+}
+
+a:hover {
+  text-decoration: underline;
 }
