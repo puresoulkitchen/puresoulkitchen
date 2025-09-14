@@ -1,78 +1,28 @@
-<!-- 卡片容器 -->
-<div class="card-container">
-  <div class="card">
-    <img src="assets/images/energy-smoothie.png" alt="Plant-Based Energy Smoothie">
-    <div class="article-content">
-      <h2><a href="articles/energy-smoothie-morning.html">Plant-Based Energy Smoothie for a Calm Morning</a></h2>
-      <p>Start your day with a gentle boost of plant-based energy. This smoothie combines fresh fruits, plant milk, and natural protein to keep you calm and focused.</p>
-    </div>
-  </div>
-
-  <!-- 可以複製多個卡片 -->
-  <div class="card">
-    <img src="assets/images/chamomile-tea.png" alt="Chamomile Tea">
-    <div class="article-content">
-      <h2><a href="articles/chamomile-tea.html">Relaxing Chamomile Tea Recipe</a></h2>
-      <p>A soothing tea to unwind after a long day. Simple, natural, and perfect for evening relaxation.</p>
-    </div>
-  </div>
-</div>
-
-<style>
-/* 卡片容器，排列多個卡片 */
-.card-container {
-  display: flex;
-  flex-wrap: wrap;        /* 多行自動換行 */
-  gap: 20px;              /* 卡片間距 */
-  align-items: flex-start; /* 高度不同卡片頂端對齊 */
-  padding: 20px;
-}
-
-/* 單張卡片 */
 .card {
+  display: flex;               /* 讓卡片內容使用 flex 排列 */
+  flex-direction: column;      /* 文字、圖片垂直排列 */
   background-color: #fffdf8;
   border: 1px solid #e4dac8;
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 4px 6px rgba(0,0,0,0.06);
   transition: transform 0.2s;
-  
-  display: flex;
-  flex-direction: column; /* 垂直排列圖片與文字 */
-  width: 300px;           /* 卡片寬度，可依需求調整 */
-  height: auto;           /* 高度隨內容自適應 */
 }
 
-.card:hover {
-  transform: translateY(-5px); /* 滑鼠懸停效果 */
-}
-
-/* 卡片圖片 */
 .card img {
   width: 100%;
-  height: auto;           /* 圖片自適應高度 */
+  height: auto;               /* 保持圖片比例 */
+  object-fit: cover;           /* 填滿卡片，避免上下留白 */
   display: block;
 }
 
-/* 卡片文字內容 */
-.article-content {
-  padding: 16px;
-  flex: 1;                /* 填滿剩餘空間 */
+.card h2 {
+  margin: 0.8em;              /* 保留原本 margin，避免空白太大 */
+  font-size: 1.1em;
+  color: #4e3d30;
 }
 
-.article-content h2 {
-  font-size: 1.2rem;
-  margin: 0 0 10px 0;
+.card p {
+  margin: 0 0.8em 1em 0.8em;  /* 保留原本 margin */
+  color: #665e53;
 }
-
-.article-content h2 a {
-  text-decoration: none;
-  color: #333;
-}
-
-.article-content p {
-  font-size: 0.95rem;
-  color: #555;
-  margin: 0;
-}
-</style>
