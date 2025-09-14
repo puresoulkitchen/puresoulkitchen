@@ -63,27 +63,23 @@ nav a {
 
 .card {
   background-color: #fffdf8;
-  border: 1px solid #e4dac8;  /* 保留原框線 */
+  border: 1px solid #e4dac8;
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 4px 6px rgba(0,0,0,0.06);
   transition: transform 0.2s;
+}
 
-  display: flex;
-  flex-direction: column; /* 讓圖片和文字自然堆疊 */
+.card:hover {
+  transform: translateY(-4px);
 }
 
 .card img {
   width: 100%;
   height: auto;       /* 保持圖片比例自適應 */
-  object-fit: cover;  /* 填滿容器，不留空白 */
+  object-fit: cover;  /* 改成 cover 讓圖片填滿容器，不留空白 */
   display: block;
-  margin: 0;
-}
-
-
-.card:hover {
-  transform: translateY(-4px);
+  margin: 0 auto;
 }
 
 .card h2 {
