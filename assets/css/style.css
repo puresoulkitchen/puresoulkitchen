@@ -1,3 +1,8 @@
+原本風格程式碼
+
+
+
+
 body {
   margin: 0;
   font-family: 'Helvetica Neue', sans-serif;
@@ -59,7 +64,6 @@ nav a {
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 1.5em;
   padding: 2em;
-  align-items: start; /* 這行新增，避免卡片被拉高 */
 }
 
 .card {
@@ -77,10 +81,9 @@ nav a {
 
 .card img {
   width: 100%;
-  height: auto;       /* 保持圖片比例自適應 */
-  object-fit: cover;  /* 改成 cover 讓圖片填滿容器，不留空白 */
+  height: 200px;       /* 固定卡片圖片高度 */
+  object-fit: cover;   /* 放大裁切圖片，覆蓋容器 */
   display: block;
-  margin: 0 auto;
 }
 
 .card h2 {
