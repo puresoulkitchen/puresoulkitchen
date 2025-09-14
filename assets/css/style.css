@@ -1,66 +1,34 @@
-body {
-  margin: 0;
-  font-family: 'Helvetica Neue', sans-serif;
-  background-color: #f8f5f1;
-  color: #333;
-}
+<!-- 卡片容器 -->
+<div class="card-container">
+  <div class="card">
+    <img src="assets/images/energy-smoothie.png" alt="Plant-Based Energy Smoothie">
+    <div class="article-content">
+      <h2><a href="articles/energy-smoothie-morning.html">Plant-Based Energy Smoothie for a Calm Morning</a></h2>
+      <p>Start your day with a gentle boost of plant-based energy. This smoothie combines fresh fruits, plant milk, and natural protein to keep you calm and focused.</p>
+    </div>
+  </div>
 
-header {
-  background-color: #fff8ec;
-  padding: 1em;
+  <!-- 可以複製多個卡片 -->
+  <div class="card">
+    <img src="assets/images/chamomile-tea.png" alt="Chamomile Tea">
+    <div class="article-content">
+      <h2><a href="articles/chamomile-tea.html">Relaxing Chamomile Tea Recipe</a></h2>
+      <p>A soothing tea to unwind after a long day. Simple, natural, and perfect for evening relaxation.</p>
+    </div>
+  </div>
+</div>
+
+<style>
+/* 卡片容器，排列多個卡片 */
+.card-container {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom: 1px solid #ddd0b4;
+  flex-wrap: wrap;        /* 多行自動換行 */
+  gap: 20px;              /* 卡片間距 */
+  align-items: flex-start; /* 高度不同卡片頂端對齊 */
+  padding: 20px;
 }
 
-.logo {
-  font-size: 1.5em;
-  font-weight: bold;
-  color: #5c4a3d;
-}
-
-nav a {
-  margin-left: 1em;
-  text-decoration: none;
-  color: #5c4a3d;
-  font-weight: 500;
-}
-
-.hero {
-  background: url("../images/dinner1.jpg") no-repeat center center/cover;
-  height: 300px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.hero-text {
-  background-color: rgba(255, 255, 255, 0.85);
-  padding: 2em;
-  border-radius: 12px;
-  text-align: center;
-}
-
-.hero h1 {
-  margin: 0;
-  font-size: 2em;
-  color: #5c4a3d;
-}
-
-.hero p {
-  margin-top: 0.5em;
-  font-size: 1.2em;
-  color: #6d5e52;
-}
-
-.container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.5em;
-  padding: 2em;
-}
-
+/* 單張卡片 */
 .card {
   background-color: #fffdf8;
   border: 1px solid #e4dac8;
@@ -68,40 +36,43 @@ nav a {
   overflow: hidden;
   box-shadow: 0 4px 6px rgba(0,0,0,0.06);
   transition: transform 0.2s;
+  
+  display: flex;
+  flex-direction: column; /* 垂直排列圖片與文字 */
+  width: 300px;           /* 卡片寬度，可依需求調整 */
+  height: auto;           /* 高度隨內容自適應 */
 }
 
 .card:hover {
-  transform: translateY(-4px);
+  transform: translateY(-5px); /* 滑鼠懸停效果 */
 }
 
+/* 卡片圖片 */
 .card img {
   width: 100%;
-  height: auto;
-  object-fit: contain;
+  height: auto;           /* 圖片自適應高度 */
   display: block;
-  margin: 0 auto;
 }
 
-.card h2 {
-  margin: 0.8em;
-  font-size: 1.1em;
-  color: #4e3d30;
+/* 卡片文字內容 */
+.article-content {
+  padding: 16px;
+  flex: 1;                /* 填滿剩餘空間 */
 }
 
-.card p {
-  margin: 0 0.8em 1em 0.8em;
-  color: #665e53;
+.article-content h2 {
+  font-size: 1.2rem;
+  margin: 0 0 10px 0;
 }
 
-footer {
-  background-color: #f2e9dc;
-  text-align: center;
-  padding: 1em;
-  margin-top: 2em;
-  font-size: 0.9em;
-  color: #7a6e61;
+.article-content h2 a {
+  text-decoration: none;
+  color: #333;
 }
 
-a:hover {
-  text-decoration: underline;
+.article-content p {
+  font-size: 0.95rem;
+  color: #555;
+  margin: 0;
 }
+</style>
