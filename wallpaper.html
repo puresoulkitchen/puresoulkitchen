@@ -9,12 +9,14 @@
 body {
   margin: 0;
   font-family: sans-serif;
-  background-color: #eaf7f1; /* 淺粉綠色背景 */
+  background-color: #ffffff; /* 頁面白色 */
 }
 
-header {
+header, footer {
+  background-color: #eaf7f1; /* 上下淺粉綠 */
   padding: 1em 2em;
-  background-color: #dff5e8; /* 淺粉綠色 */
+}
+header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -39,7 +41,7 @@ header nav a:hover {
 main {
   padding: 2em;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* 卡片寬度可調 */
   gap: 1.5em;
 }
 
@@ -57,22 +59,27 @@ main {
 .card:hover {
   transform: translateY(-2px);
 }
+
+/* 調整卡片大小 */
 .card img {
   width: 100%;
-  height: 120px;
+  height: 140px; /* 可調整高度 */
   object-fit: cover;
 }
+
 .card-content {
-  padding: 0.5em;
+  padding: 0.3em;
   width: 100%;
   text-align: center;
 }
+
+/* 縮小下載按鈕 */
 .download-btn {
   display: inline-block;
-  padding: 0.4em 0.8em;
+  padding: 0.2em 0.5em; /* 縮小按鈕 */
   background-color: #c3e8d0;
   border-radius: 6px;
-  font-size: 0.9em;
+  font-size: 0.8em; /* 縮小字體 */
   color: #4e3d30;
   text-decoration: none;
 }
@@ -82,10 +89,8 @@ main {
 
 footer {
   text-align: center;
-  padding: 1.5em;
   border-top: 1px solid #c3e8d0;
   color: #665e53;
-  background-color: #eaf7f1;
 }
 </style>
 </head>
@@ -115,7 +120,6 @@ const wallpapers = [
   "wallpaper-1.png",
   "wallpaper-2.png",
   "wallpaper-3.png"
-  // 新桌布只要加檔名即可
 ];
 
 const container = document.getElementById("wallpaper-container");
