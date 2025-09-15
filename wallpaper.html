@@ -6,98 +6,24 @@
   <title>Wallpaper | PureSoulKitchen</title>
   <link rel="stylesheet" href="assets/css/style.css">
   <style>
-    body {
-      font-family: sans-serif;
-      background-color: #fdfaf6;
-      margin: 0;
-      padding: 0;
-    }
-    header {
-      padding: 1em 2em;
-      background-color: #fffdf8;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      border-bottom: 1px solid #e4dac8;
-    }
-    header .logo {
-      font-weight: bold;
-      font-size: 1.3em;
-      color: #4e3d30;
-    }
-    header nav a {
-      margin-left: 1.5em;
-      text-decoration: none;
-      color: #4e3d30;
-      font-weight: 500;
-    }
-    header nav a:hover {
-      text-decoration: underline;
-    }
+    body { font-family: sans-serif; background-color: #fdfaf6; margin:0; padding:0; }
+    header { padding: 1em 2em; background-color: #fffdf8; display:flex; justify-content: space-between; border-bottom:1px solid #e4dac8; }
+    header .logo { font-weight:bold; font-size:1.3em; color:#4e3d30; }
+    header nav a { margin-left:1.5em; text-decoration:none; color:#4e3d30; font-weight:500; }
+    header nav a:hover { text-decoration:underline; }
 
-    main {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 1.5em;
-      padding: 2em;
-    }
+    main { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:1.5em; padding:2em; }
 
-    .card {
-      background-color: #fffdf8;
-      border: 1px solid #e4dac8;
-      border-radius: 12px;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.06);
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
-      transition: transform 0.2s;
-    }
-    .card:hover {
-      transform: translateY(-2px);
-    }
-    .card img {
-      width: 100%;
-      height: 180px;
-      object-fit: cover;
-    }
-    .card-content {
-      padding: 1em;
-      display: flex;
-      flex-direction: column;
-      flex-grow: 1;
-    }
-    .card-content h2 {
-      font-size: 1.1em;
-      margin: 0 0 0.5em 0;
-      color: #4e3d30;
-    }
-    .card-content p {
-      font-size: 0.95em;
-      color: #665e53;
-      margin: 0 0 1em 0;
-      flex-grow: 1;
-    }
-    .download-btn {
-      display: inline-block;
-      padding: 0.4em 0.8em;
-      background-color: #e4dac8;
-      border-radius: 6px;
-      font-size: 0.9em;
-      color: #4e3d30;
-      text-decoration: none;
-      text-align: center;
-    }
-    .download-btn:hover {
-      background-color: #d2c5a8;
-    }
+    .card { background-color:#fffdf8; border:1px solid #e4dac8; border-radius:12px; box-shadow:0 4px 6px rgba(0,0,0,0.06); overflow:hidden; display:flex; flex-direction:column; transition:transform 0.2s; }
+    .card:hover { transform: translateY(-2px); }
+    .card img { width:100%; height:180px; object-fit:cover; }
+    .card-content { padding:1em; display:flex; flex-direction:column; flex-grow:1; }
+    .card-content h2 { font-size:1.1em; margin:0 0 0.5em 0; color:#4e3d30; }
+    .card-content p { font-size:0.95em; color:#665e53; margin:0 0 1em 0; flex-grow:1; }
+    .download-btn { display:inline-block; padding:0.4em 0.8em; background-color:#e4dac8; border-radius:6px; font-size:0.9em; color:#4e3d30; text-decoration:none; text-align:center; }
+    .download-btn:hover { background-color:#d2c5a8; }
 
-    footer {
-      text-align: center;
-      padding: 1.5em;
-      border-top: 1px solid #e4dac8;
-      color: #665e53;
-      background-color: #fffdf8;
-    }
+    footer { text-align:center; padding:1.5em; border-top:1px solid #e4dac8; color:#665e53; background-color:#fffdf8; }
   </style>
 </head>
 <body>
@@ -112,38 +38,57 @@
     </nav>
   </header>
 
-  <main>
-    <div class="card">
-      <img src="assets-wallpaper/abstract-green.jpg" alt="Abstract Green Wallpaper">
-      <div class="card-content">
-        <h2>Abstract Green</h2>
-        <p>Calming abstract wallpaper inspired by plant-based energy.</p>
-        <a class="download-btn" href="assets-wallpaper/abstract-green.jpg" download>Download</a>
-      </div>
-    </div>
-
-    <div class="card">
-      <img src="assets-wallpaper/nature-calm.jpg" alt="Nature Calm Wallpaper">
-      <div class="card-content">
-        <h2>Nature Calm</h2>
-        <p>Serene nature-inspired wallpaper to soothe your mind.</p>
-        <a class="download-btn" href="assets-wallpaper/nature-calm.jpg" download>Download</a>
-      </div>
-    </div>
-
-    <div class="card">
-      <img src="assets-wallpaper/abstract-soft.jpg" alt="Abstract Soft Tones Wallpaper">
-      <div class="card-content">
-        <h2>Abstract Soft Tones</h2>
-        <p>Gentle gradients and soft shapes to enhance mindfulness.</p>
-        <a class="download-btn" href="assets-wallpaper/abstract-soft.jpg" download>Download</a>
-      </div>
-    </div>
-
+  <main id="wallpaper-container">
+    <!-- JavaScript 會自動生成卡片 -->
   </main>
 
   <footer>
     <p>© 2025 PureSoulKitchen. All rights reserved.</p>
   </footer>
+
+  <script>
+    // 這裡定義你的桌布檔名，之後只要加在這裡即可
+    const wallpapers = [
+      'abstract-green.jpg',
+      'nature-calm.jpg',
+      'abstract-soft.jpg'
+      // 後續可直接新增檔名
+    ];
+
+    const container = document.getElementById('wallpaper-container');
+
+    wallpapers.forEach(file => {
+      const card = document.createElement('div');
+      card.className = 'card';
+
+      const img = document.createElement('img');
+      img.src = `assets-wallpaper/${file}`;
+      img.alt = file.split('.')[0];
+
+      const content = document.createElement('div');
+      content.className = 'card-content';
+
+      const h2 = document.createElement('h2');
+      h2.textContent = file.split('.')[0];
+
+      const p = document.createElement('p');
+      p.textContent = 'Download this wallpaper for your desktop or device.';
+
+      const a = document.createElement('a');
+      a.href = `assets-wallpaper/${file}`;
+      a.download = file;
+      a.className = 'download-btn';
+      a.textContent = 'Download';
+
+      content.appendChild(h2);
+      content.appendChild(p);
+      content.appendChild(a);
+
+      card.appendChild(img);
+      card.appendChild(content);
+
+      container.appendChild(card);
+    });
+  </script>
 </body>
 </html>
