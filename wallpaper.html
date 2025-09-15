@@ -11,7 +11,6 @@ body {
   font-family: sans-serif;
   background-color: #fdfaf6;
 }
-
 header {
   padding: 1em 2em;
   background-color: #fffdf8;
@@ -35,7 +34,7 @@ header nav a:hover {
   text-decoration: underline;
 }
 
-/* 卡片式 Grid */
+/* Grid 卡片 */
 main {
   padding: 2em;
   display: grid;
@@ -49,10 +48,10 @@ main {
   border-radius: 12px;
   box-shadow: 0 4px 6px rgba(0,0,0,0.06);
   overflow: hidden;
-  transition: transform 0.2s;
   display: flex;
   flex-direction: column;
   align-items: center;
+  transition: transform 0.2s;
 }
 .card:hover {
   transform: translateY(-2px);
@@ -101,31 +100,47 @@ footer {
   </nav>
 </header>
 
-<main>
-  <div class="card">
-    <img src="assets/wallpaper/wallpaper-1.png" alt="Wallpaper 1">
-    <div class="card-content">
-      <a class="download-btn" href="assets/wallpaper/wallpaper-1.png" download>Download</a>
-    </div>
-  </div>
-
-  <div class="card">
-    <img src="assets/wallpaper/wallpaper-2.png" alt="Wallpaper 2">
-    <div class="card-content">
-      <a class="download-btn" href="assets/wallpaper/wallpaper-2.png" download>Download</a>
-    </div>
-  </div>
-
-  <div class="card">
-    <img src="assets/wallpaper/wallpaper-3.png" alt="Wallpaper 3">
-    <div class="card-content">
-      <a class="download-btn" href="assets/wallpaper/wallpaper-3.png" download>Download</a>
-    </div>
-  </div>
+<main id="wallpaper-container">
+  <!-- 卡片由 JS 自動生成 -->
 </main>
 
 <footer>
   <p>© 2025 PureSoulKitchen. All rights reserved.</p>
 </footer>
+
+<script>
+// 桌布圖片列表
+const wallpapers = [
+  "wallpaper-1.png",
+  "wallpaper-2.png",
+  "wallpaper-3.png"
+  // 之後新增桌布，只需在這裡加檔名
+];
+
+const container = document.getElementById("wallpaper-container");
+
+wallpapers.forEach(name => {
+  const card = document.createElement("div");
+  card.className = "card";
+
+  const img = document.createElement("img");
+  img.src = `assets/wallpaper/${name}`;
+  img.alt = name;
+
+  const content = document.createElement("div");
+  content.className = "card-content";
+
+  const download = document.createElement("a");
+  download.href = `assets/wallpaper/${name}`;
+  download.download = name;
+  download.className = "download-btn";
+  download.innerText = "Download";
+
+  content.appendChild(download);
+  card.appendChild(img);
+  card.appendChild(content);
+  container.appendChild(card);
+});
+</script>
 </body>
 </html>
