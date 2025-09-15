@@ -47,24 +47,27 @@
   </footer>
 
   <script>
-    // 這裡定義你的桌布檔名，之後只要加在這裡即可
+    // 這裡列出所有桌布檔名，放進 assets-wallpaper 資料夾
     const wallpapers = [
       'abstract-green.jpg',
       'nature-calm.jpg',
       'abstract-soft.jpg'
-      // 後續可直接新增檔名
+      // 新桌布檔名可直接加在這裡
     ];
 
     const container = document.getElementById('wallpaper-container');
 
     wallpapers.forEach(file => {
+      // 建立卡片
       const card = document.createElement('div');
       card.className = 'card';
 
+      // 圖片
       const img = document.createElement('img');
       img.src = `assets-wallpaper/${file}`;
       img.alt = file.split('.')[0];
 
+      // 內容
       const content = document.createElement('div');
       content.className = 'card-content';
 
@@ -80,6 +83,7 @@
       a.className = 'download-btn';
       a.textContent = 'Download';
 
+      // 組合卡片
       content.appendChild(h2);
       content.appendChild(p);
       content.appendChild(a);
