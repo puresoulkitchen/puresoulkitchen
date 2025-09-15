@@ -41,13 +41,13 @@ header nav a:hover {
 main {
   padding: 2em;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* 卡片寬度可調 */
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* 卡片寬度可調整 */
   gap: 1.5em;
 }
 
 .card {
-  background-color: #ffffff; /* 卡片底色 */
-  border: 1px solid #c3e8d0; /* 卡片邊框淺粉綠 */
+  background-color: #ffffff;
+  border: 1px solid #c3e8d0;
   border-radius: 12px;
   box-shadow: 0 4px 6px rgba(0,0,0,0.06);
   overflow: hidden;
@@ -60,10 +60,9 @@ main {
   transform: translateY(-2px);
 }
 
-/* 調整卡片大小 */
 .card img {
-  width: 300%;
-  height: 640px; /* 可調整高度 */
+  width: 100%;
+  height: 140px; /* 可調整卡片圖片高度 */
   object-fit: cover;
 }
 
@@ -73,18 +72,21 @@ main {
   text-align: center;
 }
 
-/* 縮小下載按鈕 */
+/* 下載按鈕圖示 */
 .download-btn {
-  display: inline-block;
-  padding: 0.2em 0.5em; /* 縮小按鈕 */
-  background-color: #c3e8d0;
-  border-radius: 6px;
-  font-size: 0.8em; /* 縮小字體 */
-  color: #4e3d30;
-  text-decoration: none;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.2em;
 }
-.download-btn:hover {
-  background-color: #a8d9b5;
+.download-btn svg {
+  width: 20px;
+  height: 20px;
+  stroke: #4e3d30;
+  transition: stroke 0.2s;
+}
+.download-btn:hover svg {
+  stroke: #2b6b50;
 }
 
 footer {
@@ -118,8 +120,9 @@ footer {
 // 桌布圖片列表
 const wallpapers = [
   "wallpaper-1.png",
-
-  
+  "wallpaper-2.png",
+  "wallpaper-3.png"
+  // 新桌布只要加檔名即可
 ];
 
 const container = document.getElementById("wallpaper-container");
@@ -139,7 +142,13 @@ wallpapers.forEach(name => {
   download.href = `assets/wallpaper/${name}`;
   download.download = name;
   download.className = "download-btn";
-  download.innerText = "Download";
+  download.innerHTML = `
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+      <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+      <polyline points="7 10 12 15 17 10"/>
+      <line x1="12" y1="15" x2="12" y2="3"/>
+    </svg>
+  `;
 
   content.appendChild(download);
   card.appendChild(img);
