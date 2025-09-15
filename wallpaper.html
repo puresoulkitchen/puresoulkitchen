@@ -4,67 +4,38 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Wallpaper | PureSoulKitchen</title>
-<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/style.css"/>
 <style>
-body {
-  margin: 0;
-  font-family: sans-serif;
-  background-color: #fdfaf6;
-}
-
-header {
-  padding: 1em 2em;
-  background-color: #fffdf8;
+.article-list {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom: 1px solid #e4dac8;
-}
-header .logo {
-  font-weight: bold;
-  font-size: 1.3em;
-  color: #4e3d30;
-}
-header nav a {
-  margin-left: 1.5em;
-  text-decoration: none;
-  color: #4e3d30;
-  font-weight: 500;
-}
-header nav a:hover {
-  text-decoration: underline;
-}
-
-main {
-  padding: 2em;
-  display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   gap: 1.5em;
+  padding: 2em;
 }
-
-.card {
-  width: 180px;
+.article-row {
+  display: flex;
   background-color: #fffdf8;
   border: 1px solid #e4dac8;
   border-radius: 12px;
   box-shadow: 0 4px 6px rgba(0,0,0,0.06);
   overflow: hidden;
-  display: flex;
-  flex-direction: column;
   transition: transform 0.2s;
+  align-items: center;
 }
-.card:hover {
+.article-row:hover {
   transform: translateY(-2px);
 }
-.card img {
-  width: 100%;
+.article-row img {
+  width: 180px;
   height: 120px;
   object-fit: cover;
-  display: block;
+  border-right: 1px solid #eee;
 }
-.card-content {
-  padding: 0.5em;
-  text-align: center;
+.article-content {
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .download-btn {
   display: inline-block;
@@ -75,17 +46,10 @@ main {
   color: #4e3d30;
   text-decoration: none;
   text-align: center;
+  width: fit-content;
 }
 .download-btn:hover {
   background-color: #d2c5a8;
-}
-
-footer {
-  text-align: center;
-  padding: 1.5em;
-  border-top: 1px solid #e4dac8;
-  color: #665e53;
-  background-color: #fffdf8;
 }
 </style>
 </head>
@@ -101,24 +65,24 @@ footer {
   </nav>
 </header>
 
-<main>
-  <div class="card">
+<main class="article-list">
+  <div class="article-row">
     <img src="assets-wallpaper/wallpaper-1.png" alt="Wallpaper 1">
-    <div class="card-content">
+    <div class="article-content">
       <a class="download-btn" href="assets-wallpaper/wallpaper-1.png" download>Download</a>
     </div>
   </div>
 
-  <div class="card">
+  <div class="article-row">
     <img src="assets-wallpaper/wallpaper-2.png" alt="Wallpaper 2">
-    <div class="card-content">
+    <div class="article-content">
       <a class="download-btn" href="assets-wallpaper/wallpaper-2.png" download>Download</a>
     </div>
   </div>
 
-  <div class="card">
+  <div class="article-row">
     <img src="assets-wallpaper/wallpaper-3.png" alt="Wallpaper 3">
-    <div class="card-content">
+    <div class="article-content">
       <a class="download-btn" href="assets-wallpaper/wallpaper-3.png" download>Download</a>
     </div>
   </div>
