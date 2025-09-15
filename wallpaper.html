@@ -1,98 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Wallpaper | PureSoulKitchen</title>
-  <link rel="stylesheet" href="assets/css/style.css">
-  <style>
-    body { font-family: sans-serif; background-color: #fdfaf6; margin:0; padding:0; }
-    header { padding: 1em 2em; background-color: #fffdf8; display:flex; justify-content: space-between; border-bottom:1px solid #e4dac8; }
-    header .logo { font-weight:bold; font-size:1.3em; color:#4e3d30; }
-    header nav a { margin-left:1.5em; text-decoration:none; color:#4e3d30; font-weight:500; }
-    header nav a:hover { text-decoration:underline; }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wallpaper | PureSoulKitchen</title>
+<link rel="stylesheet" href="assets/css/style.css">
+<style>
+  body {
+    margin: 0;
+    font-family: sans-serif;
+    background-color: #fdfaf6;
+  }
+  header {
+    padding: 1em 2em;
+    background-color: #fffdf8;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #e4dac8;
+  }
+  header .logo {
+    font-weight: bold;
+    font-size: 1.3em;
+    color: #4e3d30;
+  }
+  header nav a {
+    margin-left: 1.5em;
+    text-decoration: none;
+    color: #4e3d30;
+    font-weight: 500;
+  }
+  header nav a:hover {
+    text-decoration: underline;
+  }
 
-    main { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:1.5em; padding:2em; }
+  main {
+    padding: 2em;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5em;
+  }
 
-    .card { background-color:#fffdf8; border:1px solid #e4dac8; border-radius:12px; box-shadow:0 4px 6px rgba(0,0,0,0.06); overflow:hidden; display:flex; flex-direction:column; transition:transform 0.2s; }
-    .card:hover { transform: translateY(-2px); }
-    .card img { width:100%; height:180px; object-fit:cover; }
-    .card-content { padding:1em; display:flex; flex-direction:column; flex-grow:1; }
-    .card-content h2 { font-size:1.1em; margin:0 0 0.5em 0; color:#4e3d30; }
-    .card-content p { font-size:0.95em; color:#665e53; margin:0 0 1em 0; flex-grow:1; }
-    .download-btn { display:inline-block; padding:0.4em 0.8em; background-color:#e4dac8; border-radius:6px; font-size:0.9em; color:#4e3d30; text-decoration:none; text-align:center; }
-    .download-btn:hover { background-color:#d2c5a8; }
+  .card {
+    background-color: #fffdf8;
+    border: 1px solid #e4dac8;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.06);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s;
+  }
+  .card:hover {
+    transform: translateY(-2px);
+  }
+  .card img {
+    width: 100%;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+  }
+  .card-content {
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+  .card-content h2 {
+    font-size: 1.1em;
+    margin: 0 0 0.5em 0;
+    color: #4e3d30;
+  }
+  .card-content p {
+    font-size: 0.95em;
+    color: #665e53;
+    margin: 0 0 1em 0;
+    flex-grow: 1;
+  }
+  .download-btn {
+    display: inline-block;
+    padding: 0.4em 0.8em;
+    background-color: #e4dac8;
+    border-radius: 6px;
+    font-size: 0.9em;
+    color: #4e3d30;
+    text-decoration: none;
+    text-align: center;
+  }
+  .download-btn:hover {
+    background-color: #d2c5a8;
+  }
 
-    footer { text-align:center; padding:1.5em; border-top:1px solid #e4dac8; color:#665e53; background-color:#fffdf8; }
-  </style>
+  footer {
+    text-align: center;
+    padding: 1.5em;
+    border-top: 1px solid #e4dac8;
+    color: #665e53;
+    background-color: #fffdf8;
+  }
+</style>
 </head>
 <body>
-  <header>
-    <div class="logo">PureSoulKitchen</div>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="recipes.html">Recipes</a>
-      <a href="in-depth.html">In-Depth</a>
-      <a href="lifestyle.html">Lifestyle</a>
-      <a href="wallpaper.html">Wallpaper</a>
-    </nav>
-  </header>
+<header>
+  <div class="logo">PureSoulKitchen</div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="recipes.html">Recipes</a>
+    <a href="in-depth.html">In-Depth</a>
+    <a href="lifestyle.html">Lifestyle</a>
+    <a href="wallpaper.html">Wallpaper</a>
+  </nav>
+</header>
 
-  <main id="wallpaper-container">
-    <!-- JavaScript 會自動生成卡片 -->
-  </main>
+<main>
+  <!-- 卡片範例 -->
+  <div class="card">
+    <img src="assets-wallpaper/wallpaper-1.png" alt="Wallpaper 1">
+    <div class="card-content">
+      <h2>Wallpaper 1</h2>
+      <p>Beautiful wallpaper for desktop, calm and relaxing.</p>
+      <a class="download-btn" href="assets-wallpaper/wallpaper-1.png" download>Download</a>
+    </div>
+  </div>
 
-  <footer>
-    <p>© 2025 PureSoulKitchen. All rights reserved.</p>
-  </footer>
+  <div class="card">
+    <img src="assets-wallpaper/wallpaper-2.png" alt="Wallpaper 2">
+    <div class="card-content">
+      <h2>Wallpaper 2</h2>
+      <p>Soft colors and gentle gradients to soothe your mind.</p>
+      <a class="download-btn" href="assets-wallpaper/wallpaper-2.png" download>Download</a>
+    </div>
+  </div>
 
-  <script>
-    // 這裡列出所有桌布檔名，放進 assets-wallpaper 資料夾
-    const wallpapers = [
-      'wallpaper-1.png',
-    
-      
-      // 新桌布檔名可直接加在這裡
-    ];
+  <!-- 可以再新增更多桌布 -->
+</main>
 
-    const container = document.getElementById('wallpaper-container');
-
-    wallpapers.forEach(file => {
-      // 建立卡片
-      const card = document.createElement('div');
-      card.className = 'card';
-
-      // 圖片
-      const img = document.createElement('img');
-      img.src = `assets-wallpaper/${file}`;
-      img.alt = file.split('.')[0];
-
-      // 內容
-      const content = document.createElement('div');
-      content.className = 'card-content';
-
-      const h2 = document.createElement('h2');
-      h2.textContent = file.split('.')[0];
-
-      const p = document.createElement('p');
-      p.textContent = 'Download this wallpaper for your desktop or device.';
-
-      const a = document.createElement('a');
-      a.href = `assets-wallpaper/${file}`;
-      a.download = file;
-      a.className = 'download-btn';
-      a.textContent = 'Download';
-
-      // 組合卡片
-      content.appendChild(h2);
-      content.appendChild(p);
-      content.appendChild(a);
-
-      card.appendChild(img);
-      card.appendChild(content);
-
-      container.appendChild(card);
-    });
-  </script>
+<footer>
+  <p>© 2025 PureSoulKitchen. All rights reserved.</p>
+</footer>
 </body>
 </html>
