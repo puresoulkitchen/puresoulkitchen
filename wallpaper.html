@@ -1,23 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Wallpaper | PureSoulKitchen</title>
 <link rel="stylesheet" href="assets/css/style.css"/>
 <style>
 body {
   margin: 0;
   font-family: sans-serif;
-  background-color: #fdfaf6;
+  background-color: #eaf7f1; /* 淺粉綠色背景 */
 }
+
 header {
   padding: 1em 2em;
-  background-color: #fffdf8;
+  background-color: #dff5e8; /* 淺粉綠色 */
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid #e4dac8;
+  border-bottom: 1px solid #c3e8d0;
 }
 header .logo {
   font-weight: bold;
@@ -43,8 +44,8 @@ main {
 }
 
 .card {
-  background-color: #fffdf8;
-  border: 1px solid #e4dac8;
+  background-color: #ffffff; /* 卡片底色 */
+  border: 1px solid #c3e8d0; /* 卡片邊框淺粉綠 */
   border-radius: 12px;
   box-shadow: 0 4px 6px rgba(0,0,0,0.06);
   overflow: hidden;
@@ -69,22 +70,22 @@ main {
 .download-btn {
   display: inline-block;
   padding: 0.4em 0.8em;
-  background-color: #e4dac8;
+  background-color: #c3e8d0;
   border-radius: 6px;
   font-size: 0.9em;
   color: #4e3d30;
   text-decoration: none;
 }
 .download-btn:hover {
-  background-color: #d2c5a8;
+  background-color: #a8d9b5;
 }
 
 footer {
   text-align: center;
   padding: 1.5em;
-  border-top: 1px solid #e4dac8;
+  border-top: 1px solid #c3e8d0;
   color: #665e53;
-  background-color: #fffdf8;
+  background-color: #eaf7f1;
 }
 </style>
 </head>
@@ -101,7 +102,7 @@ footer {
 </header>
 
 <main id="wallpaper-container">
-  <!-- 卡片由 JS 自動生成 -->
+  <!-- JS 自動生成卡片 -->
 </main>
 
 <footer>
@@ -114,7 +115,7 @@ const wallpapers = [
   "wallpaper-1.png",
   "wallpaper-2.png",
   "wallpaper-3.png"
-  // 之後新增桌布，只需在這裡加檔名
+  // 新桌布只要加檔名即可
 ];
 
 const container = document.getElementById("wallpaper-container");
