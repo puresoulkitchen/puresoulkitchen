@@ -6,36 +6,66 @@
 <title>Wallpaper | PureSoulKitchen</title>
 <link rel="stylesheet" href="assets/css/style.css"/>
 <style>
-.article-list {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5em;
-  padding: 2em;
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background-color: #fdfaf6;
 }
-.article-row {
+
+header {
+  padding: 1em 2em;
+  background-color: #fffdf8;
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #e4dac8;
+}
+header .logo {
+  font-weight: bold;
+  font-size: 1.3em;
+  color: #4e3d30;
+}
+header nav a {
+  margin-left: 1.5em;
+  text-decoration: none;
+  color: #4e3d30;
+  font-weight: 500;
+}
+header nav a:hover {
+  text-decoration: underline;
+}
+
+/* 卡片式 Grid */
+main {
+  padding: 2em;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 1.5em;
+}
+
+.card {
   background-color: #fffdf8;
   border: 1px solid #e4dac8;
   border-radius: 12px;
   box-shadow: 0 4px 6px rgba(0,0,0,0.06);
   overflow: hidden;
   transition: transform 0.2s;
-  align-items: center;
-}
-.article-row:hover {
-  transform: translateY(-2px);
-}
-.article-row img {
-  width: 180px;
-  height: 120px;
-  object-fit: cover;
-  border-right: 1px solid #eee;
-}
-.article-content {
-  padding: 1em;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  align-items: center;
+}
+.card:hover {
+  transform: translateY(-2px);
+}
+.card img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+}
+.card-content {
+  padding: 0.5em;
+  width: 100%;
+  text-align: center;
 }
 .download-btn {
   display: inline-block;
@@ -45,11 +75,17 @@
   font-size: 0.9em;
   color: #4e3d30;
   text-decoration: none;
-  text-align: center;
-  width: fit-content;
 }
 .download-btn:hover {
   background-color: #d2c5a8;
+}
+
+footer {
+  text-align: center;
+  padding: 1.5em;
+  border-top: 1px solid #e4dac8;
+  color: #665e53;
+  background-color: #fffdf8;
 }
 </style>
 </head>
@@ -65,25 +101,25 @@
   </nav>
 </header>
 
-<main class="article-list">
-  <div class="article-row">
-    <img src="assets-wallpaper/wallpaper-1.png" alt="Wallpaper 1">
-    <div class="article-content">
-      <a class="download-btn" href="assets-wallpaper/wallpaper-1.png" download>Download</a>
+<main>
+  <div class="card">
+    <img src="assets/wallpaper/wallpaper-1.png" alt="Wallpaper 1">
+    <div class="card-content">
+      <a class="download-btn" href="assets/wallpaper/wallpaper-1.png" download>Download</a>
     </div>
   </div>
 
-  <div class="article-row">
-    <img src="assets-wallpaper/wallpaper-2.png" alt="Wallpaper 2">
-    <div class="article-content">
-      <a class="download-btn" href="assets-wallpaper/wallpaper-2.png" download>Download</a>
+  <div class="card">
+    <img src="assets/wallpaper/wallpaper-2.png" alt="Wallpaper 2">
+    <div class="card-content">
+      <a class="download-btn" href="assets/wallpaper/wallpaper-2.png" download>Download</a>
     </div>
   </div>
 
-  <div class="article-row">
-    <img src="assets-wallpaper/wallpaper-3.png" alt="Wallpaper 3">
-    <div class="article-content">
-      <a class="download-btn" href="assets-wallpaper/wallpaper-3.png" download>Download</a>
+  <div class="card">
+    <img src="assets/wallpaper/wallpaper-3.png" alt="Wallpaper 3">
+    <div class="card-content">
+      <a class="download-btn" href="assets/wallpaper/wallpaper-3.png" download>Download</a>
     </div>
   </div>
 </main>
