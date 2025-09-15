@@ -1,66 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-YW8N61J1S9"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-YW8N61J1S9');
-</script>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Wallpaper | PureSoulKitchen</title>
-  <link rel="stylesheet" href="assets/css/style.css"/>
+  <link rel="stylesheet" href="assets/css/style.css">
   <style>
-    .article-list {
+    body {
+      font-family: sans-serif;
+      background-color: #fdfaf6;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      padding: 1em 2em;
+      background-color: #fffdf8;
       display: flex;
-      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid #e4dac8;
+    }
+    header .logo {
+      font-weight: bold;
+      font-size: 1.3em;
+      color: #4e3d30;
+    }
+    header nav a {
+      margin-left: 1.5em;
+      text-decoration: none;
+      color: #4e3d30;
+      font-weight: 500;
+    }
+    header nav a:hover {
+      text-decoration: underline;
+    }
+
+    main {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
       gap: 1.5em;
       padding: 2em;
     }
-    .article-row {
-      display: flex;
+
+    .card {
       background-color: #fffdf8;
       border: 1px solid #e4dac8;
       border-radius: 12px;
       box-shadow: 0 4px 6px rgba(0,0,0,0.06);
       overflow: hidden;
+      display: flex;
+      flex-direction: column;
       transition: transform 0.2s;
     }
-    .article-row:hover {
+    .card:hover {
       transform: translateY(-2px);
     }
-    .article-row img {
-      width: 180px;
-      height: 120px;
+    .card img {
+      width: 100%;
+      height: 180px;
       object-fit: cover;
-      border-right: 1px solid #eee;
     }
-    .article-content {
+    .card-content {
       padding: 1em;
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      flex-grow: 1;
     }
-    .article-content h2 {
-      margin: 0 0 0.5em 0;
+    .card-content h2 {
       font-size: 1.1em;
+      margin: 0 0 0.5em 0;
       color: #4e3d30;
     }
-    .article-content p {
-      margin: 0 0 0.8em 0;
+    .card-content p {
+      font-size: 0.95em;
       color: #665e53;
-    }
-    .article-content a {
-      text-decoration: none;
-      color: #4e3d30;
-      font-weight: bold;
-    }
-    .article-content a:hover {
-      text-decoration: underline;
+      margin: 0 0 1em 0;
+      flex-grow: 1;
     }
     .download-btn {
       display: inline-block;
@@ -69,11 +84,19 @@
       border-radius: 6px;
       font-size: 0.9em;
       color: #4e3d30;
+      text-decoration: none;
       text-align: center;
-      width: fit-content;
     }
     .download-btn:hover {
       background-color: #d2c5a8;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1.5em;
+      border-top: 1px solid #e4dac8;
+      color: #665e53;
+      background-color: #fffdf8;
     }
   </style>
 </head>
@@ -89,30 +112,29 @@
     </nav>
   </header>
 
-  <main class="article-list">
-
-    <div class="article-row">
+  <main>
+    <div class="card">
       <img src="assets-wallpaper/abstract-green.jpg" alt="Abstract Green Wallpaper">
-      <div class="article-content">
-        <h2>Abstract Green Wallpaper</h2>
-        <p>A calming abstract wallpaper inspired by plant-based energy.</p>
+      <div class="card-content">
+        <h2>Abstract Green</h2>
+        <p>Calming abstract wallpaper inspired by plant-based energy.</p>
         <a class="download-btn" href="assets-wallpaper/abstract-green.jpg" download>Download</a>
       </div>
     </div>
 
-    <div class="article-row">
+    <div class="card">
       <img src="assets-wallpaper/nature-calm.jpg" alt="Nature Calm Wallpaper">
-      <div class="article-content">
-        <h2>Nature Calm Wallpaper</h2>
-        <p>Bring serenity to your desktop with soft, nature-inspired tones.</p>
+      <div class="card-content">
+        <h2>Nature Calm</h2>
+        <p>Serene nature-inspired wallpaper to soothe your mind.</p>
         <a class="download-btn" href="assets-wallpaper/nature-calm.jpg" download>Download</a>
       </div>
     </div>
 
-    <div class="article-row">
+    <div class="card">
       <img src="assets-wallpaper/abstract-soft.jpg" alt="Abstract Soft Tones Wallpaper">
-      <div class="article-content">
-        <h2>Abstract Soft Tones Wallpaper</h2>
+      <div class="card-content">
+        <h2>Abstract Soft Tones</h2>
         <p>Gentle gradients and soft shapes to enhance mindfulness.</p>
         <a class="download-btn" href="assets-wallpaper/abstract-soft.jpg" download>Download</a>
       </div>
