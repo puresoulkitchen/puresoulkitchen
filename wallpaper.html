@@ -51,11 +51,13 @@ header nav a:hover {
 main {
   padding: 2em;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* 卡片寬度可調整 */
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* 卡片最小寬度 250px，自動換行 */
   gap: 1.5em;
 }
 
 .card {
+  width: 100%;           /* 由 grid 控制寬度 */
+  height: 400px;         /* 卡片高度，可依需求調整 */
   background-color: #ffffff;
   border: 1px solid #c3e8d0;
   border-radius: 12px;
@@ -71,9 +73,9 @@ main {
 }
 
 .card img {
-  width: 300%;
-  height: 660px; /* 可調整卡片圖片高度 */
-  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* 填滿卡片，保持比例 */
 }
 
 .card-content {
@@ -132,8 +134,6 @@ const wallpapers = [
   "wallpaper-1.png",
   "wallpaper-2.1.png",
   "wallpaper-3.png",
-   "wallpaper-4.png",
-   "wallpaper-5.png",
   // 新桌布只要加檔名即可
 ];
 
