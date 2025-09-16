@@ -56,13 +56,15 @@ main {
 }
 
 .card {
-  display: flex;
-  flex-direction: column;
+  width: 100%;
+  height: 400px;        /* 卡片高度，可自行調整 */
   background-color: #ffffff;
   border: 1px solid #c3e8d0;
   border-radius: 12px;
   box-shadow: 0 4px 6px rgba(0,0,0,0.06);
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
   transition: transform 0.2s;
 }
 .card:hover {
@@ -71,16 +73,17 @@ main {
 
 .card img {
   width: 100%;
-  height: auto;       /* 高度自動依比例 */
-  display: block;
+  height: 75%;          /* 圖片占上方 75% */
+  object-fit: cover;
 }
 
 .card-content {
   width: 100%;
-  padding: 0.5em;
-  text-align: center;
-  background-color: #ffffff; /* 可選背景色 */
-  flex-shrink: 0;            /* 保持固定區域給下載按鈕 */
+  height: 25%;          /* 下方 25% 留給下載按鈕 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.3em;
 }
 
 /* 下載按鈕圖示 */
