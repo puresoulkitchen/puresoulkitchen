@@ -1,127 +1,222 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YW8N61J1S9"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-YW8N61J1S9');
+  </script>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Zesty Cilantro-Lime Salsa | PureSoulKitchen</title>
-  <meta name="description" content="Bright and fresh cilantro-lime salsa recipe. Perfect for tacos, bowls, chips, or roasted veggies. Quick, plant-based, and full of flavor.">
-  <link rel="icon" href="../assets/images/favicon.png" type="image/png" />
-  <link rel="stylesheet" href="../assets/css/style.css"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Zesty Cilantro-Lime Salsa</title>
   <style>
-    .recipe-container {
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
       max-width: 900px;
-      margin: 3em auto;
-      padding: 0 1em;
-      line-height: 1.8;
-      color: #4e3d30;
+      margin: 2rem auto 4rem auto;
+      background-color: #f9f6f1;
+      color: #4a4a4a;
+      padding: 0 1rem;
+      position: relative;
+      min-height: 100vh;
+      box-sizing: border-box;
     }
-    .recipe-container h1 {
-      font-size: 2.2em;
-      margin-bottom: 1em;
+    h1, h2, h3 {
+      color: #3b3b3b;
+      margin-bottom: 0.6rem;
+    }
+    h1 {
       text-align: center;
-    }
-    .recipe-container h2 {
-      margin-top: 1.5em;
-      margin-bottom: 0.5em;
       font-weight: 700;
+      margin-bottom: 1.5rem;
+    }
+    .introduction, .conclusion {
+      background: #fff8e7;
+      border-left: 6px solid #f4c95d;
+      padding: 1rem 1.5rem;
+      margin-bottom: 2rem;
+      border-radius: 6px;
+      font-style: italic;
+    }
+    footer.conclusion {
+      font-weight: 600;
+      font-style: normal;
+      text-align: center;
+      padding-top: 1rem;
+      border-top: 1px solid #ddd;
+      color: #444;
+    }
+    .section {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgb(0 0 0 / 0.05);
+      padding: 1.5rem;
+      margin-bottom: 3rem;
+    }
+    .section h2 {
+      margin-top: 0;
       color: #d9643e;
     }
-    .recipe-container p {
-      margin: 0.5em 0;
-    }
-    .recipe-container ul {
-      margin: 0.5em 0 1em 2em;
-    }
-    .recipe-container img {
+    .hero-img {
+      display: block;
       max-width: 100%;
-      margin: 1.5em 0;
-      border-radius: 10px;
+      height: auto;
+      border-radius: 12px;
+      margin: 1rem auto 2.5rem auto;
+      box-shadow: 0 4px 10px rgb(0 0 0 / 0.1);
     }
-    footer .footer-links a {
-      margin: 0 0.7em;
-      color: #4e3d30;
-      text-decoration: none;
+    ul, ol {
+      margin: 0 0 1rem 1.25rem;
+    }
+    ul li::marker, ol li::marker {
+      color: #d9643e;
+      font-weight: bold;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 1.5rem;
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 0.6rem;
+      text-align: left;
+    }
+    th {
+      background-color: #f0f4f8;
       font-weight: 600;
+      color: #2e4a7d;
     }
-    footer .footer-links a:hover {
-      text-decoration: underline;
+    button.back-home {
+      position: fixed;
+      top: 1rem;
+      left: 1rem;
+      background-color: #d9643e;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      padding: 0.5rem 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      box-shadow: 0 2px 6px rgb(0 0 0 / 0.2);
+      transition: background-color 0.3s ease;
+      z-index: 1000;
+    }
+    button.back-home:hover,
+    button.back-home:focus {
+      background-color: #b7522b;
+      outline: none;
+    }
+    nav.social-share {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #ddd;
+      position: fixed;
+      bottom: 1rem;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: #f9f6f1dd;
+      border-radius: 30px;
+      box-shadow: 0 4px 10px rgb(0 0 0 / 0.1);
+      padding-left: 2rem;
+      padding-right: 2rem;
+      z-index: 100;
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+    nav.social-share a {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: #4a4a4a;
+      text-decoration: none;
+      padding: 0.4rem 0.8rem;
+      border-radius: 20px;
+      transition: background-color 0.3s ease, color 0.3s ease;
+      border: 1.5px solid transparent;
+    }
+    nav.social-share a svg {
+      width: 22px;
+      height: 22px;
+      fill: currentColor;
+    }
+    nav.social-share a:hover,
+    nav.social-share a:focus {
+      background-color: #d9643e;
+      color: white;
+      border-color: #b7522b;
     }
   </style>
 </head>
 <body>
-  <header>
-    <div class="logo">PureSoulKitchen</div>
-    <nav>
-      <a href="../index.html">Home</a>
-      <a href="../recipes.html">Recipes</a>
-      <a href="../in-depth.html">In-Depth</a>
-      <a href="../lifestyle.html">Lifestyle</a>
-      <a href="about.html">About Us</a>
-      <a href="contact.html">Contact Us</a>
-      <a href="#" onclick="toggleLanguage()">中文</a>
-      <a href="https://www.instagram.com/puresoulkitchen/" target="_blank">Instagram</a>
-      <a href="https://www.threads.net/@puresoulkitchen" target="_blank">Threads</a>
-    </nav>
-  </header>
+  <button class="back-home" aria-label="Return to homepage" onclick="window.location.href='/'">
+    ← Back to Home
+  </button>
 
-  <main class="recipe-container">
-    <h1>Zesty Cilantro-Lime Salsa</h1>
+  <h1>Zesty Cilantro-Lime Salsa</h1>
 
-    <img src="../assets/images/zesty-cilantro.png" alt="Zesty Cilantro-Lime Salsa" />
+  <img src="../assets/images/zesty-cilantro.png" alt="Zesty Cilantro-Lime Salsa" class="hero-img" />
 
-    <p><strong>Bright, fresh, and full of flavor — this cilantro-lime salsa instantly lifts any meal.</strong> Perfect for chips, tacos, bowls, or spooning over roasted veggies.</p>
+  <section class="introduction">
+    <p>Bright, fresh, and full of flavor — this cilantro-lime salsa is perfect for tacos, bowls, or dipping your favorite chips. A simple way to bring zest to your meals!</p>
+  </section>
 
-    <h2>Why You’ll Love It</h2>
-    <p>Ever come home after a long day and feel like your brain needs a little vacation? 🍋 This salsa is basically a five-minute mood booster. Fresh, zesty, and full of life — it’s like giving your taste buds a tiny dance party. Bonus: your cat might sneak a sniff 😹.</p>
-    <p>Quick, easy, and versatile — a simple recipe to brighten your meals and your day.</p>
+  <article class="section">
+    <h2>🍅 Ingredients (Serves 2–4)</h2>
+    <table>
+      <thead>
+        <tr><th>Ingredient</th><th>Quantity</th><th>Notes</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Fresh cilantro leaves</td><td>1 cup</td><td>Loose, stems removed</td></tr>
+        <tr><td>Tomatoes</td><td>2</td><td>Diced</td></tr>
+        <tr><td>Red bell pepper</td><td>1/2 cup</td><td>Roasted or raw, chopped</td></tr>
+        <tr><td>Cucumber</td><td>1 small</td><td>Seeded, diced (optional)</td></tr>
+        <tr><td>Jalapeño</td><td>1</td><td>Seeds removed (optional)</td></tr>
+        <tr><td>Lime</td><td>2</td><td>Zest and juice</td></tr>
+        <tr><td>Extra-virgin olive oil</td><td>2 tbsp</td><td></td></tr>
+        <tr><td>Ground cumin</td><td>1/2 tsp</td><td>Or 1 tsp toasted seeds</td></tr>
+        <tr><td>Smoked paprika</td><td>1/4 tsp</td><td>Optional</td></tr>
+        <tr><td>Maple syrup or agave</td><td>1 tsp</td><td>Optional</td></tr>
+        <tr><td>Salt & black pepper</td><td>To taste</td><td></td></tr>
+        <tr><td>Parsley</td><td>1–2 tbsp</td><td>Optional, for milder flavor</td></tr>
+      </tbody>
+    </table>
+  </article>
 
-    <h2>Ingredients</h2>
-    <ul>
-      <li>1 cup fresh cilantro leaves (loosely packed, stems removed)</li>
-      <li>2 ripe tomatoes, diced</li>
-      <li>1/2 cup roasted red bell pepper, chopped (or raw for extra crunch)</li>
-      <li>1 small cucumber, seeded and diced (optional)</li>
-      <li>1 jalapeño, seeds removed (optional — mild heat)</li>
-      <li>Zest and juice of 2 limes</li>
-      <li>2 tbsp extra-virgin olive oil</li>
-      <li>1/2 tsp ground cumin (or 1 tsp toasted cumin seeds)</li>
-      <li>1/4 tsp smoked paprika (optional)</li>
-      <li>1 tsp maple syrup or agave (optional)</li>
-      <li>Salt & freshly cracked black pepper to taste</li>
-      <li>Optional: 1–2 tbsp parsley (for gentler herb flavor)</li>
-    </ul>
-
-    <h2>Instructions</h2>
+  <article class="section">
+    <h2>🧴 Instructions</h2>
     <ol>
-      <li><strong>Roast the red pepper (optional):</strong> Char until blackened, then peel, deseed, and chop.</li>
-      <li><strong>Prep the veggies:</strong> Dice tomatoes, cucumber, jalapeño, and roughly chop cilantro.</li>
-      <li><strong>Mix base:</strong> Whisk together lime juice + zest, olive oil, cumin, smoked paprika, and maple syrup.</li>
-      <li><strong>Combine:</strong> Fold in tomatoes, red pepper, cucumber, jalapeño, and cilantro gently.</li>
-      <li><strong>Season:</strong> Add salt and pepper. Adjust lime or salt to taste.</li>
-      <li><strong>Chill & serve:</strong> Let sit 20–30 minutes for flavors to meld. Serve chilled or at room temperature.</li>
+      <li>Roast the red pepper (optional) until charred, peel, deseed, and chop.</li>
+      <li>Dice tomatoes, cucumber, jalapeño, and roughly chop cilantro.</li>
+      <li>Whisk together lime juice + zest, olive oil, cumin, smoked paprika, and maple syrup.</li>
+      <li>Fold in tomatoes, red pepper, cucumber, jalapeño, and cilantro gently.</li>
+      <li>Season with salt and pepper to taste.</li>
+      <li>Let sit 20–30 minutes for flavors to meld. Serve chilled or at room temperature.</li>
     </ol>
+  </article>
 
-    <h2>Tips & Tricks</h2>
+  <article class="section">
+    <h2>💡 Tips & Serving Ideas</h2>
     <ul>
       <li>Mix parsley with cilantro for a milder flavor if desired.</li>
-      <li>Keep it refrigerated 3–4 days, best within 48 hours.</li>
-      <li>Perfect as a topping for tacos, grain bowls, roasted veggies, or simply with tortilla chips.</li>
+      <li>Refrigerate 3–4 days; best within 48 hours.</li>
+      <li>Great as topping for tacos, grain bowls, roasted veggies, or with tortilla chips.</li>
     </ul>
+  </article>
 
-    <h2>Final Thought</h2>
-    <p>This salsa is proof that a few fresh ingredients and a bit of lime can completely brighten a meal. Chop, mix, taste, chill — and suddenly your kitchen feels happier, your meal tastes brighter, and your cat might even approve 😹.</p>
+  <section class="introduction">
+    <p>Chop, mix, taste, chill — and suddenly your meal feels brighter and more vibrant. A simple recipe that brings joy to your plate and a little zing to your day!</p>
+  </section>
 
-  </main>
+  <footer class="conclusion"></footer>
 
-  <footer>
-    <p>© 2025 PureSoulKitchen. All rights reserved.</p>
-    <div class="footer-links">
-      <a href="terms.html">Terms of Use / Disclaimer</a>
-      <a href="privacy.html">Privacy Policy</a>
-      <a href="contact.html">Contact Us</a>
-    </div>
-  </footer>
-
-  <script src="../assets/js/toggle-lang.js"></script>
-</body>
-</html>
+  <nav class="social-share" aria-label="Social media sharing">
+    <a href="https://www.instagram.com/puresoulkitchen/" target="_blank" rel="noopener noreferrer" aria-label
