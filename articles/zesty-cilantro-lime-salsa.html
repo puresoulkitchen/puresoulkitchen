@@ -9,72 +9,49 @@
     gtag('js', new Date());
     gtag('config', 'G-YW8N61J1S9');
   </script>
+
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Zesty Cilantro-Lime Salsa</title>
+  <title>🌿 Zesty Cilantro-Lime Salsa</title>
+
   <style>
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      line-height: 1.6;
-      max-width: 900px;
-      margin: 2rem auto 4rem auto;
+      font-family: "Segoe UI", sans-serif;
       background-color: #f9f6f1;
-      color: #4a4a4a;
+      color: #333;
+      line-height: 1.7;
+      max-width: 900px;
+      margin: 2rem auto;
       padding: 0 1rem;
       position: relative;
-      min-height: 100vh;
-      box-sizing: border-box;
-    }
-    h1, h2, h3 {
-      color: #3b3b3b;
-      margin-bottom: 0.6rem;
     }
     h1 {
       text-align: center;
-      font-weight: 700;
-      margin-bottom: 1.5rem;
+      font-weight: bold;
+      color: #333;
     }
-    .introduction, .conclusion {
-      background: #fff8e7;
-      border-left: 6px solid #f4c95d;
+    .intro {
+      background-color: #fff5dd;
+      border-left: 6px solid #f0c94d;
       padding: 1rem 1.5rem;
+      border-radius: 8px;
       margin-bottom: 2rem;
-      border-radius: 6px;
       font-style: italic;
     }
-    footer.conclusion {
-      font-weight: 600;
-      font-style: normal;
-      text-align: center;
-      padding-top: 1rem;
-      border-top: 1px solid #ddd;
-      color: #444;
-    }
-    .section {
-      background: white;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgb(0 0 0 / 0.05);
-      padding: 1.5rem;
-      margin-bottom: 3rem;
-    }
-    .section h2 {
-      margin-top: 0;
-      color: #d9643e;
-    }
-    .hero-img {
+    img {
       display: block;
       max-width: 100%;
-      height: auto;
+      margin: 1.5rem auto;
       border-radius: 12px;
-      margin: 1rem auto 2.5rem auto;
-      box-shadow: 0 4px 10px rgb(0 0 0 / 0.1);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    h2 {
+      color: #d9643e;
+      margin-top: 2rem;
     }
     ul, ol {
-      margin: 0 0 1rem 1.25rem;
-    }
-    ul li::marker, ol li::marker {
-      color: #d9643e;
-      font-weight: bold;
+      margin-left: 1.5rem;
+      margin-bottom: 1rem;
     }
     table {
       width: 100%;
@@ -91,6 +68,21 @@
       font-weight: 600;
       color: #2e4a7d;
     }
+    .section {
+      background-color: #ffffff;
+      padding: 1.2rem 1.5rem;
+      border-radius: 10px;
+      margin-bottom: 2rem;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    }
+    .conclusion {
+      font-weight: bold;
+      padding-top: 1rem;
+      margin-top: 3rem;
+      border-top: 1px solid #ccc;
+      text-align: center;
+    }
+
     button.back-home {
       position: fixed;
       top: 1rem;
@@ -106,11 +98,11 @@
       transition: background-color 0.3s ease;
       z-index: 1000;
     }
-    button.back-home:hover,
-    button.back-home:focus {
+    button.back-home:hover, button.back-home:focus {
       background-color: #b7522b;
       outline: none;
     }
+
     nav.social-share {
       display: flex;
       justify-content: center;
@@ -130,6 +122,8 @@
       z-index: 100;
       font-weight: 600;
       font-size: 0.95rem;
+      height: 60px;
+      align-items: center;
     }
     nav.social-share a {
       display: flex;
@@ -147,8 +141,7 @@
       height: 22px;
       fill: currentColor;
     }
-    nav.social-share a:hover,
-    nav.social-share a:focus {
+    nav.social-share a:hover, nav.social-share a:focus {
       background-color: #d9643e;
       color: white;
       border-color: #b7522b;
@@ -156,19 +149,18 @@
   </style>
 </head>
 <body>
-  <button class="back-home" aria-label="Return to homepage" onclick="window.location.href='/'">
-    ← Back to Home
-  </button>
 
-  <h1>Zesty Cilantro-Lime Salsa</h1>
+  <button class="back-home" onclick="window.location.href='/'">← Back to Home</button>
 
-  <img src="../assets/images/zesty-cilantro.png" alt="Zesty Cilantro-Lime Salsa" class="hero-img" />
+  <h1>🌿 Zesty Cilantro-Lime Salsa</h1>
 
-  <section class="introduction">
+  <div class="intro">
     <p>Bright, fresh, and full of flavor — this cilantro-lime salsa is perfect for tacos, bowls, or dipping your favorite chips. A simple way to bring zest to your meals!</p>
-  </section>
+  </div>
 
-  <article class="section">
+  <img src="../assets/images/zesty-cilantro.png" alt="Zesty Cilantro-Lime Salsa" />
+
+  <div class="section">
     <h2>🍅 Ingredients (Serves 2–4)</h2>
     <table>
       <thead>
@@ -189,9 +181,9 @@
         <tr><td>Parsley</td><td>1–2 tbsp</td><td>Optional, for milder flavor</td></tr>
       </tbody>
     </table>
-  </article>
+  </div>
 
-  <article class="section">
+  <div class="section">
     <h2>🧴 Instructions</h2>
     <ol>
       <li>Roast the red pepper (optional) until charred, peel, deseed, and chop.</li>
@@ -201,32 +193,39 @@
       <li>Season with salt and pepper to taste.</li>
       <li>Let sit 20–30 minutes for flavors to meld. Serve chilled or at room temperature.</li>
     </ol>
-  </article>
+  </div>
 
-  <article class="section">
+  <div class="section">
     <h2>💡 Tips & Serving Ideas</h2>
     <ul>
       <li>Mix parsley with cilantro for a milder flavor if desired.</li>
       <li>Refrigerate 3–4 days; best within 48 hours.</li>
       <li>Great as topping for tacos, grain bowls, roasted veggies, or with tortilla chips.</li>
     </ul>
-  </article>
+  </div>
 
-  <section class="introduction">
+  <div class="section conclusion">
     <p>Chop, mix, taste, chill — and suddenly your meal feels brighter and more vibrant. A simple recipe that brings joy to your plate and a little zing to your day!</p>
-  </section>
+  </div>
 
-  <footer class="conclusion"></footer>
+  <div style="height: 80px;"></div>
 
   <nav class="social-share" aria-label="Social media sharing">
     <a href="https://www.instagram.com/puresoulkitchen/" target="_blank" rel="noopener noreferrer" aria-label="Visit PureSoulKitchen Instagram">
-      <svg viewBox="0 0 24 24"><path d="M7.75 2h8.5A5.75 5.75 0 0122 7.75v8.5A5.75 5.75 0 0116.25 22h-8.5A5.75 5.75 0 012 16.25v-8.5A5.75 5.75 0 017.75 2zm0 1.5A4.25 4.25 0 003.5 7.75v8.5A4.25 4.25 0 007.75 20.5h8.5a4.25 4.25 0 004.25-4.25v-8.5A4.25 4.25 0 0016.25 3.5h-8.5zm8.75 2.25a1.125 1.125 0 110 2.25 1.125 1.125 0 010-2.25zM12 7a5 5 0 110 10 5 5 0 010-10zm0 1.5a3.5 3.5 0 100 7 3.5 3.5 0 000-7z"/></svg>
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+        <path d="M7.75 2h8.5A5.75 5.75 0 0122 7.75v8.5A5.75 5.75 0 0116.25 22h-8.5A5.75 5.75 0 012 16.25v-8.5A5.75 5.75 0 017.75 2zm0 1.5A4.25 4.25 0 003.5 7.75v8.5A4.25 4.25 0 007.75 20.5h8.5a4.25 4.25 0 004.25-4.25v-8.5A4.25 4.25 0 0016.25 3.5h-8.5zm8.75 2.25a1.125 1.125 0 110 2.25 1.125 1.125 0 010-2.25zM12 7a5 5 0 110 10 5 5 0 010-10zm0 1.5a3.5 3.5 0 100 7 3.5 3.5 0 000-7z"/>
+      </svg>
       Instagram
     </a>
     <a href="https://www.threads.net/@puresoulkitchen" target="_blank" rel="noopener noreferrer" aria-label="Visit PureSoulKitchen Threads">
-      <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" fill="none"/><path d="M8 14c1-1 2-3 4-3 1.5 0 3 2 3 3" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 10c-2 1-3 3-4 4" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+        <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" fill="none"/>
+        <path d="M8 14c1-1 2-3 4-3 1.5 0 3 2 3 3" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M12 10c-2 1-3 3-4 4" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
       Threads
     </a>
   </nav>
+
 </body>
 </html>
