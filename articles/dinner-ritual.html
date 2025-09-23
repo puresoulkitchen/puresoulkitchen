@@ -1,19 +1,23 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-YW8N61J1S9"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-YW8N61J1S9');
-</script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YW8N61J1S9"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-YW8N61J1S9');
+  </script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>5 Plant-Based Dinner Recipes to Soothe Your Mind and Body (No Garlic, No Onion)</title>
+  <meta name="description" content="Five calming plant-based dinner recipes designed to soothe the mind and body, free from garlic and onion, supporting relaxation and mindful living.">
+  <meta name="keywords" content="Plant-based dinner, no garlic, no onion, calming recipes, mindful eating, stress relief meals, Ayurveda diet">
+  <meta property="og:title" content="5 Plant-Based Dinner Recipes to Soothe Your Mind and Body (No Garlic, No Onion)">
+  <meta property="og:description" content="Discover five soothing plant-based dinner recipes, free from garlic and onion, crafted to calm your nervous system and nourish your body.">
+  <meta property="og:image" content="../assets/images/buddha-bowl.png">
+  <meta property="og:type" content="article">
   <style>
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -86,7 +90,6 @@
       border-top: 1px solid #ddd;
       color: #444;
     }
-    /* 返回首頁按鈕 */
     button.back-home {
       position: fixed;
       top: 1rem;
@@ -106,47 +109,60 @@
       background-color: #b7522b;
       outline: none;
     }
-    /* 社交分享區 */
     nav.social-share {
       display: flex;
       justify-content: center;
-      gap: 2rem;
+      gap: 0.5rem;
       margin-top: 3rem;
-      padding-top: 1rem;
-      border-top: 1px solid #ddd;
+      padding: 0.4rem 0.8rem;
+      border-radius: 25px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
       position: fixed;
       bottom: 1rem;
       left: 50%;
       transform: translateX(-50%);
       background-color: #f9f6f1dd;
-      border-radius: 30px;
-      box-shadow: 0 4px 10px rgb(0 0 0 / 0.1);
-      padding-left: 2rem;
-      padding-right: 2rem;
       z-index: 100;
-      font-weight: 600;
-      font-size: 0.95rem;
+      font-weight: 500;
+      font-size: 0.9rem;
     }
     nav.social-share a {
       display: flex;
       align-items: center;
-      gap: 0.5rem;
+      gap: 0.2rem;
       color: #4a4a4a;
       text-decoration: none;
-      padding: 0.4rem 0.8rem;
-      border-radius: 20px;
+      padding: 0.2rem 0.4rem;
+      border-radius: 18px;
+      border: 1px solid transparent;
       transition: background-color 0.3s ease, color 0.3s ease;
-      border: 1.5px solid transparent;
-    }
-    nav.social-share a svg {
-      width: 22px;
-      height: 22px;
-      fill: currentColor;
     }
     nav.social-share a:hover, nav.social-share a:focus {
       background-color: #d9643e;
       color: white;
       border-color: #b7522b;
+    }
+    #copy-toast {
+      visibility: hidden;
+      position: fixed;
+      bottom: 4rem;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #333;
+      color: #fff;
+      padding: 0.4rem 0.8rem;
+      border-radius: 5px;
+      font-size: 0.8rem;
+      z-index: 999;
+    }
+    #copy-toast.show {
+      visibility: visible;
+      animation: fadeout 2s forwards;
+    }
+    @keyframes fadeout {
+      0% {opacity:1;}
+      80% {opacity:1;}
+      100% {opacity:0;}
     }
   </style>
 </head>
@@ -161,112 +177,122 @@
     <p>That’s why we’ve crafted five peaceful, plant-based dinner recipes that are completely free from the five pungent spices — a tradition rooted in both Ayurvedic and spiritual dietary practices. Each recipe in this list aims to calm your nervous system, support gut health, and bring a quiet kind of joy to your evening.</p>
   </section>
 
+  <!-- Recipe 1 -->
   <article class="recipe">
-    <h2>🥘 Recipe 1: Creamy Pumpkin Millet Stew</h2>
-    <div class="benefit">Benefit: Magnesium-rich pumpkin calms the nervous system; millet is light and grounding.</div>
-    <img src="../assets/images/pumpkin-millet-porridge.png" alt="Creamy Pumpkin Millet Stew" />
-    <h3>Ingredients (2 servings):</h3>
+    <h2>1. Golden Turmeric Lentil Soup</h2>
+    <img src="../assets/images/turmeric-lentil-soup.png" alt="Golden turmeric lentil soup in a bowl" />
+    <div class="benefit">✨ Calms inflammation and warms digestion</div>
+    <h3>Ingredients:</h3>
     <ul>
-      <li>1 cup millet (pre-soaked for 4 hours)</li>
-      <li>1.5 cups pumpkin (peeled, diced)</li>
-      <li>1/2 cup carrots, sliced</li>
-      <li>1 tbsp olive oil</li>
-      <li>1/4 tsp turmeric</li>
-      <li>1/4 tsp cumin powder</li>
+      <li>1 cup red lentils</li>
+      <li>1 carrot, chopped</li>
+      <li>1 small zucchini, chopped</li>
+      <li>1 tsp turmeric powder</li>
+      <li>1 tsp cumin seeds</li>
+      <li>1-inch piece of ginger, grated</li>
+      <li>6 cups water or vegetable broth</li>
       <li>Salt to taste</li>
-      <li>2.5 cups water</li>
     </ul>
     <h3>Instructions:</h3>
     <ol>
-      <li>Heat olive oil in a pot, add turmeric and cumin.</li>
-      <li>Add pumpkin and carrot. Sauté 3 minutes.</li>
-      <li>Add millet and water, bring to boil.</li>
-      <li>Simmer for 20–25 minutes until soft.</li>
-      <li>Add salt, serve warm with fresh coriander.</li>
+      <li>Rinse lentils thoroughly.</li>
+      <li>In a large pot, lightly toast cumin seeds until fragrant.</li>
+      <li>Add chopped vegetables, ginger, and turmeric. Stir briefly.</li>
+      <li>Pour in water/broth and lentils. Simmer for 20–25 minutes.</li>
+      <li>Season with salt and serve warm with brown rice or quinoa.</li>
     </ol>
   </article>
 
+  <!-- Recipe 2 -->
   <article class="recipe">
-    <h2>🥗 Recipe 2: Quinoa & Steamed Greens with Tahini Dressing</h2>
-    <div class="benefit">Benefit: Quinoa provides protein and tryptophan; greens like bok choy aid liver detox.</div>
-    <img src="../assets/images/quinoa-root-veggies.png" alt="Quinoa & Steamed Greens" />
+    <h2>2. Creamy Coconut Vegetable Stew</h2>
+    <img src="../assets/images/coconut-stew.png" alt="Creamy coconut vegetable stew in a bowl" />
+    <div class="benefit">🌿 Soothes the nervous system with healthy fats</div>
+    <h3>Ingredients:</h3>
+    <ul>
+      <li>1 cup pumpkin, cubed</li>
+      <li>1 cup green beans</li>
+      <li>1 cup cauliflower florets</li>
+      <li>1 can coconut milk</li>
+      <li>1 tsp coriander powder</li>
+      <li>½ tsp turmeric</li>
+      <li>1 tbsp fresh lime juice</li>
+      <li>Salt to taste</li>
+    </ul>
+    <h3>Instructions:</h3>
+    <ol>
+      <li>Steam pumpkin, beans, and cauliflower until tender.</li>
+      <li>In a pot, warm coconut milk and spices gently.</li>
+      <li>Add the steamed vegetables and simmer for 5 minutes.</li>
+      <li>Finish with lime juice and salt before serving.</li>
+    </ol>
+  </article>
+
+  <!-- Recipe 3 -->
+  <article class="recipe">
+    <h2>3. Quinoa & Steamed Greens Bowl</h2>
+    <img src="../assets/images/quinoa-bowl.png" alt="Quinoa bowl with colorful steamed greens" />
+    <div class="benefit">🥗 Balances energy and provides steady nourishment</div>
     <h3>Ingredients:</h3>
     <ul>
       <li>1 cup cooked quinoa</li>
-      <li>1 cup bok choy, lightly steamed</li>
-      <li>1/2 cup broccoli florets</li>
-      <li>1 tbsp tahini</li>
-      <li>1 tbsp lemon juice</li>
-      <li>1 tsp maple syrup</li>
-      <li>Salt & pepper to taste</li>
+      <li>1 cup steamed broccoli</li>
+      <li>1 cup steamed kale</li>
+      <li>½ avocado, sliced</li>
+      <li>1 tbsp sesame seeds</li>
+      <li>Dressing: 1 tbsp tahini + 1 tsp lemon juice + warm water</li>
     </ul>
     <h3>Instructions:</h3>
     <ol>
-      <li>Arrange quinoa and greens in a bowl.</li>
-      <li>Mix tahini, lemon, maple syrup, and salt.</li>
-      <li>Drizzle dressing over bowl. Serve.</li>
+      <li>Cook quinoa and let it cool slightly.</li>
+      <li>Arrange steamed greens and avocado on top of quinoa.</li>
+      <li>Whisk dressing ingredients until creamy.</li>
+      <li>Pour dressing over the bowl and sprinkle with sesame seeds.</li>
     </ol>
   </article>
 
+  <!-- Recipe 4 -->
   <article class="recipe">
-    <h2>🍲 Recipe 3: Lentil Coconut Soup with Calming Herbs</h2>
-    <div class="benefit">Benefit: Lentils balance blood sugar; coconut milk soothes the gut; ashwagandha or tulsi supports stress relief.</div>
-    <img src="../assets/images/spinach-almond-orange-salad.png" alt="Lentil Coconut Soup" />
+    <h2>4. Gentle Miso Vegetable Soup</h2>
+    <img src="../assets/images/miso-soup.png" alt="Miso soup with tofu and vegetables" />
+    <div class="benefit">🍵 Restores gut balance and calms the mind</div>
     <h3>Ingredients:</h3>
     <ul>
-      <li>1/2 cup yellow lentils</li>
-      <li>2 cups water</li>
-      <li>1/2 cup coconut milk</li>
-      <li>1/4 tsp ground coriander</li>
-      <li>1/4 tsp dried tulsi or 1/4 tsp ashwagandha powder</li>
-      <li>Pinch of Himalayan salt</li>
+      <li>1 tbsp white miso paste</li>
+      <li>1 cup napa cabbage, chopped</li>
+      <li>½ cup cubed tofu</li>
+      <li>1 sheet nori, cut into strips</li>
+      <li>3 cups warm water</li>
     </ul>
     <h3>Instructions:</h3>
     <ol>
-      <li>Rinse and boil lentils until soft.</li>
-      <li>Add coconut milk, herbs, and salt.</li>
-      <li>Simmer for 10 minutes. Serve warm.</li>
+      <li>Bring water to a gentle simmer, add cabbage and tofu.</li>
+      <li>Simmer until tender, about 5–6 minutes.</li>
+      <li>Turn off the heat and whisk miso paste into the warm broth.</li>
+      <li>Garnish with nori strips before serving.</li>
     </ol>
   </article>
 
+  <!-- Recipe 5 -->
   <article class="recipe">
-    <h2>🍚 Recipe 4: Sweet Potato & Brown Rice Buddha Bowl</h2>
-    <div class="benefit">Benefit: Complex carbs promote serotonin; sesame oil nourishes the skin and gut lining.</div>
-    <img src="../assets/images/buddha-bowl.png" alt="Sweet Potato & Brown Rice Buddha Bowl" />
+    <h2>5. Sweet Potato & Chickpea Buddha Bowl</h2>
+    <img src="../assets/images/buddha-bowl.png" alt="Buddha bowl with sweet potato, chickpeas, and greens" />
+    <div class="benefit">🍠 Comforting, grounding, and deeply satisfying</div>
     <h3>Ingredients:</h3>
     <ul>
-      <li>1 cup cooked brown rice</li>
-      <li>1 cup steamed sweet potatoes, cubed</li>
-      <li>1/2 avocado, sliced</li>
-      <li>1 tsp toasted sesame oil</li>
-      <li>Sesame seeds and microgreens for garnish</li>
-    </ul>
-    <h3>Instructions:</h3>
-    <ol>
-      <li>Layer brown rice, sweet potato, and avocado in a bowl.</li>
-      <li>Drizzle sesame oil.</li>
-      <li>Top with seeds and greens. Serve.</li>
-    </ol>
-  </article>
-
-  <article class="recipe">
-    <h2>🍝 Recipe 5: Zucchini Noodles with Cashew Basil Cream</h2>
-    <div class="benefit">Benefit: Light digestion for evening; cashews provide calming magnesium.</div>
-    <img src="../assets/images/chickpea-coconut-curry.png" alt="Zucchini Noodles with Cashew Basil Cream" />
-    <h3>Ingredients:</h3>
-    <ul>
-      <li>2 zucchinis, spiralized</li>
-      <li>1/4 cup raw cashews (soaked)</li>
-      <li>1/4 cup water</li>
-      <li>5–6 basil leaves</li>
-      <li>1 tbsp nutritional yeast</li>
+      <li>1 large sweet potato, roasted</li>
+      <li>1 cup cooked chickpeas</li>
+      <li>1 cup sautéed spinach</li>
+      <li>½ cup cooked millet or rice</li>
+      <li>1 tsp smoked paprika</li>
+      <li>1 tbsp olive oil</li>
       <li>Salt to taste</li>
     </ul>
     <h3>Instructions:</h3>
     <ol>
-      <li>Blend cashews, basil, water, yeast, and salt into cream.</li>
-      <li>Toss with zucchini noodles.</li>
-      <li>Let sit 5 mins before serving to soften noodles.</li>
+      <li>Roast cubed sweet potato with olive oil and paprika at 200°C for 25 minutes.</li>
+      <li>Assemble a bowl with millet/rice, chickpeas, spinach, and roasted sweet potato.</li>
+      <li>Drizzle with tahini or olive oil before serving.</li>
     </ol>
   </article>
 
@@ -274,24 +300,33 @@
     <p>Your dinner should be more than just fuel — it can be a ritual of restoration. These five gentle, garlic-free and onion-free recipes are designed to help you slow down, reconnect, and nourish yourself deeply. By aligning what you eat with how you want to feel, you begin to bring peace not only to your body, but also to your spirit.</p>
   </footer>
 
+  <div style="height: 80px;"></div>
+
   <nav class="social-share" aria-label="Social media sharing">
-    <a href="https://www.instagram.com/puresoulkitchen/" target="_blank" rel="noopener noreferrer" aria-label="Visit PureSoulKitchen Instagram">
-      <!-- Instagram SVG icon -->
-      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-        <path d="M7.75 2h8.5A5.75 5.75 0 0122 7.75v8.5A5.75 5.75 0 0116.25 22h-8.5A5.75 5.75 0 012 16.25v-8.5A5.75 5.75 0 017.75 2zm0 1.5A4.25 4.25 0 003.5 7.75v8.5A4.25 4.25 0 007.75 20.5h8.5a4.25 4.25 0 004.25-4.25v-8.5A4.25 4.25 0 0016.25 3.5h-8.5zm8.75 2.25a1.125 1.125 0 110 2.25 1.125 1.125 0 010-2.25zM12 7a5 5 0 110 10 5 5 0 010-10zm0 1.5a3.5 3.5 0 100 7 3.5 3.5 0 000-7z"/>
-      </svg>
-      Instagram
-    </a>
-    <a href="https://www.threads.net/@puresoulkitchen" target="_blank" rel="noopener noreferrer" aria-label="Visit PureSoulKitchen Threads">
-      <!-- Threads official-like SVG icon -->
-      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" >
-        <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" fill="none"/>
-        <path d="M8 14c1-1 2-3 4-3 1.5 0 3 2 3 3" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-        <path d="M12 10c-2 1-3 3-4 4" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-      </svg>
-      Threads
-    </a>
+    <a href="https://www.instagram.com/puresoulkitchen/" target="_blank" rel="noopener noreferrer">Instagram</a>
+    <a href="https://www.threads.net/@puresoulkitchen" target="_blank" rel="noopener noreferrer">Threads</a>
+    <a href="#" id="twitter-share" target="_blank">Twitter</a>
+    <a href="#" id="facebook-share" target="_blank">Facebook</a>
+    <a href="#" id="pinterest-share" target="_blank">Pinterest</a>
+    <a href="#" id="copy-link">Share</a>
   </nav>
-  
+
+  <div id="copy-toast">Link copied!</div>
+
+  <script>
+    const url = encodeURIComponent(window.location.href);
+    const title = encodeURIComponent(document.title);
+    document.getElementById('twitter-share').href = `https://twitter.com/intent/tweet?text=${title}&url=${url}`;
+    document.getElementById('facebook-share').href = `https://www.facebook.com/sharer/sharer.php?u=${url}`;
+    document.getElementById('pinterest-share').href = `https://www.pinterest.com/pin/create/button/?url=${url}&description=${title}`;
+    document.getElementById('copy-link').onclick = function(e) {
+      e.preventDefault();
+      navigator.clipboard.writeText(window.location.href);
+      let t = document.getElementById('copy-toast');
+      t.classList.add('show');
+      setTimeout(()=>{ t.classList.remove('show'); }, 2000);
+    };
+  </script>
+
 </body>
 </html>
