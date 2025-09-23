@@ -1,10 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>🌼 Chamomile Tea + Spiced Pumpkin Risotto: The Ultimate Evening Reset</title>
-
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-YW8N61J1S9"></script>
   <script>
@@ -13,6 +9,10 @@
     gtag('js', new Date());
     gtag('config', 'G-YW8N61J1S9');
   </script>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>🌼 Chamomile Tea + Spiced Pumpkin Risotto: The Ultimate Evening Reset</title>
 
   <style>
     body {
@@ -23,11 +23,13 @@
       max-width: 900px;
       margin: 2rem auto;
       padding: 0 1rem;
-      box-sizing: border-box;
+      position: relative;
     }
-    h1 { text-align: center; font-weight: bold; color: #333; }
-    h2 { color: #d9643e; margin-top: 2rem; }
-    ul, ol { margin-left: 1.5rem; margin-bottom: 1rem; }
+    h1 {
+      text-align: center;
+      font-weight: bold;
+      color: #333;
+    }
     .intro {
       background-color: #fff5dd;
       border-left: 6px solid #f0c94d;
@@ -35,6 +37,21 @@
       border-radius: 8px;
       margin-bottom: 2rem;
       font-style: italic;
+    }
+    img {
+      display: block;
+      max-width: 100%;
+      margin: 1.5rem auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    h2 {
+      color: #d9643e;
+      margin-top: 2rem;
+    }
+    ul, ol {
+      margin-left: 1.5rem;
+      margin-bottom: 1rem;
     }
     .section {
       background-color: #ffffff;
@@ -50,17 +67,10 @@
       border-top: 1px solid #ccc;
       text-align: center;
     }
-    img {
-      display: block;
-      max-width: 100%;
-      margin: 1.5rem auto;
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    }
-
     button.back-home {
       position: fixed;
-      top: 1rem; left: 1rem;
+      top: 1rem;
+      left: 1rem;
       background-color: #d9643e;
       color: white;
       border: none;
@@ -68,34 +78,61 @@
       padding: 0.5rem 1rem;
       font-weight: 600;
       cursor: pointer;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+      box-shadow: 0 2px 6px rgb(0 0 0 / 0.2);
       transition: background-color 0.3s ease;
       z-index: 1000;
     }
-    button.back-home:hover, button.back-home:focus { background-color: #b7522b; outline: none; }
+    button.back-home:hover, button.back-home:focus {
+      background-color: #b7522b;
+      outline: none;
+    }
 
+    /* 社交分享欄 */
     nav.social-share {
-      position: fixed; bottom: 1rem; left: 50%; transform: translateX(-50%);
-      display: flex; gap: 1rem; background: #f9f6f1dd;
-      border-radius: 30px; padding: 0.4rem 1rem; font-size: 0.9rem; font-weight: 600;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1); z-index: 100;
+      display: flex;
+      justify-content: center;
+      gap: 0.5rem;
+      position: fixed;
+      bottom: 1rem;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: #f9f6f1dd;
+      border-radius: 30px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      padding: 0.4rem 0.8rem;
+      font-size: 0.85rem;
+      font-weight: 600;
+      z-index: 100;
       align-items: center;
     }
     nav.social-share a {
-      display: flex; align-items: center; gap: 0.3rem;
-      color: #4a4a4a; text-decoration: none;
-      padding: 0.3rem 0.6rem; border-radius: 20px; border: 1px solid transparent;
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+      color: #4a4a4a;
+      text-decoration: none;
+      padding: 0.3rem 0.6rem;
+      border-radius: 18px;
+      border: 1px solid transparent;
       transition: all 0.2s;
     }
     nav.social-share a:hover, nav.social-share a:focus {
-      background-color: #d9643e; color: white; border-color: #b7522b;
+      background-color: #d9643e;
+      color: white;
+      border-color: #b7522b;
     }
-    nav.social-share svg { width: 20px; height: 20px; fill: currentColor; }
-
     #copy-toast {
-      visibility: hidden; position: fixed; bottom: 4rem; left: 50%; transform: translateX(-50%);
-      background: #333; color: #fff; padding: 0.4rem 0.8rem; border-radius: 5px;
-      font-size: 0.8rem; z-index: 999;
+      visibility: hidden;
+      position: fixed;
+      bottom: 4rem;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #333;
+      color: #fff;
+      padding: 0.4rem 0.8rem;
+      border-radius: 5px;
+      font-size: 0.8rem;
+      z-index: 999;
     }
     #copy-toast.show { visibility: visible; animation: fadeout 2s forwards; }
     @keyframes fadeout { 0%{opacity:1;} 80%{opacity:1;} 100%{opacity:0;} }
@@ -115,12 +152,12 @@
 
   <div class="section">
     <h2>🌼 Why Chamomile Tea?</h2>
-    <p>Chamomile tea is basically the OG queen of herbal teas for relaxation — the Beyoncé of bedtime drinks. Naturally caffeine-free, it soothes frazzled nerves, helps digestion, and preps your mind for a good night’s sleep. SEO fact check: Most people searching for chamomile tea benefits want stress relief, better sleep, and improved digestion — and chamomile delivers all three.</p>
+    <p>Chamomile tea is basically the OG queen of herbal teas for relaxation — the Beyoncé of bedtime drinks. Naturally caffeine-free, it soothes frazzled nerves, helps digestion, and preps your mind for a good night’s sleep.</p>
   </div>
 
   <div class="section">
     <h2>🎃 Why Pair It with Spiced Pumpkin Risotto?</h2>
-    <p>Spiced pumpkin risotto is like getting a warm hug from autumn itself. Add a dash of cinnamon, nutmeg, and creamy oat or soy milk, and you’ve got a plant-based dinner that feels indulgent yet wholesome. The sweet warmth of pumpkin perfectly matches the floral softness of chamomile — one sip, one bite, and you’re basically hosting a wellness party in your mouth.</p>
+    <p>Spiced pumpkin risotto is like getting a warm hug from autumn itself. Add a dash of cinnamon, nutmeg, and creamy oat or soy milk, and you’ve got a plant-based dinner that feels indulgent yet wholesome.</p>
   </div>
 
   <div class="section">
@@ -135,26 +172,37 @@
 
   <div class="section conclusion">
     <p>💡 Final Thought: Try It Tonight for the Ultimate Evening Reset<br>
-    If you’ve been searching for relaxing dinner ideas or anti-stress herbal teas, this is your go-to combo. Tonight, don’t just “eat dinner” — turn it into a mindful self-care moment. Because you deserve more than a quick meal… you deserve an evening reset.</p>
+    If you’ve been searching for relaxing dinner ideas or anti-stress herbal teas, this is your go-to combo. Tonight, don’t just “eat dinner” — turn it into a mindful self-care moment.</p>
   </div>
 
+  <!-- 留空間避免結尾內容被固定社群欄遮擋 -->
   <div style="height: 80px;"></div>
 
   <nav class="social-share">
-    <a href="https://www.instagram.com/puresoulkitchen/" target="_blank" rel="noopener noreferrer">Instagram</a>
-    <a href="https://www.threads.net/@puresoulkitchen" target="_blank" rel="noopener noreferrer">Threads</a>
+    <a href="https://www.instagram.com/puresoulkitchen/" target="_blank">Instagram</a>
+    <a href="https://www.threads.net/@puresoulkitchen" target="_blank">Threads</a>
+    <a href="#" id="twitter-share" target="_blank">Twitter</a>
+    <a href="#" id="facebook-share" target="_blank">Facebook</a>
+    <a href="#" id="pinterest-share" target="_blank">Pinterest</a>
     <a href="#" id="copy-link">Share</a>
   </nav>
 
   <div id="copy-toast">Link copied!</div>
 
   <script>
+    const url = encodeURIComponent(window.location.href);
+    const title = encodeURIComponent(document.title);
+
+    document.getElementById('twitter-share').href = `https://twitter.com/intent/tweet?text=${title}&url=${url}`;
+    document.getElementById('facebook-share').href = `https://www.facebook.com/sharer/sharer.php?u=${url}`;
+    document.getElementById('pinterest-share').href = `https://www.pinterest.com/pin/create/button/?url=${url}&description=${title}`;
+
     document.getElementById('copy-link').onclick = function(e){
       e.preventDefault();
       navigator.clipboard.writeText(window.location.href);
-      let t=document.getElementById('copy-toast');
-      t.classList.add('show');
-      setTimeout(()=>{t.classList.remove('show')},2000);
+      const toast = document.getElementById('copy-toast');
+      toast.classList.add('show');
+      setTimeout(()=>{toast.classList.remove('show');},2000);
     }
   </script>
 
