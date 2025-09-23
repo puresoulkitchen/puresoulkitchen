@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>5-Minute Avocado Tofu Sandwich</title>
+
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-YW8N61J1S9"></script>
   <script>
@@ -9,9 +13,7 @@
     gtag('js', new Date());
     gtag('config', 'G-YW8N61J1S9');
   </script>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>5-Minute Avocado Tofu Sandwich</title>
+
   <style>
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -25,15 +27,9 @@
       min-height: 100vh;
       box-sizing: border-box;
     }
-    h1, h2, h3 {
-      color: #3b3b3b;
-      margin-bottom: 0.6rem;
-    }
-    h1 {
-      text-align: center;
-      font-weight: 700;
-      margin-bottom: 1.5rem;
-    }
+    h1, h2, h3 { color: #3b3b3b; margin-bottom: 0.6rem; }
+    h1 { text-align: center; font-weight: 700; margin-bottom: 1.5rem; }
+
     .introduction, .conclusion {
       background: #fff8e7;
       border-left: 6px solid #f4c95d;
@@ -57,10 +53,8 @@
       padding: 1.5rem;
       margin-bottom: 3rem;
     }
-    .section h2 {
-      margin-top: 0;
-      color: #d9643e;
-    }
+    .section h2 { margin-top: 0; color: #d9643e; }
+
     .hero-img {
       display: block;
       max-width: 100%;
@@ -69,93 +63,50 @@
       margin: 1rem auto 2.5rem auto;
       box-shadow: 0 4px 10px rgb(0 0 0 / 0.1);
     }
-    ul, ol {
-      margin: 0 0 1rem 1.25rem;
-    }
-    ul li::marker, ol li::marker {
-      color: #d9643e;
-      font-weight: bold;
-    }
+
+    ul, ol { margin: 0 0 1rem 1.25rem; }
+    ul li::marker, ol li::marker { color: #d9643e; font-weight: bold; }
+
     table {
       width: 100%;
       border-collapse: collapse;
       margin-bottom: 1.5rem;
     }
-    th, td {
-      border: 1px solid #ddd;
-      padding: 0.6rem;
-      text-align: left;
-    }
-    th {
-      background-color: #f0f4f8;
-      font-weight: 600;
-      color: #2e4a7d;
-    }
+    th, td { border: 1px solid #ddd; padding: 0.6rem; text-align: left; }
+    th { background-color: #f0f4f8; font-weight: 600; color: #2e4a7d; }
+
     button.back-home {
-      position: fixed;
-      top: 1rem;
-      left: 1rem;
-      background-color: #d9643e;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      padding: 0.5rem 1rem;
-      font-weight: 600;
-      cursor: pointer;
-      box-shadow: 0 2px 6px rgb(0 0 0 / 0.2);
-      transition: background-color 0.3s ease;
+      position: fixed; top: 1rem; left: 1rem;
+      background-color: #d9643e; color: white;
+      border: none; border-radius: 5px; padding: 0.5rem 1rem;
+      font-weight: 600; cursor: pointer;
+      box-shadow: 0 2px 6px rgb(0 0 0 / 0.2); transition: background-color 0.3s ease;
       z-index: 1000;
     }
-    button.back-home:hover,
-    button.back-home:focus {
-      background-color: #b7522b;
-      outline: none;
-    }
+    button.back-home:hover, button.back-home:focus { background-color: #b7522b; outline: none; }
+
     nav.social-share {
-      display: flex;
-      justify-content: center;
-      gap: 1rem;
-      margin-top: 3rem;
-      padding-top: 1rem;
-      border-top: 1px solid #ddd;
-      position: fixed;
-      bottom: 1rem;
-      left: 50%;
-      transform: translateX(-50%);
-      background-color: #f9f6f1dd;
-      border-radius: 30px;
-      box-shadow: 0 4px 10px rgb(0 0 0 / 0.1);
-      padding-left: 2rem;
-      padding-right: 2rem;
-      z-index: 100;
-      font-weight: 600;
-      font-size: 0.95rem;
+      position: fixed; bottom: 1rem; left: 50%; transform: translateX(-50%);
+      display: flex; gap: 0.5rem; background: #f9f6f1dd; border-radius: 25px;
+      padding: 0.4rem 0.8rem; font-size: 0.85rem; font-weight: 600;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1); z-index: 100;
     }
     nav.social-share a {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      color: #4a4a4a;
-      text-decoration: none;
-      padding: 0.4rem 0.8rem;
-      border-radius: 20px;
-      transition: background-color 0.3s ease, color 0.3s ease;
-      border: 1.5px solid transparent;
+      text-decoration: none; color: #4a4a4a; padding: 0.3rem 0.6rem;
+      border-radius: 18px; border: 1px solid transparent; transition: all 0.2s;
     }
-    nav.social-share a svg {
-      width: 22px;
-      height: 22px;
-      fill: currentColor;
+    nav.social-share a:hover { background: #d9643e; color: white; border-color: #b7522b; }
+
+    #copy-toast {
+      visibility: hidden; position: fixed; bottom: 4rem; left: 50%; transform: translateX(-50%);
+      background: #333; color: #fff; padding: 0.4rem 0.8rem; border-radius: 5px; font-size: 0.8rem; z-index: 999;
     }
-    nav.social-share a:hover,
-    nav.social-share a:focus {
-      background-color: #d9643e;
-      color: white;
-      border-color: #b7522b;
-    }
+    #copy-toast.show { visibility: visible; animation: fadeout 2s forwards; }
+    @keyframes fadeout { 0%{opacity:1;} 80%{opacity:1;} 100%{opacity:0;} }
   </style>
 </head>
 <body>
+
   <button class="back-home" aria-label="Return to homepage" onclick="window.location.href='/'">← Back to Home</button>
 
   <h1>5-Minute Avocado Tofu Sandwich (No Garlic, No Onion, with Cheese)</h1>
@@ -169,7 +120,8 @@
   <!-- 文章內容開始 -->
   <article class="section">
     <h2>🌙 Why This Sandwich is the Perfect Stress-Relief Dinner</h2>
-    <p>Let’s be real — by the time you get home from work, your energy is drained. You’re tired, overstimulated, and the last thing you want is to spend another hour in the kitchen. That’s where this sandwich comes in. It’s fast (ready in 10 minutes), plant-based, soothing, and — bonus — it tastes like a warm hug.</p>
+    <p>Let’s be real — by the time you get home from work, your energy is drained. You’re tired, overstimulated, and the last thing you want is to spend another hour in the kitchen.</p>
+    <p>That’s where this sandwich comes in. It’s fast (ready in 10 minutes), plant-based, soothing, and — bonus — it tastes like a warm hug.</p>
     <ul>
       <li>✅ Free from garlic and onion (perfect for sensitive stomachs and calmer minds)</li>
       <li>✅ Made with avocado and tofu for protein and healthy fats</li>
@@ -244,39 +196,32 @@
   </article>
   <!-- 文章內容結束 -->
 
-  <footer class="conclusion"></footer>
+  <footer class="conclusion">© 2025 Pure Soul Kitchen. All rights reserved.</footer>
 
-<nav class="social-share">
-  <a href="https://www.instagram.com/puresoulkitchen/" target="_blank">Instagram</a>
-  <a href="https://www.threads.net/@puresoulkitchen" target="_blank">Threads</a>
-  <a href="#" id="twitter-share" target="_blank">Twitter</a>
-  <a href="#" id="facebook-share" target="_blank">Facebook</a>
-  <a href="#" id="pinterest-share" target="_blank">Pinterest</a>
-  <a href="#" id="copy-link">Share</a>
-</nav>
+  <nav class="social-share">
+    <a href="https://www.instagram.com/puresoulkitchen/" target="_blank">Instagram</a>
+    <a href="https://www.threads.net/@puresoulkitchen" target="_blank">Threads</a>
+    <a href="#" id="twitter-share" target="_blank">Twitter</a>
+    <a href="#" id="facebook-share" target="_blank">Facebook</a>
+    <a href="#" id="pinterest-share" target="_blank">Pinterest</a>
+    <a href="#" id="copy-link">Share</a>
+  </nav>
 
-<style>
-  nav.social-share {
-    position: fixed; bottom: 1rem; left: 50%; transform: translateX(-50%);
-    display: flex; gap: 0.5rem; background: #f9f6f1dd; border-radius: 25px;
-    padding: 0.4rem 0.8rem; font-size: 0.85rem; font-weight: 600; box-shadow: 0 4px 10px rgba(0,0,0,0.1); z-index: 100;
-  }
-  nav.social-share a { text-decoration: none; color: #4a4a4a; padding: 0.3rem 0.6rem; border-radius: 18px; border: 1px solid transparent; transition: all 0.2s; }
-  nav.social-share a:hover { background: #d9643e; color: white; border-color: #b7522b; }
-  #copy-toast { visibility: hidden; position: fixed; bottom: 4rem; left: 50%; transform: translateX(-50%);
-                background: #333; color: #fff; padding: 0.4rem 0.8rem; border-radius: 5px; font-size: 0.8rem; z-index: 999; }
-  #copy-toast.show { visibility: visible; animation: fadeout 2s forwards; }
-  @keyframes fadeout { 0%{opacity:1;} 80%{opacity:1;} 100%{opacity:0;} }
-</style>
+  <div id="copy-toast">Link copied!</div>
 
-<div id="copy-toast">Link copied!</div>
+  <script>
+    const url=encodeURIComponent(window.location.href), title=encodeURIComponent(document.title);
+    document.getElementById('twitter-share').href=`https://twitter.com/intent/tweet?text=${title}&url=${url}`;
+    document.getElementById('facebook-share').href=`https://www.facebook.com/sharer/sharer.php?u=${url}`;
+    document.getElementById('pinterest-share').href=`https://www.pinterest.com/pin/create/button/?url=${url}&description=${title}`;
+    document.getElementById('copy-link').onclick=function(e){
+      e.preventDefault();
+      navigator.clipboard.writeText(window.location.href);
+      let t=document.getElementById('copy-toast');
+      t.classList.add('show');
+      setTimeout(()=>{t.classList.remove('show')},2000);
+    }
+  </script>
 
-<script>
-const url=encodeURIComponent(window.location.href), title=encodeURIComponent(document.title);
-document.getElementById('twitter-share').href=`https://twitter.com/intent/tweet?text=${title}&url=${url}`;
-document.getElementById('facebook-share').href=`https://www.facebook.com/sharer/sharer.php?u=${url}`;
-document.getElementById('pinterest-share').href=`https://www.pinterest.com/pin/create/button/?url=${url}&description=${title}`;
-document.getElementById('copy-link').onclick=function(e){e.preventDefault();navigator.clipboard.writeText(window.location.href);let t=document.getElementById('copy-toast');t.classList.add('show');setTimeout(()=>{t.classList.remove('show')},2000);}
-</script>
 </body>
 </html>
