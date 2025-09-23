@@ -188,33 +188,37 @@
     <p>Dance, deadlift, or downward dog — the best workout is the one you’ll actually do. 💚<br>Plant power fuels performance *and* peace of mind.</p>
   <div style="height: 100px;"></div>
 
-<nav class="social-share" aria-label="Social media sharing">
-  <a href="https://www.instagram.com/puresoulkitchen/" target="_blank" rel="noopener noreferrer" aria-label="Visit Instagram">
-    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M7.75 2h8.5A5.75 5.75 0 0122 7.75v8.5A5.75 5.75 0 0116.25 22h-8.5A5.75 5.75 0 012 16.25v-8.5A5.75 5.75 0 017.75 2zm0 1.5A4.25 4.25 0 003.5 7.75v8.5A4.25 4.25 0 007.75 20.5h8.5a4.25 4.25 0 004.25-4.25v-8.5A4.25 4.25 0 0016.25 3.5h-8.5zm8.75 2.25a1.125 1.125 0 110 2.25 1.125 1.125 0 010-2.25zM12 7a5 5 0 110 10 5 5 0 010-10zm0 1.5a3.5 3.5 0 100 7 3.5 3.5 0 000-7z"/></svg>
-    Instagram
-  </a>
-
-  <a href="https://www.threads.net/@puresoulkitchen" target="_blank" rel="noopener noreferrer" aria-label="Visit Threads">
-    <svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" fill="none"/><path d="M8 14c1-1 2-3 4-3 1.5 0 3 2 3 3" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 10c-2 1-3 3-4 4" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
-    Threads
-  </a>
-
-  <a href="#" id="twitter-share" target="_blank" aria-label="Share on Twitter">
-    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23 3a10.9 10.9 0 01-3.14 1.53A4.48 4.48 0 0022.4.36a9.12 9.12 0 01-2.88 1.1A4.52 4.52 0 0016.67 0c-2.51 0-4.54 2.03-4.54 4.54 0 .36.04.7.12 1.03A12.94 12.94 0 013 1.67a4.5 4.5 0 001.39 6.05 4.48 4.48 0 01-2.06-.57v.06c0 2.12 1.5 3.89 3.5 4.29a4.52 4.52 0 01-2.05.08c.58 1.81 2.27 3.13 4.27 3.16A9.05 9.05 0 012 19.54a12.77 12.77 0 006.92 2.03c8.3 0 12.85-6.88 12.85-12.85 0-.2 0-.42-.02-.63A9.18 9.18 0 0023 3z"/></svg>
-    Twitter
-  </a>
-
-  <a href="#" id="facebook-share" target="_blank" aria-label="Share on Facebook">
-    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M22.675 0H1.325C.593 0 0 .593 0 1.326v21.348C0 23.407.593 24 1.325 24h11.495v-9.294H9.69v-3.622h3.13V8.413c0-3.1 1.893-4.788 4.657-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.796.715-1.796 1.763v2.31h3.587l-.467 3.622h-3.12V24h6.116C23.407 24 24 23.407 24 22.674V1.326C24 .593 23.407 0 22.675 0z"/></svg>
-    Facebook
-  </a>
+<nav class="social-share">
+  <a href="https://www.instagram.com/puresoulkitchen/" target="_blank">Instagram</a>
+  <a href="https://www.threads.net/@puresoulkitchen" target="_blank">Threads</a>
+  <a href="#" id="twitter-share" target="_blank">Twitter</a>
+  <a href="#" id="facebook-share" target="_blank">Facebook</a>
+  <a href="#" id="pinterest-share" target="_blank">Pinterest</a>
+  <a href="#" id="copy-link">Share</a>
 </nav>
 
+<style>
+  nav.social-share {
+    position: fixed; bottom: 1rem; left: 50%; transform: translateX(-50%);
+    display: flex; gap: 0.5rem; background: #f9f6f1dd; border-radius: 25px;
+    padding: 0.4rem 0.8rem; font-size: 0.85rem; font-weight: 600; box-shadow: 0 4px 10px rgba(0,0,0,0.1); z-index: 100;
+  }
+  nav.social-share a { text-decoration: none; color: #4a4a4a; padding: 0.3rem 0.6rem; border-radius: 18px; border: 1px solid transparent; transition: all 0.2s; }
+  nav.social-share a:hover { background: #d9643e; color: white; border-color: #b7522b; }
+  #copy-toast { visibility: hidden; position: fixed; bottom: 4rem; left: 50%; transform: translateX(-50%);
+                background: #333; color: #fff; padding: 0.4rem 0.8rem; border-radius: 5px; font-size: 0.8rem; z-index: 999; }
+  #copy-toast.show { visibility: visible; animation: fadeout 2s forwards; }
+  @keyframes fadeout { 0%{opacity:1;} 80%{opacity:1;} 100%{opacity:0;} }
+</style>
+
+<div id="copy-toast">Link copied!</div>
+
 <script>
-  const currentURL = encodeURIComponent(window.location.href);
-  const pageTitle = encodeURIComponent(document.title);
-  document.getElementById('twitter-share').href = `https://twitter.com/intent/tweet?text=${pageTitle}&url=${currentURL}`;
-  document.getElementById('facebook-share').href = `https://www.facebook.com/sharer/sharer.php?u=${currentURL}`;
+const url=encodeURIComponent(window.location.href), title=encodeURIComponent(document.title);
+document.getElementById('twitter-share').href=`https://twitter.com/intent/tweet?text=${title}&url=${url}`;
+document.getElementById('facebook-share').href=`https://www.facebook.com/sharer/sharer.php?u=${url}`;
+document.getElementById('pinterest-share').href=`https://www.pinterest.com/pin/create/button/?url=${url}&description=${title}`;
+document.getElementById('copy-link').onclick=function(e){e.preventDefault();navigator.clipboard.writeText(window.location.href);let t=document.getElementById('copy-toast');t.classList.add('show');setTimeout(()=>{t.classList.remove('show')},2000);}
 </script>
 </body>
 </html>
