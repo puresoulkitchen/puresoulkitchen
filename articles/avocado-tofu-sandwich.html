@@ -246,20 +246,37 @@
 
   <footer class="conclusion"></footer>
 
-  <!-- 浮動分享按鈕 -->
-  <nav class="social-share" aria-label="Social media sharing">
-    <a href="https://www.instagram.com/puresoulkitchen/" target="_blank">Instagram</a>
-    <a href="https://www.threads.net/@puresoulkitchen" target="_blank">Threads</a>
-    <a href="#" id="twitter-share" target="_blank">Twitter</a>
-    <a href="#" id="facebook-share" target="_blank">Facebook</a>
-  </nav>
+<nav class="social-share">
+  <a href="https://www.instagram.com/puresoulkitchen/" target="_blank">Instagram</a>
+  <a href="https://www.threads.net/@puresoulkitchen" target="_blank">Threads</a>
+  <a href="#" id="twitter-share" target="_blank">Twitter</a>
+  <a href="#" id="facebook-share" target="_blank">Facebook</a>
+  <a href="#" id="pinterest-share" target="_blank">Pinterest</a>
+  <a href="#" id="copy-link">Share</a>
+</nav>
 
-  <script>
-    const currentURL = encodeURIComponent(window.location.href);
-    const pageTitle = encodeURIComponent(document.title);
-    document.getElementById('twitter-share').href = `https://twitter.com/intent/tweet?text=${pageTitle}&url=${currentURL}`;
-    document.getElementById('facebook-share').href = `https://www.facebook.com/sharer/sharer.php?u=${currentURL}`;
-  </script>
+<style>
+  nav.social-share {
+    position: fixed; bottom: 1rem; left: 50%; transform: translateX(-50%);
+    display: flex; gap: 0.5rem; background: #f9f6f1dd; border-radius: 25px;
+    padding: 0.4rem 0.8rem; font-size: 0.85rem; font-weight: 600; box-shadow: 0 4px 10px rgba(0,0,0,0.1); z-index: 100;
+  }
+  nav.social-share a { text-decoration: none; color: #4a4a4a; padding: 0.3rem 0.6rem; border-radius: 18px; border: 1px solid transparent; transition: all 0.2s; }
+  nav.social-share a:hover { background: #d9643e; color: white; border-color: #b7522b; }
+  #copy-toast { visibility: hidden; position: fixed; bottom: 4rem; left: 50%; transform: translateX(-50%);
+                background: #333; color: #fff; padding: 0.4rem 0.8rem; border-radius: 5px; font-size: 0.8rem; z-index: 999; }
+  #copy-toast.show { visibility: visible; animation: fadeout 2s forwards; }
+  @keyframes fadeout { 0%{opacity:1;} 80%{opacity:1;} 100%{opacity:0;} }
+</style>
 
+<div id="copy-toast">Link copied!</div>
+
+<script>
+const url=encodeURIComponent(window.location.href), title=encodeURIComponent(document.title);
+document.getElementById('twitter-share').href=`https://twitter.com/intent/tweet?text=${title}&url=${url}`;
+document.getElementById('facebook-share').href=`https://www.facebook.com/sharer/sharer.php?u=${url}`;
+document.getElementById('pinterest-share').href=`https://www.pinterest.com/pin/create/button/?url=${url}&description=${title}`;
+document.getElementById('copy-link').onclick=function(e){e.preventDefault();navigator.clipboard.writeText(window.location.href);let t=document.getElementById('copy-toast');t.classList.add('show');setTimeout(()=>{t.classList.remove('show')},2000);}
+</script>
 </body>
 </html>
