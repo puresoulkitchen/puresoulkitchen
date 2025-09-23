@@ -89,28 +89,47 @@
     .back-home:hover {
       background-color: #b84d2d;
     }
-    .social-share {
-      display: flex;
-      justify-content: center;
-      gap: 1.5rem;
-      margin: 3rem auto 2rem;
-      padding: 1rem;
-      background-color: rgba(240, 240, 240, 0.6);
-      border-radius: 12px;
-      width: fit-content;
-    }
-    .social-share a {
-      text-decoration: none;
-      display: flex;
-      align-items: center;
-      color: #333;
-      font-weight: bold;
-      gap: 0.4rem;
-      transition: color 0.3s;
-    }
-    .social-share a:hover {
-      color: #000;
-    }
+   nav.social-share {
+  display: flex;
+  justify-content: center;
+  gap: 0.02rem;            /* 按鈕間距縮小 */
+  margin-top: 3rem;
+  padding: 0.5rem 1rem;
+  border-radius: 25px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  position: fixed;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #f9f6f1dd;
+  z-index: 100;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+nav.social-share a {
+  display: flex;
+  align-items: center;
+  gap: 0.1rem;             /* icon 與文字間距縮小 */
+  color: #4a4a4a;
+  text-decoration: none;
+  padding: 0.2rem 0.3rem;  /* 按鈕內距略縮小 */
+  border-radius: 18px;
+  border: 1px solid transparent;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav.social-share a svg {
+  width: 16px;
+  height: 16px;
+}
+
+nav.social-share a:hover,
+nav.social-share a:focus {
+  background-color: #d9643e;
+  color: white;
+  border-color: #b7522b;
+}
   </style>
 </head>
 <body>
