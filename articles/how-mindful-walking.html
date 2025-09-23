@@ -89,29 +89,45 @@
     .back-home:hover {
       background-color: #b84d2d;
     }
-    .social-share {
-      display: flex;
-      justify-content: center;
-      gap: 1.5rem;
-      margin: 3rem auto 2rem;
-      padding: 1rem;
-      background-color: rgba(240, 240, 240, 0.6);
-      border-radius: 12px;
-      width: fit-content;
-    }
-    .social-share a {
-      text-decoration: none;
-      display: flex;
-      align-items: center;
-      color: #333;
-      font-weight: bold;
-      gap: 0.4rem;
-      transition: color 0.3s;
-    }
-    .social-share a:hover {
-      color: #000;
-    }
-  </style>
+  nav.social-share a {
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+  color: #4a4a4a;
+  text-decoration: none;
+  padding: 0.2rem 0.4rem;
+  border-radius: 18px;
+  border: 1px solid transparent;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+nav.social-share a:hover {
+  background-color: #d9643e;
+  color: white;
+  border-color: #b7522b;
+}
+#copy-toast {
+  visibility: hidden;
+  position: fixed;
+  bottom: 4rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #333;
+  color: #fff;
+  padding: 0.4rem 0.8rem;
+  border-radius: 5px;
+  font-size: 0.8rem;
+  z-index: 999;
+}
+#copy-toast.show {
+  visibility: visible;
+  animation: fadeout 2s forwards;
+}
+@keyframes fadeout {
+  0% {opacity:1;}
+  80% {opacity:1;}
+  100% {opacity:0;}
+}
+</style>
 </head>
 <body>
 <a class="back-home" href="/">← Back to Home</a>
