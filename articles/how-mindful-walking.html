@@ -209,8 +209,10 @@
   <p>Mindful walking in nature isn’t just a leisure activity—it’s a healing ritual. With each conscious step, you train your nervous system to return to balance, ease tension from your body, and reawaken your sense of presence. This low-barrier practice is especially relevant for those seeking spiritual, plant-based, and holistic lifestyles.</p>
 </div>
 
-<!-- Floating Social Share -->
-<nav class="social-share" aria-label="Social media sharing">
+<!-- 避免社群列遮擋最後一段 -->
+<div style="height: 80px;"></div>
+
+<nav class="social-share">
   <a href="https://www.instagram.com/puresoulkitchen/" target="_blank" rel="noopener noreferrer">Instagram</a>
   <a href="https://www.threads.net/@puresoulkitchen" target="_blank" rel="noopener noreferrer">Threads</a>
   <a href="#" id="twitter-share" target="_blank">Twitter</a>
@@ -222,23 +224,23 @@
 <div id="copy-toast">Link copied!</div>
 
 <script>
-  const url = encodeURIComponent(window.location.href);
-  const title = encodeURIComponent(document.title);
+const url = encodeURIComponent(window.location.href);
+const title = encodeURIComponent(document.title);
 
-  document.getElementById('twitter-share').href =
-    `https://twitter.com/intent/tweet?text=${title}&url=${url}`;
-  document.getElementById('facebook-share').href =
-    `https://www.facebook.com/sharer/sharer.php?u=${url}`;
-  document.getElementById('pinterest-share').href =
-    `https://www.pinterest.com/pin/create/button/?url=${url}&description=${title}`;
+document.getElementById('twitter-share').href = 
+  `https://twitter.com/intent/tweet?text=${title}&url=${url}`;
+document.getElementById('facebook-share').href = 
+  `https://www.facebook.com/sharer/sharer.php?u=${url}`;
+document.getElementById('pinterest-share').href = 
+  `https://www.pinterest.com/pin/create/button/?url=${url}&description=${title}`;
 
-  document.getElementById('copy-link').onclick = function(e) {
-    e.preventDefault();
-    navigator.clipboard.writeText(window.location.href);
-    let t = document.getElementById('copy-toast');
-    t.classList.add('show');
-    setTimeout(()=>{ t.classList.remove('show'); }, 2000);
-  };
+document.getElementById('copy-link').onclick = function(e) {
+  e.preventDefault();
+  navigator.clipboard.writeText(window.location.href);
+  let t = document.getElementById('copy-toast');
+  t.classList.add('show');
+  setTimeout(()=>{ t.classList.remove('show'); }, 2000);
+};
 </script>
 </body>
 </html>
