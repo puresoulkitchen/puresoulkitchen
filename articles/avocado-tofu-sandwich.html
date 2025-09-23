@@ -114,44 +114,26 @@
     nav.social-share {
       display: flex;
       justify-content: center;
-      gap: 2rem;
+      gap: 1.5rem;
       margin-top: 3rem;
-      padding-top: 1rem;
-      border-top: 1px solid #ddd;
-      position: fixed;
-      bottom: 1rem;
-      left: 50%;
-      transform: translateX(-50%);
-      background-color: #f9f6f1dd;
-      border-radius: 30px;
-      box-shadow: 0 4px 10px rgb(0 0 0 / 0.1);
-      padding-left: 2rem;
-      padding-right: 2rem;
-      z-index: 100;
-      font-weight: 600;
-      font-size: 0.95rem;
+      padding: 1rem;
+      background-color: rgba(240, 240, 240, 0.6);
+      border-radius: 12px;
+      width: fit-content;
+      margin-left: auto;
+      margin-right: auto;
     }
     nav.social-share a {
+      text-decoration: none;
       display: flex;
       align-items: center;
-      gap: 0.5rem;
-      color: #4a4a4a;
-      text-decoration: none;
-      padding: 0.4rem 0.8rem;
-      border-radius: 20px;
-      transition: background-color 0.3s ease, color 0.3s ease;
-      border: 1.5px solid transparent;
+      color: #333;
+      font-weight: bold;
+      gap: 0.4rem;
+      transition: color 0.3s;
     }
-    nav.social-share a svg {
-      width: 22px;
-      height: 22px;
-      fill: currentColor;
-    }
-    nav.social-share a:hover,
-    nav.social-share a:focus {
-      background-color: #d9643e;
-      color: white;
-      border-color: #b7522b;
+    nav.social-share a:hover {
+      color: #000;
     }
   </style>
 </head>
@@ -160,8 +142,7 @@
     ← Back to Home
   </button>
 
-  <h1>🥪 5-Minute Avocado Tofu Sandwich (No Garlic, No Onion, with Cheese)</h1>
-
+  <h1>5-Minute Avocado Tofu Sandwich (No Garlic, No Onion, with Cheese)</h1>
   <img src="../assets/images/sandwich-based-avocado.png" alt="Avocado tofu sandwich on toasted whole grain bread" class="hero-img" />
 
   <section class="introduction">
@@ -205,24 +186,17 @@
       <li>1/2 tsp maple syrup or coconut sugar</li>
       <li>1 tbsp water (adjust for texture)</li>
     </ul>
-    <p><strong>💡Tip:</strong> You only need half for one sandwich. Save the rest for a salad or dip tomorrow.</p>
+    <p><strong>Tip:</strong> You only need half for one sandwich. Save the rest for a salad or dip tomorrow.</p>
   </article>
 
   <article class="section">
     <h2>🍳 How to Make It</h2>
     <ol>
-      <li>Grill the Tofu — Pat tofu dry. Heat a bit of olive oil in a pan and cook tofu slices on medium heat for 3–4 minutes each side, until crispy and golden brown.</li>
-      <li>Toast the Bread (optional) — If you like extra texture, toast the bread lightly.</li>
-      <li>Build Your Layers:
-        <ul>
-          <li>Spread miso tahini sauce on the bread</li>
-          <li>Add lettuce, tomato, avocado slices</li>
-          <li>Top with grilled tofu and a slice of cheese</li>
-          <li>Close the sandwich and gently press</li>
-        </ul>
-      </li>
-      <li>Optional Final Step — Warm it in a pan or sandwich press for 1–2 minutes to melt the cheese and bring flavors together.</li>
-      <li>Serve & Enjoy — Cut in half. Serve with herbal tea or miso soup.</li>
+      <li>Grill the Tofu: Pat tofu dry. Heat a bit of olive oil in a pan and cook tofu slices on medium heat for 3–4 minutes each side, until crispy and golden brown.</li>
+      <li>Toast the Bread (optional): If you like extra texture, toast the bread lightly.</li>
+      <li>Build Your Layers: Spread miso tahini sauce on the bread, add lettuce, tomato, avocado slices, top with grilled tofu and a slice of cheese, then close the sandwich and gently press.</li>
+      <li>Optional Final Step: Warm it in a pan or sandwich press for 1–2 minutes — just enough to melt the cheese and bring all the flavors together.</li>
+      <li>Serve & Enjoy: Cut in half. Serve with a cup of warm herbal tea or a simple miso soup.</li>
     </ol>
   </article>
 
@@ -240,31 +214,53 @@
 
   <article class="section">
     <h2>🧘 Mindful Eating Moment</h2>
-    <p>If you can, slow down and eat this without distractions. Light a candle, play soft lo-fi or nature sounds, and take a few deep breaths between bites. You’ll be amazed how much better food feels this way.</p>
+    <p>Slow down and eat this without distractions. Light a candle, play some soft lo-fi or nature sounds, and take a few deep breaths between bites. You’ll be amazed how much better food feels this way.</p>
   </article>
 
   <article class="section">
     <h2>➕ Explore More Plant-Based Wellness</h2>
     <ul>
-      <li><a href="articles/dinner-ritual.html">5 Plant-Based Dinner Recipes to Soothe Your Mind and Body</a></li>
-      <li><a href="articles/plant-based-dinner.html">🧘‍♀️ Soothe Your Soul with a Dinner Ritual</a></li>
+      <li>🔗 <a href="articles/dinner-ritual.html">5 Plant-Based Dinner Recipes to Soothe Your Mind and Body</a></li>
+      <li>🔗 <a href="articles/plant-based-dinner.html">🧘‍♀️ Soothe Your Soul with a Dinner Ritual</a></li>
     </ul>
   </article>
 
-  <footer class="conclusion"></footer>
+  <footer class="conclusion">
+    Enjoy this weeknight reset with a sandwich that soothes both body and mind!
+  </footer>
 
- <nav class="social-share" aria-label="Social media sharing">
-  <!-- Instagram Share -->
-  <a href="#" onclick="window.open(`https://www.instagram.com/?url=${encodeURIComponent(window.location.href)}`, '_blank', 'noopener,noreferrer'); return false;" aria-label="Share on Instagram">
-    <svg viewBox="0 0 24 24"><path d="M7.75 2h8.5A5.75 5.75 0 0122 7.75v8.5A5.75 5.75 0 0116.25 22h-8.5A5.75 5.75 0 012 16.25v-8.5A5.75 5.75 0 017.75 2zm0 1.5A4.25 4.25 0 003.5 7.75v8.5A4.25 4.25 0 007.75 20.5h8.5a4.25 4.25 0 004.25-4.25v-8.5A4.25 4.25 0 0016.25 3.5h-8.5zm8.75 2.25a1.125 1.125 0 110 2.25 1.125 1.125 0 010-2.25zM12 7a5 5 0 110 10 5 5 0 010-10zm0 1.5a3.5 3.5 0 100 7 3.5 3.5 0 000-7z"/></svg>
-    Instagram
-  </a>
+  <nav class="social-share" aria-label="Social media sharing">
+    <!-- Instagram -->
+    <a href="https://www.instagram.com/puresoulkitchen/" target="_blank" rel="noopener noreferrer">
+      <svg viewBox="0 0 24 24"><path d="M7.75 2h8.5A5.75 5.75 0 0122 7.75v8.5A5.75 5.75 0 0116.25 22h-8.5A5.75 5.75 0 012 16.25v-8.5A5.75 5.75 0 017.75 2zm0 1.5A4.25 4.25 0 003.5 7.75v8.5A4.25 4.25 0 007.75 20.5h8.5a4.25 4.25 0 004.25-4.25v-8.5A4.25 4.25 0 0016.25 3.5h-8.5zm8.75 2.25a1.125 1.125 0 110 2.25 1.125 1.125 0 010-2.25zM12 7a5 5 0 110 10 5 5 0 010-10zm0 1.5a3.5 3.5 0 100 7 3.5 3.5 0 000-7z"/></svg>
+      Instagram
+    </a>
+    <!-- Threads -->
+    <a href="https://www.threads.net/@puresoulkitchen" target="_blank" rel="noopener noreferrer">
+      <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" fill="none"/><path d="M8 14c1-1 2-3 4-3 1.5 0 3 2 3 3" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 10c-2 1-3 3-4 4" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      Threads
+    </a>
+    <!-- Twitter -->
+    <a href="#" id="twitter-share" target="_blank" rel="noopener noreferrer">
+      <svg viewBox="0 0 24 24"><path d="M23 3a10.9 10.9 0 01-3.14 1.53A4.48 4.48 0 0022.4.36a9.14 9.14 0 01-2.88 1.1A4.52 4.52 0 0016.12 0c-2.5 0-4.52 2.03-4.52 4.53 0 .35.04.69.11 1.02A12.84 12.84 0 013 1.64a4.53 4.53 0 001.4 6.05 4.49 4.49 0 01-2.05-.57v.06c0 2.22 1.58 4.07 3.68 4.49a4.52 4.52 0 01-2.04.08 4.53 4.53 0 004.22 3.15A9.06 9.06 0 010 19.54a12.78 12.78 0 006.92 2.03c8.3 0 12.84-6.88 12.84-12.85 0-.2-.01-.41-.02-.61A9.18 9.18 0 0023 3z"/></svg>
+      Twitter
+    </a>
+    <!-- Facebook -->
+    <a href="#" id="facebook-share" target="_blank" rel="noopener noreferrer">
+      <svg viewBox="0 0 24 24"><path d="M22 12a10 10 0 10-11.63 9.87v-6.99H8.89V12h1.48V9.85c0-1.46.87-2.28 2.21-2.28.64 0 1.31.11 1.31.11v1.45h-.74c-.73 0-.96.46-.96.93V12h1.63l-.26 2.88h-1.37v6.99A10 10 0 0022 12z"/></svg>
+      Facebook
+    </a>
+  </nav>
 
-  <!-- Threads Share -->
-  <a href="#" onclick="window.open(`https://www.threads.net/share?url=${encodeURIComponent(window.location.href)}`, '_blank', 'noopener,noreferrer'); return false;" aria-label="Share on Threads">
-    <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" fill="none"/><path d="M8 14c1-1 2-3 4-3 1.5 0 3 2 3 3" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 10c-2 1-3 3-4 4" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
-    Threads
-  </a>
-</nav>
+  <script>
+    const pageUrl = encodeURIComponent(window.location.href);
+    const pageTitle = encodeURIComponent(document.title);
+
+    document.getElementById('twitter-share').href =
+      `https://twitter.com/intent/tweet?text=${pageTitle}&url=${pageUrl}`;
+
+    document.getElementById('facebook-share').href =
+      `https://www.facebook.com/sharer/sharer.php?u=${pageUrl}`;
+  </script>
 </body>
 </html>
