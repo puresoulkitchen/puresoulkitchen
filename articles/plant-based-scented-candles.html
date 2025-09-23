@@ -88,50 +88,58 @@
       background-color: #b7522b;
       outline: none;
     }
-
     nav.social-share {
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-      margin-top: 3rem;
-      padding-top: 1rem;
-      border-top: 1px solid #ddd;
-      position: fixed;
-      bottom: 1rem;
-      left: 50%;
-      transform: translateX(-50%);
-      background-color: #f9f6f1dd;
-      border-radius: 30px;
-      box-shadow: 0 4px 10px rgb(0 0 0 / 0.1);
-      padding-left: 2rem;
-      padding-right: 2rem;
-      z-index: 100;
-      font-weight: 600;
-      font-size: 0.95rem;
-      height: 60px;
-      align-items: center;
-    }
-    nav.social-share a {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      color: #4a4a4a;
-      text-decoration: none;
-      padding: 0.4rem 0.8rem;
-      border-radius: 20px;
-      transition: background-color 0.3s ease, color 0.3s ease;
-      border: 1.5px solid transparent;
-    }
-    nav.social-share a svg {
-      width: 22px;
-      height: 22px;
-      fill: currentColor;
-    }
-    nav.social-share a:hover, nav.social-share a:focus {
-      background-color: #d9643e;
-      color: white;
-      border-color: #b7522b;
-    }
+  display: flex;
+  justify-content: center;
+  gap: 0.8rem;
+  position: fixed;        /* <- 關鍵，固定位置 */
+  bottom: 1rem;           /* <- 距離底部 */
+  left: 50%;              /* <- 水平置中 */
+  transform: translateX(-50%);
+  padding: 0.6rem 1rem;
+  background-color: rgba(240,240,240,0.9);
+  border-radius: 25px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  z-index: 999;
+}
+nav.social-share a {
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+  color: #4a4a4a;
+  text-decoration: none;
+  padding: 0.2rem 0.4rem;
+  border-radius: 18px;
+  border: 1px solid transparent;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+nav.social-share a:hover {
+  background-color: #d9643e;
+  color: white;
+  border-color: #b7522b;
+}
+#copy-toast {
+  visibility: hidden;
+  position: fixed;
+  bottom: 4rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #333;
+  color: #fff;
+  padding: 0.4rem 0.8rem;
+  border-radius: 5px;
+  font-size: 0.8rem;
+  z-index: 999;
+}
+#copy-toast.show {
+  visibility: visible;
+  animation: fadeout 2s forwards;
+}
+@keyframes fadeout {
+  0% {opacity:1;}
+  80% {opacity:1;}
+  100% {opacity:0;}
+}
   </style>
 </head>
 <body>
@@ -208,25 +216,38 @@
     <p>✨ Final Thoughts: A plant-based lifestyle is not only about what’s on your plate. It’s also about the small, intentional choices you make every day to support your body, mind, and environment. Lighting a natural, plant-based scented candle is one of those gentle practices — a reminder that healing can be as simple as a flame and a breath.</p>
   </div>
 
-  <!-- 留空間避免結尾內容被固定社群欄遮擋 -->
-  <div style="height: 80px;"></div>
+<!-- 避免社群列遮擋最後一段 -->
+<div style="height: 80px;"></div>
 
-  <nav class="social-share" aria-label="Social media sharing">
-    <a href="https://www.instagram.com/puresoulkitchen/" target="_blank" rel="noopener noreferrer" aria-label="Visit PureSoulKitchen Instagram">
-      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-        <path d="M7.75 2h8.5A5.75 5.75 0 0122 7.75v8.5A5.75 5.75 0 0116.25 22h-8.5A5.75 5.75 0 012 16.25v-8.5A5.75 5.75 0 017.75 2zm0 1.5A4.25 4.25 0 003.5 7.75v8.5A4.25 4.25 0 007.75 20.5h8.5a4.25 4.25 0 004.25-4.25v-8.5A4.25 4.25 0 0016.25 3.5h-8.5zm8.75 2.25a1.125 1.125 0 110 2.25 1.125 1.125 0 010-2.25zM12 7a5 5 0 110 10 5 5 0 010-10zm0 1.5a3.5 3.5 0 100 7 3.5 3.5 0 000-7z"/>
-      </svg>
-      Instagram
-    </a>
-    <a href="https://www.threads.net/@puresoulkitchen" target="_blank" rel="noopener noreferrer" aria-label="Visit PureSoulKitchen Threads">
-      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-        <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" fill="none"/>
-        <path d="M8 14c1-1 2-3 4-3 1.5 0 3 2 3 3" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-        <path d="M12 10c-2 1-3 3-4 4" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-      </svg>
-      Threads
-    </a>
-  </nav>
+<nav class="social-share">
+  <a href="https://www.instagram.com/puresoulkitchen/" target="_blank" rel="noopener noreferrer">Instagram</a>
+  <a href="https://www.threads.net/@puresoulkitchen" target="_blank" rel="noopener noreferrer">Threads</a>
+  <a href="#" id="twitter-share" target="_blank">Twitter</a>
+  <a href="#" id="facebook-share" target="_blank">Facebook</a>
+  <a href="#" id="pinterest-share" target="_blank">Pinterest</a>
+  <a href="#" id="copy-link">Share</a>
+</nav>
 
+<div id="copy-toast">Link copied!</div>
+
+<script>
+const url = encodeURIComponent(window.location.href);
+const title = encodeURIComponent(document.title);
+
+document.getElementById('twitter-share').href = 
+  `https://twitter.com/intent/tweet?text=${title}&url=${url}`;
+document.getElementById('facebook-share').href = 
+  `https://www.facebook.com/sharer/sharer.php?u=${url}`;
+document.getElementById('pinterest-share').href = 
+  `https://www.pinterest.com/pin/create/button/?url=${url}&description=${title}`;
+
+document.getElementById('copy-link').onclick = function(e) {
+  e.preventDefault();
+  navigator.clipboard.writeText(window.location.href);
+  let t = document.getElementById('copy-toast');
+  t.classList.add('show');
+  setTimeout(()=>{ t.classList.remove('show'); }, 2000);
+};
+</script>
 </body>
 </html>
