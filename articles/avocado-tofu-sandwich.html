@@ -114,44 +114,62 @@
     nav.social-share {
       display: flex;
       justify-content: center;
-      gap: 1.5rem;
+      gap: 1rem;
       margin-top: 3rem;
-      padding: 1rem;
-      background-color: rgba(240, 240, 240, 0.6);
-      border-radius: 12px;
-      width: fit-content;
-      margin-left: auto;
-      margin-right: auto;
+      padding-top: 1rem;
+      border-top: 1px solid #ddd;
+      position: fixed;
+      bottom: 1rem;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: #f9f6f1dd;
+      border-radius: 30px;
+      box-shadow: 0 4px 10px rgb(0 0 0 / 0.1);
+      padding-left: 2rem;
+      padding-right: 2rem;
+      z-index: 100;
+      font-weight: 600;
+      font-size: 0.95rem;
     }
     nav.social-share a {
-      text-decoration: none;
       display: flex;
       align-items: center;
-      color: #333;
-      font-weight: bold;
-      gap: 0.4rem;
-      transition: color 0.3s;
+      gap: 0.5rem;
+      color: #4a4a4a;
+      text-decoration: none;
+      padding: 0.4rem 0.8rem;
+      border-radius: 20px;
+      transition: background-color 0.3s ease, color 0.3s ease;
+      border: 1.5px solid transparent;
     }
-    nav.social-share a:hover {
-      color: #000;
+    nav.social-share a svg {
+      width: 22px;
+      height: 22px;
+      fill: currentColor;
+    }
+    nav.social-share a:hover,
+    nav.social-share a:focus {
+      background-color: #d9643e;
+      color: white;
+      border-color: #b7522b;
     }
   </style>
 </head>
 <body>
-  <button class="back-home" aria-label="Return to homepage" onclick="window.location.href='/'">
-    ← Back to Home
-  </button>
+  <button class="back-home" aria-label="Return to homepage" onclick="window.location.href='/'">← Back to Home</button>
 
   <h1>5-Minute Avocado Tofu Sandwich (No Garlic, No Onion, with Cheese)</h1>
+
   <img src="../assets/images/sandwich-based-avocado.png" alt="Avocado tofu sandwich on toasted whole grain bread" class="hero-img" />
 
   <section class="introduction">
     <p>A cozy, plant-based dinner that soothes after a long day. Fast, comforting, and kind to your nervous system.</p>
   </section>
 
+  <!-- 文章內容開始 -->
   <article class="section">
     <h2>🌙 Why This Sandwich is the Perfect Stress-Relief Dinner</h2>
-    <p>Let’s be real — by the time you get home from work, your energy is drained. You’re tired, overstimulated, and the last thing you want is to spend another hour in the kitchen. That’s where this sandwich comes in. It’s fast (ready in 10 minutes), plant-based, soothing, and — bonus — it tastes like a warm hug.</p>
+    <p>Let’s be real — by the time you get home from work, your energy is drained. You’re tired, overstimulated, and the last thing you want is to spend another hour in the kitchen. That’s where this sandwich comes in. It’s fast (ready in 10 minutes), plant-based, soothing, and — bonus — it tastes like a warm hug.</p>
     <ul>
       <li>✅ Free from garlic and onion (perfect for sensitive stomachs and calmer minds)</li>
       <li>✅ Made with avocado and tofu for protein and healthy fats</li>
@@ -178,7 +196,7 @@
   </article>
 
   <article class="section">
-    <h2>🧴 Quick Miso Tahini Sauce (2-Minute Recipe)</h2>
+    <h2>🧴 Quick Miso Tahini Sauce</h2>
     <ul>
       <li>1 tsp white miso</li>
       <li>1 tbsp tahini (sesame paste)</li>
@@ -186,17 +204,17 @@
       <li>1/2 tsp maple syrup or coconut sugar</li>
       <li>1 tbsp water (adjust for texture)</li>
     </ul>
-    <p><strong>Tip:</strong> You only need half for one sandwich. Save the rest for a salad or dip tomorrow.</p>
+    <p>💡Tip: Use half for one sandwich, save the rest for a salad or dip tomorrow.</p>
   </article>
 
   <article class="section">
     <h2>🍳 How to Make It</h2>
     <ol>
-      <li>Grill the Tofu: Pat tofu dry. Heat a bit of olive oil in a pan and cook tofu slices on medium heat for 3–4 minutes each side, until crispy and golden brown.</li>
-      <li>Toast the Bread (optional): If you like extra texture, toast the bread lightly.</li>
-      <li>Build Your Layers: Spread miso tahini sauce on the bread, add lettuce, tomato, avocado slices, top with grilled tofu and a slice of cheese, then close the sandwich and gently press.</li>
-      <li>Optional Final Step: Warm it in a pan or sandwich press for 1–2 minutes — just enough to melt the cheese and bring all the flavors together.</li>
-      <li>Serve & Enjoy: Cut in half. Serve with a cup of warm herbal tea or a simple miso soup.</li>
+      <li>Grill the tofu slices until crispy and golden brown.</li>
+      <li>Toast the bread if desired.</li>
+      <li>Build layers: miso tahini sauce, lettuce, tomato, avocado, tofu, cheese.</li>
+      <li>Optional: warm in pan or sandwich press for 1–2 min to melt cheese.</li>
+      <li>Serve with herbal tea or miso soup.</li>
     </ol>
   </article>
 
@@ -207,14 +225,14 @@
       <li>🥑 Avocado = magnesium + potassium = natural relaxation</li>
       <li>🧀 Cheese = tryptophan = serotonin booster</li>
       <li>🍞 Whole grain bread = fiber + grounding carbs</li>
-      <li>🚫 No garlic or onion = gentle on gut and great for meditative evenings</li>
+      <li>🚫 No garlic or onion = gentle on gut</li>
       <li>🌱 Miso = probiotics = gut-brain connection</li>
     </ul>
   </article>
 
   <article class="section">
     <h2>🧘 Mindful Eating Moment</h2>
-    <p>Slow down and eat this without distractions. Light a candle, play some soft lo-fi or nature sounds, and take a few deep breaths between bites. You’ll be amazed how much better food feels this way.</p>
+    <p>Slow down and eat without distractions. Light a candle, play soft lo-fi or nature sounds, and take a few deep breaths between bites.</p>
   </article>
 
   <article class="section">
@@ -224,49 +242,24 @@
       <li>🔗 <a href="articles/plant-based-dinner.html">🧘‍♀️ Soothe Your Soul with a Dinner Ritual</a></li>
     </ul>
   </article>
+  <!-- 文章內容結束 -->
 
-  <footer class="conclusion">
-    Enjoy this weeknight reset with a sandwich that soothes both body and mind!
-  </footer>
-  
-<nav class="social-share" aria-label="Social media sharing">
-  <!-- Instagram -->
-  <a href="https://www.instagram.com/puresoulkitchen/" target="_blank" rel="noopener noreferrer" aria-label="Visit PureSoulKitchen Instagram">
-    <svg viewBox="0 0 24 24"><path d="M7.75 2h8.5A5.75 5.75 0 0122 7.75v8.5A5.75 5.75 0 0116.25 22h-8.5A5.75 5.75 0 012 16.25v-8.5A5.75 5.75 0 017.75 2zm0 1.5A4.25 4.25 0 003.5 7.75v8.5A4.25 4.25 0 007.75 20.5h8.5a4.25 4.25 0 004.25-4.25v-8.5A4.25 4.25 0 0016.25 3.5h-8.5zm8.75 2.25a1.125 1.125 0 110 2.25 1.125 1.125 0 010-2.25zM12 7a5 5 0 110 10 5 5 0 010-10zm0 1.5a3.5 3.5 0 100 7 3.5 3.5 0 000-7z"/></svg>
-    Instagram
-  </a>
+  <footer class="conclusion"></footer>
 
-  <!-- Threads -->
-  <a href="https://www.threads.net/@puresoulkitchen" target="_blank" rel="noopener noreferrer" aria-label="Visit PureSoulKitchen Threads">
-    <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" fill="none"/><path d="M8 14c1-1 2-3 4-3 1.5 0 3 2 3 3" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 10c-2 1-3 3-4 4" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
-    Threads
-  </a>
+  <!-- 浮動分享按鈕 -->
+  <nav class="social-share" aria-label="Social media sharing">
+    <a href="https://www.instagram.com/puresoulkitchen/" target="_blank">Instagram</a>
+    <a href="https://www.threads.net/@puresoulkitchen" target="_blank">Threads</a>
+    <a href="#" id="twitter-share" target="_blank">Twitter</a>
+    <a href="#" id="facebook-share" target="_blank">Facebook</a>
+  </nav>
 
-  <!-- Twitter 分享 -->
-  <a href="#" id="twitter-share" target="_blank" rel="noopener noreferrer" aria-label="Share on Twitter">
-    <svg viewBox="0 0 24 24"><path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"/></svg>
-    Twitter
-  </a>
+  <script>
+    const currentURL = encodeURIComponent(window.location.href);
+    const pageTitle = encodeURIComponent(document.title);
+    document.getElementById('twitter-share').href = `https://twitter.com/intent/tweet?text=${pageTitle}&url=${currentURL}`;
+    document.getElementById('facebook-share').href = `https://www.facebook.com/sharer/sharer.php?u=${currentURL}`;
+  </script>
 
-  <!-- Facebook 分享 -->
-  <a href="#" id="facebook-share" target="_blank" rel="noopener noreferrer" aria-label="Share on Facebook">
-    <svg viewBox="0 0 24 24"><path d="M22 12a10 10 0 10-11.5 9.95v-7.05h-2.1v-2.9h2.1v-2.2c0-2.07 1.23-3.2 3.12-3.2.9 0 1.84.16 1.84.16v2.03h-1.04c-1.03 0-1.35.64-1.35 1.3v1.9h2.3l-.37 2.9h-1.93v7.05A10 10 0 0022 12z"/></svg>
-    Facebook
-  </a>
-</nav>
-
-<script>
-  // 取得當前頁面 URL
-  const currentURL = encodeURIComponent(window.location.href);
-  const pageTitle = encodeURIComponent(document.title);
-
-  // 設定 Twitter 分享連結
-  const twitterLink = `https://twitter.com/intent/tweet?text=${pageTitle}&url=${currentURL}`;
-  document.getElementById('twitter-share').setAttribute('href', twitterLink);
-
-  // 設定 Facebook 分享連結
-  const facebookLink = `https://www.facebook.com/sharer/sharer.php?u=${currentURL}`;
-  document.getElementById('facebook-share').setAttribute('href', facebookLink);
-</script>
 </body>
 </html>
