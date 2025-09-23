@@ -86,49 +86,44 @@
       background-color: #b7522b;
       outline: none;
     }
-
-    nav.social-share {
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-      margin-top: 3rem;
-      padding-top: 1rem;
-      border-top: 1px solid #ddd;
-      position: fixed;
-      bottom: 1rem;
-      left: 50%;
-      transform: translateX(-50%);
-      background-color: #f9f6f1dd;
-      border-radius: 30px;
-      box-shadow: 0 4px 10px rgb(0 0 0 / 0.1);
-      padding-left: 2rem;
-      padding-right: 2rem;
-      z-index: 100;
-      font-weight: 600;
-      font-size: 0.95rem;
-    }
     nav.social-share a {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      color: #4a4a4a;
-      text-decoration: none;
-      padding: 0.4rem 0.8rem;
-      border-radius: 20px;
-      transition: background-color 0.3s ease, color 0.3s ease;
-      border: 1.5px solid transparent;
-    }
-    nav.social-share a svg {
-      width: 22px;
-      height: 22px;
-      fill: currentColor;
-    }
-    nav.social-share a:hover, nav.social-share a:focus {
-      background-color: #d9643e;
-      color: white;
-      border-color: #b7522b;
-    }
-
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+  color: #4a4a4a;
+  text-decoration: none;
+  padding: 0.2rem 0.4rem;
+  border-radius: 18px;
+  border: 1px solid transparent;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+nav.social-share a:hover {
+  background-color: #d9643e;
+  color: white;
+  border-color: #b7522b;
+}
+#copy-toast {
+  visibility: hidden;
+  position: fixed;
+  bottom: 4rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #333;
+  color: #fff;
+  padding: 0.4rem 0.8rem;
+  border-radius: 5px;
+  font-size: 0.8rem;
+  z-index: 999;
+}
+#copy-toast.show {
+  visibility: visible;
+  animation: fadeout 2s forwards;
+}
+@keyframes fadeout {
+  0% {opacity:1;}
+  80% {opacity:1;}
+  100% {opacity:0;}
+}
     table {
       width: 100%;
       border-collapse: collapse;
