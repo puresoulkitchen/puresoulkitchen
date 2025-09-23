@@ -241,23 +241,38 @@
   <div class="conclusion">
     <p>A plant-based diet can do more than nourish the body—it can help realign the mind and balance the emotions by supporting key hormones. With mindful eating and the right ingredients, meals become a tool for emotional resilience and inner harmony.</p>
   </div>
+<!-- 避免社群列遮擋最後一段 -->
+<div style="height: 80px;"></div>
 
-  <nav class="social-share" aria-label="Social media sharing">
-    <a href="https://www.instagram.com/puresoulkitchen/" target="_blank" rel="noopener noreferrer" aria-label="Visit PureSoulKitchen Instagram">
-      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-        <path d="M7.75 2h8.5A5.75 5.75 0 0122 7.75v8.5A5.75 5.75 0 0116.25 22h-8.5A5.75 5.75 0 012 16.25v-8.5A5.75 5.75 0 017.75 2zm0 1.5A4.25 4.25 0 003.5 7.75v8.5A4.25 4.25 0 007.75 20.5h8.5a4.25 4.25 0 004.25-4.25v-8.5A4.25 4.25 0 0016.25 3.5h-8.5zm8.75 2.25a1.125 1.125 0 110 2.25 1.125 1.125 0 010-2.25zM12 7a5 5 0 110 10 5 5 0 010-10zm0 1.5a3.5 3.5 0 100 7 3.5 3.5 0 000-7z"/>
-      </svg>
-      Instagram
-    </a>
-    <a href="https://www.threads.net/@puresoulkitchen" target="_blank" rel="noopener noreferrer" aria-label="Visit PureSoulKitchen Threads">
-      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-        <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" fill="none"/>
-        <path d="M8 14c1-1 2-3 4-3 1.5 0 3 2 3 3" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-        <path d="M12 10c-2 1-3 3-4 4" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-      </svg>
-      Threads
-    </a>
-  </nav>
+<nav class="social-share">
+  <a href="https://www.instagram.com/puresoulkitchen/" target="_blank" rel="noopener noreferrer">Instagram</a>
+  <a href="https://www.threads.net/@puresoulkitchen" target="_blank" rel="noopener noreferrer">Threads</a>
+  <a href="#" id="twitter-share" target="_blank">Twitter</a>
+  <a href="#" id="facebook-share" target="_blank">Facebook</a>
+  <a href="#" id="pinterest-share" target="_blank">Pinterest</a>
+  <a href="#" id="copy-link">Share</a>
+</nav>
 
+<div id="copy-toast">Link copied!</div>
+
+<script>
+const url = encodeURIComponent(window.location.href);
+const title = encodeURIComponent(document.title);
+
+document.getElementById('twitter-share').href = 
+  `https://twitter.com/intent/tweet?text=${title}&url=${url}`;
+document.getElementById('facebook-share').href = 
+  `https://www.facebook.com/sharer/sharer.php?u=${url}`;
+document.getElementById('pinterest-share').href = 
+  `https://www.pinterest.com/pin/create/button/?url=${url}&description=${title}`;
+
+document.getElementById('copy-link').onclick = function(e) {
+  e.preventDefault();
+  navigator.clipboard.writeText(window.location.href);
+  let t = document.getElementById('copy-toast');
+  t.classList.add('show');
+  setTimeout(()=>{ t.classList.remove('show'); }, 2000);
+};
+</script>
 </body>
 </html>
