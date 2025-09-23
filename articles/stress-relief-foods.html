@@ -97,6 +97,58 @@
   .back-home:hover {
     background-color: #b84d2d;
   }
+    nav.social-share {
+  display: flex;
+  justify-content: center;
+  gap: 0.8rem;
+  position: fixed;        /* <- 關鍵，固定位置 */
+  bottom: 1rem;           /* <- 距離底部 */
+  left: 50%;              /* <- 水平置中 */
+  transform: translateX(-50%);
+  padding: 0.6rem 1rem;
+  background-color: rgba(240,240,240,0.9);
+  border-radius: 25px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  z-index: 999;
+}
+nav.social-share a {
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+  color: #4a4a4a;
+  text-decoration: none;
+  padding: 0.2rem 0.4rem;
+  border-radius: 18px;
+  border: 1px solid transparent;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+nav.social-share a:hover {
+  background-color: #d9643e;
+  color: white;
+  border-color: #b7522b;
+}
+#copy-toast {
+  visibility: hidden;
+  position: fixed;
+  bottom: 4rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #333;
+  color: #fff;
+  padding: 0.4rem 0.8rem;
+  border-radius: 5px;
+  font-size: 0.8rem;
+  z-index: 999;
+}
+#copy-toast.show {
+  visibility: visible;
+  animation: fadeout 2s forwards;
+}
+@keyframes fadeout {
+  0% {opacity:1;}
+  80% {opacity:1;}
+  100% {opacity:0;}
+}
 </style>
 
   <h1>🥦 Nutritional Analysis of Common Stress-Relieving Foods</h1>
@@ -177,47 +229,38 @@
     <div class="tip">Tip: Use as an after-dinner herbal infusion, especially with oat-based desserts.</div>
   </div>
 
-  <div class="conclusion">
-    <p>These plant-based ingredients are more than just healthy — they’re functional tools for emotional well-being. When used in recipes that respect simplicity, balance, and a no-five-pungent-spice approach, they contribute to a diet of peace. Whether you're unwinding after a long day or preparing for a mindful meditation session, incorporating these foods into your meals can be a gentle yet powerful act of self-care.</p>
-  </div>
-<div class="social-share">
-  <a href="https://www.instagram.com/puresoulkitchen/" target="_blank" rel="noopener">
-    <svg fill="currentColor" viewBox="0 0 24 24" width="20" height="20">
-      <path d="M7.5 2h9A5.5 5.5 0 0 1 22 7.5v9A5.5 5.5 0 0 1 16.5 22h-9A5.5 5.5 0 0 1 2 16.5v-9A5.5 5.5 0 0 1 7.5 2zm0 2A3.5 3.5 0 0 0 4 7.5v9A3.5 3.5 0 0 0 7.5 20h9a3.5 3.5 0 0 0 3.5-3.5v-9A3.5 3.5 0 0 0 16.5 4h-9zm9.75 1.5a.75.75 0 1 1 0 1.5.75.75 0 0 1 0-1.5zM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6z"/>
-    </svg>
-    Instagram
-  </a>
-  <a href="https://www.threads.net/@puresoulkitchen" target="_blank" rel="noopener">
-    <svg viewBox="0 0 1000 1000" fill="currentColor" width="20" height="20">
-      <path d="M500 0C225 0 0 225 0 500s225 500 500 500 500-225 500-500S775 0 500 0zm12 798c-112 0-190-66-190-180 0-99 69-174 161-174 29 0 53 5 73 14-5-22-7-44-7-66 0-44 11-82 56-82 38 0 66 33 66 79 0 94-87 171-224 171-17 0-36-1-53-4-14 13-21 31-21 52 0 40 30 66 81 66 41 0 70-13 98-35l27 34c-37 31-82 54-127 54zm152-345c2-16 3-31 3-47 0-24-5-35-15-35-14 0-18 18-18 42 0 16 1 30 4 44 9-2 18-3 26-4z"/>
-    </svg>
-    Threads
-  </a>
-</div>
+ <!-- 避免社群列遮擋最後一段 -->
+<div style="height: 80px;"></div>
 
-<style>
-  .social-share {
-    display: flex;
-    justify-content: center;
-    gap: 1.5rem;
-    margin: 3rem auto 2rem;
-    padding: 1rem;
-    background-color: rgba(240, 240, 240, 0.6);
-    border-radius: 12px;
-    width: fit-content;
-  }
-  .social-share a {
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    color: #333;
-    font-weight: bold;
-    gap: 0.4rem;
-    transition: color 0.3s;
-  }
-  .social-share a:hover {
-    color: #000;
-  }
-</style>
+<nav class="social-share">
+  <a href="https://www.instagram.com/puresoulkitchen/" target="_blank" rel="noopener noreferrer">Instagram</a>
+  <a href="https://www.threads.net/@puresoulkitchen" target="_blank" rel="noopener noreferrer">Threads</a>
+  <a href="#" id="twitter-share" target="_blank">Twitter</a>
+  <a href="#" id="facebook-share" target="_blank">Facebook</a>
+  <a href="#" id="pinterest-share" target="_blank">Pinterest</a>
+  <a href="#" id="copy-link">Share</a>
+</nav>
+
+<div id="copy-toast">Link copied!</div>
+
+<script>
+const url = encodeURIComponent(window.location.href);
+const title = encodeURIComponent(document.title);
+
+document.getElementById('twitter-share').href = 
+  `https://twitter.com/intent/tweet?text=${title}&url=${url}`;
+document.getElementById('facebook-share').href = 
+  `https://www.facebook.com/sharer/sharer.php?u=${url}`;
+document.getElementById('pinterest-share').href = 
+  `https://www.pinterest.com/pin/create/button/?url=${url}&description=${title}`;
+
+document.getElementById('copy-link').onclick = function(e) {
+  e.preventDefault();
+  navigator.clipboard.writeText(window.location.href);
+  let t = document.getElementById('copy-toast');
+  t.classList.add('show');
+  setTimeout(()=>{ t.classList.remove('show'); }, 2000);
+};
+</script>
 </body>
 </html>
