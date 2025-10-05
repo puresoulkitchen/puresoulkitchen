@@ -91,45 +91,55 @@
     nav.social-share {
       display: flex;
       justify-content: center;
-      gap: 2rem;
-      margin-top: 3rem;
-      padding-top: 1rem;
-      border-top: 1px solid #ddd;
+      gap: 0.8rem;
       position: fixed;
       bottom: 1rem;
       left: 50%;
       transform: translateX(-50%);
-      background-color: #f9f6f1dd;
-      border-radius: 30px;
-      box-shadow: 0 4px 10px rgb(0 0 0 / 0.1);
-      padding-left: 2rem;
-      padding-right: 2rem;
-      z-index: 100;
-      font-weight: 600;
-      font-size: 0.95rem;
-      height: 60px;
-      align-items: center;
+      padding: 0.6rem 1rem;
+      background-color: rgba(240,240,240,0.9);
+      border-radius: 25px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      z-index: 999;
     }
     nav.social-share a {
       display: flex;
       align-items: center;
-      gap: 0.5rem;
+      gap: 0.2rem;
       color: #4a4a4a;
       text-decoration: none;
-      padding: 0.4rem 0.8rem;
-      border-radius: 20px;
+      padding: 0.2rem 0.4rem;
+      border-radius: 18px;
+      border: 1px solid transparent;
       transition: background-color 0.3s ease, color 0.3s ease;
-      border: 1.5px solid transparent;
     }
-    nav.social-share a svg {
-      width: 22px;
-      height: 22px;
-      fill: currentColor;
-    }
-    nav.social-share a:hover, nav.social-share a:focus {
+    nav.social-share a:hover {
       background-color: #d9643e;
       color: white;
       border-color: #b7522b;
+    }
+
+    #copy-toast {
+      visibility: hidden;
+      position: fixed;
+      bottom: 4rem;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #333;
+      color: #fff;
+      padding: 0.4rem 0.8rem;
+      border-radius: 5px;
+      font-size: 0.8rem;
+      z-index: 999;
+    }
+    #copy-toast.show {
+      visibility: visible;
+      animation: fadeout 2s forwards;
+    }
+    @keyframes fadeout {
+      0% {opacity:1;}
+      80% {opacity:1;}
+      100% {opacity:0;}
     }
   </style>
 </head>
@@ -140,87 +150,81 @@
   <h1>🌽 Homemade Mexican Tortillas with Plant-Based Fillings</h1>
 
   <div class="intro">
-    <p>Soft, freshly made corn tortillas are just the beginning! Fill them with colorful, easy-to-prepare plant-based ingredients, then finish with our <a href="zesty-cilantro-lime-salsa.html">🌿 Zesty Cilantro-Lime Salsa</a> for a bright, zesty flavor.</p>
+    <p>Soft, warm corn tortillas filled with colorful plant-based ingredients — finished with our <a href="articles/zesty-cilantro-lime-salsa.html">🌿 Zesty Cilantro-Lime Salsa</a> for a bright, zesty flavor. Perfect for tacos, wraps, or family meals!</p>
   </div>
 
-  <img src="../assets/images/mexican-tortillas.png" alt="Fresh homemade Mexican tortillas with colorful fillings" />
+  <img src="../assets/images/mexican-tortillas.png" alt="Homemade Mexican tortillas with plant-based fillings" />
 
   <div class="section">
-    <h2>🌽 Ingredients for Tortillas (Makes 6-8)</h2>
+    <h2>🌽 Make the Corn Tortillas</h2>
     <ul>
-      <li>1 cup masa harina (corn flour)</li>
-      <li>3/4 cup warm water</li>
-      <li>1/4 tsp salt</li>
-      <li>Optional: 1 tsp olive oil or corn oil</li>
+      <li>1 cup masa harina</li>
+      <li>1/2 tsp salt</li>
+      <li>3/4 cup warm water (adjust as needed)</li>
+      <li>Mix into a soft dough. Divide into 6 portions and roll into balls.</li>
+      <li>Press or roll each ball into a flat disc (~6 inch diameter).</li>
+      <li>Cook on a hot, dry skillet 1-2 minutes per side until lightly browned.</li>
     </ul>
   </div>
 
   <div class="section">
-    <h2>🥗 Ingredients for Fillings</h2>
+    <h2>🥗 Prepare the Plant-Based Fillings</h2>
     <ul>
-      <li>1 cup black beans or cooked lentils</li>
-      <li>1/2 cup diced bell peppers</li>
-      <li>1/2 avocado, sliced</li>
-      <li>1/4 cup corn kernels</li>
-      <li>1/4 cup chopped fresh cilantro</li>
-      <li>Optional: shredded plant-based cheese or crumbled tofu</li>
+      <li>Grilled vegetables: bell peppers, zucchini, mushrooms.</li>
+      <li>Plant-based protein: pan-fried tofu or tempeh slices.</li>
+      <li>Fresh greens: lettuce, arugula, or spinach.</li>
+      <li>Optional extras: avocado slices, pickled onions, or shredded carrots.</li>
     </ul>
   </div>
 
   <div class="section">
-    <h2>🧑‍🍳 Step 1: Make the Tortillas</h2>
+    <h2>🌿 Assemble Your Tortilla Wrap</h2>
     <ol>
-      <li>Combine masa harina, salt, and optional oil in a bowl.</li>
-      <li>Gradually add warm water, mixing until soft dough forms.</li>
-      <li>Divide dough into 6-8 balls and press into thin circles.</li>
-      <li>Cook on a heated non-stick or cast-iron skillet 1-2 minutes per side until golden and puffed.</li>
-      <li>Keep warm under a clean cloth.</li>
-    </ol>
-  </div>
-
-  <div class="section">
-    <h2>🧑‍🍳 Step 2: Prepare the Fillings</h2>
-    <ul>
-      <li>Warm beans and corn lightly with a pinch of salt.</li>
-      <li>Dice bell peppers and slice avocado.</li>
-      <li>Optionally crumble tofu or shred plant-based cheese.</li>
-    </ul>
-  </div>
-
-  <div class="section">
-    <h2>🧑‍🍳 Step 3: Assemble the Tortillas</h2>
-    <ol>
-      <li>Lay a warm tortilla on a plate.</li>
-      <li>Add a layer of beans and corn.</li>
-      <li>Top with bell peppers, avocado, and cilantro.</li>
-      <li>Sprinkle cheese or tofu if using.</li>
-      <li>Finish with a generous spoonful of <a href="zesty-cilantro-lime-salsa.html">🌿 Zesty Cilantro-Lime Salsa</a>.</li>
-      <li>Fold or roll and enjoy immediately.</li>
+      <li>Place a warm tortilla on a plate.</li>
+      <li>Layer greens first, then protein, then vegetables.</li>
+      <li>Add optional extras like avocado or pickled veggies.</li>
+      <li>Top generously with <a href="articles/zesty-cilantro-lime-salsa.html">🌿 Zesty Cilantro-Lime Salsa</a>.</li>
+      <li>Roll or fold the tortilla and enjoy immediately!</li>
     </ol>
   </div>
 
   <div class="section conclusion">
-    <p>✨ Fresh tortillas with colorful fillings make a nourishing, plant-based meal. The <a href="zesty-cilantro-lime-salsa.html">🌿 Zesty Cilantro-Lime Salsa</a> ties everything together, creating a bright, flavorful experience in every bite.</p>
+    <p>✨ Final Thoughts: Making your own corn tortillas and filling them with fresh, plant-based ingredients is a fun, interactive way to enjoy Mexican flavors. The bright kick from our <a href="articles/zesty-cilantro-lime-salsa.html">Zesty Cilantro-Lime Salsa</a> completes the meal and brings everyone to the table.</p>
   </div>
 
+  <!-- 留空間避免結尾內容被固定社群欄遮擋 -->
   <div style="height: 80px;"></div>
 
-  <nav class="social-share" aria-label="Social media sharing">
-    <a href="https://www.instagram.com/puresoulkitchen/" target="_blank" rel="noopener noreferrer" aria-label="Visit PureSoulKitchen Instagram">
-      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-        <path d="M7.75 2h8.5A5.75 5.75 0 0122 7.75v8.5A5.75 5.75 0 0116.25 22h-8.5A5.75 5.75 0 012 16.25v-8.5A5.75 5.75 0 017.75 2zm0 1.5A4.25 4.25 0 003.5 7.75v8.5A4.25 4.25 0 007.75 20.5h8.5a4.25 4.25 0 004.25-4.25v-8.5A4.25 4.25 0 0016.25 3.5h-8.5zm8.75 2.25a1.125 1.125 0 110 2.25 1.125 1.125 0 010-2.25zM12 7a5 5 0 110 10 5 5 0 010-10zm0 1.5a3.5 3.5 0 100 7 3.5 3.5 0 000-7z"/>
-      </svg>
-      Instagram
-    </a>
-    <a href="https://www.threads.net/@puresoulkitchen" target="_blank" rel="noopener noreferrer" aria-label="Visit PureSoulKitchen Threads">
-      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-        <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" fill="none"/>
-        <path d="M8 14c1-1 2-3 4-3 1.5 0 3 2 3 3" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-        <path d="M12 10c-2 1-3 3-4 4" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-      </svg>
-      Threads
-    </a>
+  <nav class="social-share">
+    <a href="https://www.instagram.com/puresoulkitchen/" target="_blank" rel="noopener noreferrer">Instagram</a>
+    <a href="https://www.threads.net/@puresoulkitchen" target="_blank" rel="noopener noreferrer">Threads</a>
+    <a href="#" id="twitter-share" target="_blank">Twitter</a>
+    <a href="#" id="facebook-share" target="_blank">Facebook</a>
+    <a href="#" id="pinterest-share" target="_blank">Pinterest</a>
+    <a href="#" id="copy-link">Share</a>
   </nav>
+
+  <div id="copy-toast">Link copied!</div>
+
+  <script>
+    const url = encodeURIComponent(window.location.href);
+    const title = encodeURIComponent(document.title);
+
+    document.getElementById('twitter-share').href = 
+      `https://twitter.com/intent/tweet?text=${title}&url=${url}`;
+    document.getElementById('facebook-share').href = 
+      `https://www.facebook.com/sharer/sharer.php?u=${url}`;
+    document.getElementById('pinterest-share').href = 
+      `https://www.pinterest.com/pin/create/button/?url=${url}&description=${title}`;
+
+    document.getElementById('copy-link').onclick = function(e) {
+      e.preventDefault();
+      navigator.clipboard.writeText(window.location.href);
+      let t = document.getElementById('copy-toast');
+      t.classList.add('show');
+      setTimeout(()=>{ t.classList.remove('show'); }, 2000);
+    };
+  </script>
 
 </body>
 </html>
