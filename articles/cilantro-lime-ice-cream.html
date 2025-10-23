@@ -71,6 +71,7 @@
 
   <div class="intro">
     <p>A creamy, plant-based ice cream infused with cilantro and lime — unexpectedly fresh, naturally sweet, and perfect for mindful summer days.</p>
+    <p>For a savory complement or to create a full cilantro-themed meal, try our <a href="articles/zesty-cilantro-lime-salsa.html">🌿 Zesty Cilantro-Lime Salsa</a> and <a href="articles/mexican-corn-tortilla-wrap.html">🌽 Homemade Mexican Tortillas with Plant-Based Fillings</a>.</p>
   </div>
 
   <img src="../assets/images/cilantro-lime-ice-cream.png" alt="Creamy cilantro-lime ice cream in a glass bowl, topped with fresh cilantro leaves" />
@@ -137,7 +138,7 @@
       navigator.clipboard.writeText(window.location.href).then(()=>showCopyToast());
     };
     function showCopyToast(){
-      let t=document.getElementById('copy-toast')
+      let t=document.getElementById('copy-toast');
       t.classList.add('show');
       setTimeout(()=>{t.classList.remove('show');},2000);
     }
