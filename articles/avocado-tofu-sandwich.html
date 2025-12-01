@@ -56,12 +56,13 @@
     .section h2 { margin-top: 0; color: #d9643e; }
 
     .hero-img {
-      display: block;
-      max-width: 100%;
-      height: auto;
-      border-radius: 12px;
-      margin: 1rem auto 2.5rem auto;
-      box-shadow: 0 4px 10px rgb(0 0 0 / 0.1);
+    display: block;                   /* 圖片獨占一行，方便置中 */
+    width: 100%;                       /* 強制撐滿容器 */
+    max-width: none;                   /* 不受原始檔案大小限制 */
+    height: auto;                      /* 保持比例 */
+    border-radius: 12px;               /* 圓角效果 */
+    margin: 1rem auto 2.5rem auto;     /* 上 1rem, 左右 auto (置中), 下 2.5rem */
+    box-shadow: 0 4px 10px rgb(0 0 0 / 0.1); /* 陰影效果 */
     }
 
     ul, ol { margin: 0 0 1rem 1.25rem; }
