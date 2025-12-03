@@ -1,4 +1,2 @@
 User-agent: *
-Allow: /
-
 Sitemap: https://puresoulkitchen.com/sitemap.xml
