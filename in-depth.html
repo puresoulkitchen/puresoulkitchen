@@ -61,6 +61,55 @@
     .article-content a:hover {
       text-decoration: underline;
     }
+    
+  .popular-section {
+  margin: 2em;
+  padding: 1.5em;
+  background-color: #fff8ef;
+  border: 1px solid #e6d8c3;
+  border-radius: 14px;
+}
+
+.popular-title {
+  margin-bottom: 1em;
+  font-size: 1.2em;
+  color: #4e3d30;
+}
+
+.popular-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.popular-item {
+  display: flex;
+  gap: 1em;
+  align-items: center;
+}
+
+.popular-item img {
+  width: 90px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.popular-item a {
+  font-weight: 600;
+  color: #4e3d30;
+  text-decoration: none;
+}
+
+.popular-item a:hover {
+  text-decoration: underline;
+}
+
+.popular-item p {
+  margin: 0.2em 0 0;
+  font-size: 0.9em;
+  color: #665e53;
+}
   </style>
 </head>
 <body>
@@ -75,19 +124,22 @@
   </header>
 
   <main class="article-list">
+    <section class="popular-section">
+  <h2 class="popular-title">🔥 Popular In-Depth Reads</h2>
+  <div class="article-row">
+  <img src="assets/images/vagus-nerve-plant-based.png" alt="Illustration of the vagus nerve connecting brain, heart, and gut with plant-based foods around it">
+  <div class="article-content">
+    <h2><a href="articles/vagus-nerve-plant-based.html">🌿 Nourishing the Vagus Nerve: How Plant-Based Foods Support Your Calm System</a></h2>
+    <p>Explore how a plant-based diet can strengthen your vagus nerve, improve emotional balance, and support overall wellness through mindful nutrition and gut-brain connection.</p>
+  </div>
+  </div>
+</section>
+
     <div class="article-row">
   <img src="assets/images/gut-brain-axis.png" alt="Illustration of gut–brain axis connection with plant-based foods">
   <div class="article-content">
     <h2><a href="articles/plant-based-gut-brain-axis.html">🌿 How Plant-Based Foods Influence the Gut–Brain Axis</a></h2>
     <p>A deep exploration of how plant-based foods interact with the gut–brain axis, including microbial support, neural signaling, immune pathways, and subtle improvements </p>
-  </div>
-</div>
-
-    <div class="article-row">
-  <img src="assets/images/vagus-nerve-plant-based.png" alt="Illustration of the vagus nerve connecting brain, heart, and gut with plant-based foods around it">
-  <div class="article-content">
-    <h2><a href="articles/vagus-nerve-plant-based.html">🌿 Nourishing the Vagus Nerve: How Plant-Based Foods Support Your Calm System</a></h2>
-    <p>Explore how a plant-based diet can strengthen your vagus nerve, improve emotional balance, and support overall wellness through mindful nutrition and gut-brain connection.</p>
   </div>
 </div>
 
