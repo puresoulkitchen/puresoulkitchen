@@ -61,6 +61,54 @@
     .article-content a:hover {
       text-decoration: underline;
     }
+  .popular-section {
+  margin: 2em;
+  padding: 1.5em;
+  background-color: #fff8ef;
+  border: 1px solid #e6d8c3;
+  border-radius: 14px;
+}
+
+.popular-title {
+  margin-bottom: 1em;
+  font-size: 1.2em;
+  color: #4e3d30;
+}
+
+.popular-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.popular-item {
+  display: flex;
+  gap: 1em;
+  align-items: center;
+}
+
+.popular-item img {
+  width: 90px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.popular-item a {
+  font-weight: 600;
+  color: #4e3d30;
+  text-decoration: none;
+}
+
+.popular-item a:hover {
+  text-decoration: underline;
+}
+
+.popular-item p {
+  margin: 0.2em 0 0;
+  font-size: 0.9em;
+  color: #665e53;
+}
   </style>
 </head>
 <body>
@@ -75,6 +123,19 @@
   </header>
 
   <main class="article-list">
+<section class="popular-section">
+  <h2 class="popular-title">🔥 Popular In-Depth Reads</h2>
+
+  <div class="article-row">
+  <img src="assets/images/seasonal-ritual-bowl.png" alt="Cozy plant-based Seasonal Ritual Bowl with roasted pumpkin, quinoa, greens, seeds, and citrus">
+  <div class="article-content">
+    <h2><a href="articles/seasonal-ritual-bowl.html">🌿 Seasonal Ritual Bowl: A Plant-Based Recipe for Noticing the Weather Shift</a></h2>
+    <p>A flexible plant-based bowl for the in-between days — warm, simple, and shaped by the shifting seasons. Featuring roasted pumpkin, quinoa, greens, and seeds, this bowl matches flavor and texture to the weather outside.</p>
+  </div>
+</div>
+ 
+</section>
+
     <div class="article-row">
   <img src="assets/images/seasonal-ritual-bowl.png" alt="Cozy plant-based Seasonal Ritual Bowl with roasted pumpkin, quinoa, greens, seeds, and citrus">
   <div class="article-content">
