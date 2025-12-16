@@ -74,41 +74,69 @@
   transition: transform 0.2s ease;
 }
 
-.editor-card:hover {
-  transform: translateY(-3px);
-}
-/* 編輯精選整體容器 */
+/* 整個精選區塊 */
 .editor-picks {
   max-width: 1200px;
   margin: 4rem auto;
   padding: 2.5rem 3rem;
   background-color: #fff6e8;
   border-radius: 28px;
+
+  /* 微陰影，讓它浮起來但不商業 */
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
 }
 
-/* 標題像分頁標籤 */
+/* 標題像分頁區塊 */
 .editor-title {
   font-size: 1.6rem;
-  margin-bottom: 1.8rem;
+  margin-bottom: 2rem;
   color: #4e3d30;
 }
 
-/* 精選內的文章排列 */
-.editor-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
+/* 單一精選項目 */
+.editor-item {
+  display: flex;
+  gap: 2.5rem;
+  align-items: center;
 
-  /* 控制高度，接近你說的 15cm 視覺 */
+  /* 高度接近你說的 15cm 視覺感 */
   min-height: 520px;
-  align-items: stretch;
 }
 
-/* 精選區裡的 card 微調（不影響其他地方） */
-.editor-picks .card {
-  background-color: #fffdf8;
-  height: 100%;
+/* 左側圖片 */
+.editor-item img {
+  width: 45%;
+  height: 420px;
+  object-fit: cover;
+  border-radius: 18px;
 }
+
+/* 右側文字 */
+.editor-text {
+  width: 55%;
+}
+
+.editor-text h3 {
+  margin: 0 0 1rem;
+  font-size: 1.5rem;
+  line-height: 1.4;
+}
+
+.editor-text a {
+  text-decoration: none;
+  color: #4e3d30;
+}
+
+.editor-text a:hover {
+  text-decoration: underline;
+}
+
+.editor-text p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #665e53;
+}
+
   </style>
 </head>
 <body>
