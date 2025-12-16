@@ -59,15 +59,50 @@
   color: #4e3d30;
 }
 
-/* 精選區內的 card 稍微強調 */
-.editor-picks .card {
-  border: 2px solid #d9c9a8;
-  background-color: #fffaf2;
+.editor-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5em;
 }
 
-/* 可選：加一點呼吸感 */
-.editor-picks .card p {
-  font-size: 0.95em;
+.editor-card {
+  background-color: #fffdf8;
+  border: 1px solid #e4dac8;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease;
+}
+
+.editor-card:hover {
+  transform: translateY(-3px);
+}
+
+.editor-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+
+.editor-card h3 {
+  font-size: 1.05em;
+  margin: 0.8em 0 0.4em;
+  padding: 0 1em;
+}
+
+.editor-card p {
+  font-size: 0.9em;
+  color: #665e53;
+  padding: 0 1em 1.2em;
+}
+
+.editor-card a {
+  text-decoration: none;
+  color: #4e3d30;
+}
+
+.editor-card a:hover {
+  text-decoration: underline;
 }
   </style>
 </head>
