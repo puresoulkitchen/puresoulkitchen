@@ -77,32 +77,37 @@
 .editor-card:hover {
   transform: translateY(-3px);
 }
-
-.editor-card img {
-  width: 100%;
-  height: 160px;
-  object-fit: cover;
+/* 編輯精選整體容器 */
+.editor-picks {
+  max-width: 1200px;
+  margin: 4rem auto;
+  padding: 2.5rem 3rem;
+  background-color: #fff6e8;
+  border-radius: 28px;
 }
 
-.editor-card h3 {
-  font-size: 1.05em;
-  margin: 0.8em 0 0.4em;
-  padding: 0 1em;
-}
-
-.editor-card p {
-  font-size: 0.9em;
-  color: #665e53;
-  padding: 0 1em 1.2em;
-}
-
-.editor-card a {
-  text-decoration: none;
+/* 標題像分頁標籤 */
+.editor-title {
+  font-size: 1.6rem;
+  margin-bottom: 1.8rem;
   color: #4e3d30;
 }
 
-.editor-card a:hover {
-  text-decoration: underline;
+/* 精選內的文章排列 */
+.editor-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+
+  /* 控制高度，接近你說的 15cm 視覺 */
+  min-height: 520px;
+  align-items: stretch;
+}
+
+/* 精選區裡的 card 微調（不影響其他地方） */
+.editor-picks .card {
+  background-color: #fffdf8;
+  height: 100%;
 }
   </style>
 </head>
@@ -127,15 +132,17 @@
       <p>Plant-based, five-spice-free nourishment for your body and soul</p>
     </div>
   </div>
-<section class="editor-picks">
-  <h2 class="editor-title">✍️ Editor’s Picks</h2>
+
+  <section class="editor-picks">
+  <h2 class="editor-title">Editor’s Picks</h2>
+  <div class="editor-grid">
   
   <section class="card">
   <img src="assets/images/vagus-nerve-plant-based.png" alt="Illustration of the vagus nerve connecting brain, heart, and gut with plant-based foods around it">
   <h2><a href="articles/vagus-nerve-plant-based.html">🌿 Nourishing the Vagus Nerve: How Plant-Based Foods Support Your Calm System</a></h2>
   <p>Discover how a plant-based diet can naturally support your vagus nerve, promoting calm, emotional balance, and overall wellness through nutrient-rich foods and mindful eating strategies.</p>
 </section>
-  
+</div>
 </section>
 
   <main class="container">
