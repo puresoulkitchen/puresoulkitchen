@@ -48,68 +48,88 @@
     footer .footer-links a:hover {
       background-color: #f5eee1;
     }
-/* ===== Editor Picks Section ===== */
-
+/* 整個精選區塊 */
 .editor-picks {
-  margin: 3rem 0;
+  max-width: 1200px;
+  margin: 4rem auto;
+  padding: 2.5rem 3rem;
+  background-color: #fff6e8;
+  border-radius: 28px;
+
+  /* 微陰影，讓它浮起來但不商業 */
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
 }
 
-/* 分頁標籤感 */
-.editor-tab {
-  display: inline-block;
-  margin-bottom: 1rem;
-  padding: 0.5rem 1.2rem;
-  background-color: #fffdf8;
-  border: 1px solid #e4dac8;
-  border-radius: 10px;
-  font-size: 0.95rem;
+/* 標題像分頁區塊 */
+.editor-title {
+  font-size: 1.6rem;
+  margin-bottom: 2rem;
   color: #4e3d30;
-  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.06);
 }
 
-/* 精選大底塊 */
-.editor-pick-block {
-  background-color: #fffdf8;
-  border: 1px solid #e4dac8;
-  border-radius: 18px;
-  padding: 1.5rem;
-  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
-  max-width: 100%;
-}
-
-/* 控制 card 在精選裡的顯示，不影響其他地方 */
-.editor-pick-block .card {
-  box-shadow: none;
-  border: none;
-  margin: 0;
+/* 單一精選項目 */
+.editor-item {
   display: flex;
-  gap: 1.5rem;
+  gap: 2.5rem;
   align-items: center;
+
+  /* 保留你要的「長正方形視覺感」 */
+  min-height: 520px;
 }
 
-/* 圖片不再可怕 */
-.editor-pick-block .card img {
-  width: 40%;
-  max-width: 320px;
-  height: auto;
-  border-radius: 12px;
+/* 左側圖片（這裡是重點修改） */
+.editor-item img {
+  width: 42%;              /* 稍微縮小比例 */
+  max-width: 420px;        /* 防止螢幕大時過度膨脹 */
+  height: 360px;           /* 不再吃滿高度 */
   object-fit: cover;
+  border-radius: 18px;
+
+  /* 讓圖片視覺更柔 */
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
 }
 
 /* 右側文字 */
-.editor-pick-block .card h2 {
-  margin-top: 0;
+.editor-text {
+  width: 58%;
+}
+
+.editor-text h3 {
+  margin: 0 0 1rem;
+  font-size: 1.5rem;
+  line-height: 1.4;
+}
+
+.editor-text a {
+  text-decoration: none;
+  color: #4e3d30;
+}
+
+.editor-text a:hover {
+  text-decoration: underline;
+}
+
+.editor-text p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #665e53;
 }
 
 /* 手機版調整 */
 @media (max-width: 768px) {
-  .editor-pick-block .card {
+  .editor-item {
     flex-direction: column;
+    min-height: auto;
   }
 
-  .editor-pick-block .card img {
+  .editor-item img {
     width: 100%;
     max-width: 100%;
+    height: 240px;
+  }
+
+  .editor-text {
+    width: 100%;
   }
 }
   </style>
