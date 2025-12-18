@@ -28,75 +28,78 @@
   <link rel="stylesheet" href="assets/css/style.css"/>
 
   <style>
-    /* ===== Editor's Picks Section ===== */
+    /* ===== Editor's Picks Section (固定高度版) ===== */
+  .editor-picks {
+    max-width: 1200px;
+    margin: 2.5rem auto;
+    padding: 1.4rem 2.5rem;
+    background-color: #fff6e8;
+    border-radius: 26px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+  }
+  .editor-title {
+    font-size: 1.6rem;
+    margin-bottom: 1.2rem;
+    color: #4e3d30;
+  }
+  .editor-item {
+    display: flex;
+    gap: 2rem;
+    align-items: stretch;
+    height: 320px;       /* 固定高度 */
+    overflow: hidden;    /* 文字或圖片超出不撐高 */
+    margin-bottom: 1.6rem;
+  }
+  .editor-item img {
+    width: 45%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 18px;
+  }
+  .editor-text {
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+  }
+  .editor-text h3 {
+    margin: 0 0 0.7rem;
+    font-size: 1.45rem;
+    line-height: 1.4;
+  }
+  .editor-text h3 a {
+    text-decoration: none;
+    color: #4e3d30;
+  }
+  .editor-text h3 a:hover {
+    text-decoration: underline;
+  }
+  .editor-text p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #665e53;
+  }
+
+  @media (max-width: 768px) {
     .editor-picks {
-      max-width: 1200px;
-      margin: 3rem auto;
-      padding: 1.6rem 3rem;
-      background-color: #fff6e8;
-      border-radius: 26px;
-      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
-    }
-    .editor-title {
-      font-size: 1.6rem;
-      margin-bottom: 1.4rem;
-      color: #4e3d30;
+      padding: 1.2rem 1.5rem;
     }
     .editor-item {
-      display: flex;
-      gap: 2.2rem;
-      align-items: stretch;       /* 左右高度自動對齊 */
-      min-height: 300px;
+      flex-direction: column;
+      height: auto;      /* 手機版自適應高度 */
     }
     .editor-item img {
-      width: 45%;
-      height: auto;
-      object-fit: cover;
-      border-radius: 18px;
+      width: 100%;
+      height: 220px;
     }
     .editor-text {
-      width: 55%;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;    /* 文字垂直置中 */
+      width: 100%;
     }
     .editor-text h3 {
-      margin: 0 0 0.8rem;
-      font-size: 1.45rem;
-      line-height: 1.4;
+      font-size: 1.3rem;
     }
-    .editor-text h3 a {
-      text-decoration: none;
-      color: #4e3d30;
-    }
-    .editor-text h3 a:hover {
-      text-decoration: underline;
-    }
-    .editor-text p {
-      font-size: 1rem;
-      line-height: 1.7;
-      color: #665e53;
-    }
-
-    @media (max-width: 768px) {
-      .editor-picks {
-        padding: 1.4rem 1.5rem;
-      }
-      .editor-item {
-        flex-direction: column;
-        min-height: auto;
-      }
-      .editor-item img {
-        width: 100%;
-        height: 240px;
-      }
-      .editor-text {
-        width: 100%;
-      }
-      .editor-text h3 {
-        font-size: 1.3rem;
-      }
-    }
+  }
   </style>
 </head>
 <body>
