@@ -50,47 +50,44 @@
     }
 /* =========================
    Editor's Picks Section
-   ========================= */
+========================= */
 
 .editor-picks {
   max-width: 1200px;
   margin: 3rem auto;
-  padding: 1.8rem 2.4rem;
+  padding: 1.8rem 3rem;
   background-color: #fff6e8;
-  border-radius: 24px;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
+  border-radius: 26px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
 }
 
 .editor-title {
-  font-size: 1.45rem;
-  margin-bottom: 1.5rem;
+  font-size: 1.6rem;
+  margin-bottom: 1.6rem;
   color: #4e3d30;
 }
 
-/* 單一精選項目 */
 .editor-item {
   display: flex;
+  gap: 2.2rem;
   align-items: center;
-  gap: 2rem;
-  min-height: 420px;
+  min-height: 460px;
 }
 
-/* 左側圖片 */
 .editor-item img {
   width: 45%;
-  height: 340px;
+  height: 380px;
   object-fit: cover;
-  border-radius: 16px;
+  border-radius: 18px;
 }
 
-/* 右側文字 */
 .editor-text {
   flex: 1;
 }
 
 .editor-text h3 {
   margin: 0 0 0.8rem;
-  font-size: 1.4rem;
+  font-size: 1.45rem;
   line-height: 1.4;
 }
 
@@ -104,12 +101,15 @@
 }
 
 .editor-text p {
-  font-size: 0.95rem;
-  line-height: 1.6;
+  font-size: 1rem;
+  line-height: 1.7;
   color: #665e53;
 }
 
-/* RWD 手機版 */
+/* =========================
+   Mobile Adjustments
+========================= */
+
 @media (max-width: 768px) {
   .editor-picks {
     padding: 1.6rem 1.4rem;
@@ -118,12 +118,15 @@
   .editor-item {
     flex-direction: column;
     min-height: auto;
-    gap: 1.4rem;
   }
 
   .editor-item img {
     width: 100%;
-    height: 220px;
+    height: 240px;
+  }
+
+  .editor-text h3 {
+    font-size: 1.3rem;
   }
 }
   </style>
@@ -157,7 +160,8 @@
   <h2 class="editor-title">Editor’s Picks</h2>
 
   <div class="editor-item">
-    <img src="assets/images/tea-chamomile-benefits.png" alt="Chamomile Tea Benefits">
+    <img src="assets/images/tea-chamomile-benefits.png"
+         alt="Chamomile Tea Benefits">
 
     <div class="editor-text">
       <h3>
@@ -166,8 +170,8 @@
         </a>
       </h3>
       <p>
-        A calming cup of chamomile tea that gently supports relaxation, digestion,
-        and emotional balance — a quiet ritual for slowing down at the end of the day.
+        A calming cup of chamomile tea that gently soothes stress, supports digestion,
+        and helps the body ease into rest — a quiet ritual for slower evenings.
       </p>
     </div>
   </div>
