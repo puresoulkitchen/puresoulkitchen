@@ -48,82 +48,68 @@
     footer .footer-links a:hover {
       background-color: #f5eee1;
     }
-    /* ===== Editor’s Picks ===== */
+/* ===== Editor Picks Section ===== */
 
 .editor-picks {
-  margin: 3.5rem 0;
+  margin: 3rem 0;
 }
 
-.editor-title {
-  font-size: 1.4rem;
-  margin-bottom: 1.5rem;
-  color: #4e3d30;
-}
-
-/* 底塊 */
-.editor-item {
-  display: flex;
-  align-items: center;
+/* 分頁標籤感 */
+.editor-tab {
+  display: inline-block;
+  margin-bottom: 1rem;
+  padding: 0.5rem 1.2rem;
   background-color: #fffdf8;
-  border-radius: 20px;
-  padding: 1.8rem;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
-  gap: 1.8rem;
-  min-height: 420px;
-}
-
-/* 圖片（已縮小、去壓迫感） */
-.editor-item img {
-  width: 38%;
-  height: 300px;
-  object-fit: cover;
-  border-radius: 16px;
-  opacity: 0.95;
-  filter: saturate(0.95) contrast(0.95);
-}
-
-/* 文字區 */
-.editor-text {
-  flex: 1;
-}
-
-.editor-text h3 {
-  margin: 0 0 0.8rem;
-  font-size: 1.4rem;
-  line-height: 1.4;
-}
-
-.editor-text h3 a {
-  text-decoration: none;
+  border: 1px solid #e4dac8;
+  border-radius: 10px;
+  font-size: 0.95rem;
   color: #4e3d30;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.06);
 }
 
-.editor-text h3 a:hover {
-  text-decoration: underline;
+/* 精選大底塊 */
+.editor-pick-block {
+  background-color: #fffdf8;
+  border: 1px solid #e4dac8;
+  border-radius: 18px;
+  padding: 1.5rem;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
+  max-width: 100%;
 }
 
-.editor-text p {
+/* 控制 card 在精選裡的顯示，不影響其他地方 */
+.editor-pick-block .card {
+  box-shadow: none;
+  border: none;
   margin: 0;
-  color: #665e53;
-  font-size: 1rem;
-  line-height: 1.7;
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+/* 圖片不再可怕 */
+.editor-pick-block .card img {
+  width: 40%;
+  max-width: 320px;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+/* 右側文字 */
+.editor-pick-block .card h2 {
+  margin-top: 0;
 }
 
 /* 手機版調整 */
 @media (max-width: 768px) {
-  .editor-item {
+  .editor-pick-block .card {
     flex-direction: column;
-    padding: 1.4rem;
-    min-height: auto;
   }
 
-  .editor-item img {
+  .editor-pick-block .card img {
     width: 100%;
-    height: 220px;
-  }
-
-  .editor-text h3 {
-    font-size: 1.2rem;
+    max-width: 100%;
   }
 }
   </style>
@@ -151,14 +137,19 @@
     </div>
   </div>
 
- <section class="editor-picks">
-  <h2 class="editor-title">Editor’s Picks</h2>
+<section class="editor-picks">
+
+  <div class="editor-tab">Editor’s Picks</div>
+
+  <div class="editor-pick-block">
+    
 <section class="card">
   <img src="assets/images/tea-chamomile-benefits.png" alt="Chamomile Tea and Spiced Pumpkin Risotto">
   <h2><a href="articles/chamomile-tea-benefits.html">🌼 Chamomile Tea Benefits: The Herbal Queen of Relaxation, Sleep, and Digestion</a></h2>
   <p>A calming cup of chamomile tea that soothes stress, aids digestion, and improves sleep—your nightly wellness ritual starts here.</p>
 </section>
-    </section>
+   
+</section>
   
   <main class="container">
        </section>
