@@ -48,6 +48,68 @@
     footer .footer-links a:hover {
       background-color: #f5eee1;
     }
+    /* 整個精選區塊 */
+.editor-picks {
+  max-width: 1200px;
+  margin: 4rem auto;
+  padding: 2.5rem 3rem;
+  background-color: #fff6e8;
+  border-radius: 28px;
+
+  /* 微陰影，讓它浮起來但不商業 */
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+}
+
+/* 標題像分頁區塊 */
+.editor-title {
+  font-size: 1.6rem;
+  margin-bottom: 2rem;
+  color: #4e3d30;
+}
+
+/* 單一精選項目 */
+.editor-item {
+  display: flex;
+  gap: 2.5rem;
+  align-items: center;
+
+  /* 高度接近你說的 15cm 視覺感 */
+  min-height: 520px;
+}
+
+/* 左側圖片 */
+.editor-item img {
+  width: 45%;
+  height: 420px;
+  object-fit: cover;
+  border-radius: 18px;
+}
+
+/* 右側文字 */
+.editor-text {
+  width: 55%;
+}
+
+.editor-text h3 {
+  margin: 0 0 1rem;
+  font-size: 1.5rem;
+  line-height: 1.4;
+}
+
+.editor-text a {
+  text-decoration: none;
+  color: #4e3d30;
+}
+
+.editor-text a:hover {
+  text-decoration: underline;
+}
+
+.editor-text p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #665e53;
+}
   </style>
 </head>
 <body>
@@ -72,6 +134,15 @@
     </div>
   </div>
 
+  <section class="editor-picks">
+  <h2 class="editor-title">Editor’s Picks</h2>
+<section class="card">
+  <img src="assets/images/tea-chamomile-benefits.png" alt="Chamomile Tea and Spiced Pumpkin Risotto">
+  <h2><a href="articles/chamomile-tea-benefits.html">🌼 Chamomile Tea Benefits: The Herbal Queen of Relaxation, Sleep, and Digestion</a></h2>
+  <p>A calming cup of chamomile tea that soothes stress, aids digestion, and improves sleep—your nightly wellness ritual starts here.</p>
+</section>
+    </section>
+  
   <main class="container">
        </section>
     <section class="card">
