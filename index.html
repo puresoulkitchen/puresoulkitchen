@@ -48,69 +48,86 @@
     footer .footer-links a:hover {
       background-color: #f5eee1;
     }
-    /* 整個精選區塊 */
-.editor-picks {
-  max-width: 1200px;
-  margin: 4rem auto;
-  padding: 2.5rem 3rem;
-  background-color: #fff6e8;
-  border-radius: 28px;
+    /* ===== Editor’s Picks ===== */
 
-  /* 微陰影，讓它浮起來但不商業 */
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+.editor-picks {
+  margin: 3.5rem 0;
 }
 
-/* 標題像分頁區塊 */
 .editor-title {
-  font-size: 1.6rem;
-  margin-bottom: 2rem;
+  font-size: 1.4rem;
+  margin-bottom: 1.5rem;
   color: #4e3d30;
 }
 
-/* 單一精選項目 */
+/* 底塊 */
 .editor-item {
   display: flex;
-  gap: 2.5rem;
   align-items: center;
-
-  /* 高度接近你說的 15cm 視覺感 */
-  min-height: 520px;
+  background-color: #fffdf8;
+  border-radius: 20px;
+  padding: 1.8rem;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  gap: 1.8rem;
+  min-height: 420px;
 }
 
-/* 左側圖片 */
+/* 圖片（已縮小、去壓迫感） */
 .editor-item img {
-  width: 45%;
-  height: 420px;
+  width: 38%;
+  height: 300px;
   object-fit: cover;
-  border-radius: 18px;
+  border-radius: 16px;
+  opacity: 0.95;
+  filter: saturate(0.95) contrast(0.95);
 }
 
-/* 右側文字 */
+/* 文字區 */
 .editor-text {
-  width: 55%;
+  flex: 1;
 }
 
 .editor-text h3 {
-  margin: 0 0 1rem;
-  font-size: 1.5rem;
+  margin: 0 0 0.8rem;
+  font-size: 1.4rem;
   line-height: 1.4;
 }
 
-.editor-text a {
+.editor-text h3 a {
   text-decoration: none;
   color: #4e3d30;
 }
 
-.editor-text a:hover {
+.editor-text h3 a:hover {
   text-decoration: underline;
 }
 
 .editor-text p {
+  margin: 0;
+  color: #665e53;
   font-size: 1rem;
   line-height: 1.7;
-  color: #665e53;
+}
+
+/* 手機版調整 */
+@media (max-width: 768px) {
+  .editor-item {
+    flex-direction: column;
+    padding: 1.4rem;
+    min-height: auto;
+  }
+
+  .editor-item img {
+    width: 100%;
+    height: 220px;
+  }
+
+  .editor-text h3 {
+    font-size: 1.2rem;
+  }
 }
   </style>
+  
 </head>
 <body>
   <header>
@@ -134,7 +151,7 @@
     </div>
   </div>
 
-  <section class="editor-picks">
+ <section class="editor-picks">
   <h2 class="editor-title">Editor’s Picks</h2>
 <section class="card">
   <img src="assets/images/tea-chamomile-benefits.png" alt="Chamomile Tea and Spiced Pumpkin Risotto">
